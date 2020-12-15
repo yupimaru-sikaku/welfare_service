@@ -1,6 +1,8 @@
 <%= render partial: "shared/header" %>
 
 <div class="content">
+
+	<%#検索フォーム%>
 	<div class="search-content">
 		<figure>
 			<%= image_tag "search.png", class: "search-img", alt: "検索写真" %>
@@ -13,5 +15,16 @@
 			</figcaption>
 		</figure>
 	</div>
+	<%#//検索フォーム%>
+
+	<%#事業者の方はこちら%>
+	<div class="business">
+		<%= link_to "#" do %>
+			<span>事業者の方はこちら</span>
+		<% end %>
+	</div>
+
+	<%#//事業者の方はこちら%>
+
 </div>
 
