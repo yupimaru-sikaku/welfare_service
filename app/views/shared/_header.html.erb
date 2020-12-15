@@ -1,0 +1,55 @@
+<div class="header">
+
+	<input id="menu" type="checkbox">
+	<label for="menu" class="open">
+		<span></span>
+		<span></span>
+		<span></span>
+	</label>
+	<label for="menu" class="close-2"></label>
+	<div class="content">
+		<ul class="content-lists">
+			<li>
+				<div class="user-icon">
+					<%= link_to "#", class: "icon-img" do %>
+						<%= image_tag "kaneo.png" %>
+					<% end %>
+				</div>
+			</li>
+			<li>
+				<%= link_to "#", class: "registration-img" do %>
+					<i class="fas fa-user"></i>
+					<span>アカウント設定</span>
+				<% end %>
+			</li>
+			<li>
+				<%= link_to "#", class: "registration-img" do %>
+					<i class="fas fa-business-time"></i>
+					<span>管理者はこちら</span>
+				<% end %>
+			</li>
+			<li>
+				<%= link_to "#", class: "registration-img" do %>
+					<i class="fas fa-sign-in-alt"></i>
+					<span>新規登録</span>
+				<% end %>
+			</li>
+			<li>
+				<%= link_to "#", class: "registration-img" do %>
+					<i class="fas fa-key"></i>
+					<span>ログイン</span>
+				<% end %>
+			</li>
+			<li>
+				<%= link_to "#", class: "registration-img" do %>
+					<i class="fas fa-door-open"></i>
+					<span>ログアウト</span>
+				<% end %>
+			</li>
+		</ul>
+	</div>
+	<div class="header-img">
+		<%= link_to image_tag("logo.png"), root_path %>
+	</div>
+	
+</div>
