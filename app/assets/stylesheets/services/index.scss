@@ -16,45 +16,42 @@
   justify-content: space-around;
   
   p{
-    padding: calc(213px / 4) 0px;
-    font-size: 0.7em;
+    padding: calc((350px - 189px) / 4) 0px;
+    font-size: 0.3em;
   }
   
   .search-form{
     background-color: rgba(255, 255, 255, 0.8);
-    width: 95%;
-    height: 230px;
+    width: 90%;
+    height: 120px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin-top: calc(213px / 4);
-    margin-bottom: calc(213px / 4);
+    margin: calc((350px - 189px) / 4);
     
     .search-text{
       border: 1px solid #ffffff;
       background-color: white;
-      font-size: 30px;
+      font-size: 20px;
       width: 80%;
-      height: 90px;
+      height: 40px;
       padding-left: 20px;
       margin: 0 auto;
       color: black;
     }
     
     .search-submit{
-      // border: 1px solid #ffffff;
       background-color: #21c1f7;
-      font-size: 0.4em;
+      font-size: 20px;
       width: 80%;
-      height: 90px;
-      padding-left: 20px;
+      height: 40px;
       margin: 0 auto;
     }
   }
 
   .search-img{
-    width: 100vw;
+    height: 350px;
   }
 
   figure {
