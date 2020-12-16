@@ -138,6 +138,7 @@
   width: 140px;
   height: 140px;
   margin: 5px;
+  margin-bottom: 20px;
   position: relative;
   border-radius: 30px;
   -webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
@@ -167,7 +168,7 @@
   color: black;
   display: block;
   position: absolute;
-  top: calc(140px - 24px);
+  top: calc(140px - 23px);
   left: 0px;
   background-color: white;
   border-radius: 0 0 30px 30px;
