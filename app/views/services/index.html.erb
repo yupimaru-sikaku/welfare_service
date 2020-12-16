@@ -7,7 +7,7 @@
 		<figure>
 			<%= image_tag "search.png", class: "search-img", alt: "検索写真" %>
 			<figcaption class="decorator">
-				<p>あなたの毎日に、<br>プロからのケアを。</p>
+				<p>あなたの毎日に、<br>プロからのプロテインを。</p>
 				<div class="search-form">
 					<input type="text", class="search-text", placeholder="気になるサービスを入力">
 					<input type="submit", value="調べる", class="search-submit">
@@ -23,8 +23,73 @@
 			<span>事業者の方はこちら</span>
 		<% end %>
 	</div>
-
 	<%#//事業者の方はこちら%>
 
-</div>
+	<%#事業者の方はこちら%>
+	<div class="service-content">
+		<div class="service-titile">
+			<p>サービス一覧</p>
+		</div>
+		<div class="services">
+			<ol class="service-lists">
+				<li>
+					<%= link_to  "居宅介護", "#", class: "service-list" %>
+				</li>
+				<li>
+					<%= link_to  "重度介護訪問", "#", class: "service-list" %>
+				</li>
+				<li>
+					<%= link_to  "同行援護", "#", class: "service-list" %>
+				</li>
+				<li>
+					<%= link_to  "行動援護", "#", class: "service-list" %>
+				</li>
+				<li>
+					<%= link_to  "移動支援", "#", class: "service-list" %>
+				</li>
+				<li>
+					<%= link_to  "生活介護", "#", class: "service-list" %>
+				</li>
+				<li>
+					<%= link_to  "短期入所", "#", class: "service-list" %>
+				</li>
+				<li>
+					<%= link_to  "自立訓練", "#", class: "service-list" %>
+				</li>
+				<li>
+					<%= link_to  "就労移行支援", "#", class: "service-list" %>
+				</li>
+				<li>
+					<%= link_to  "就労継続支援A", "#", class: "service-list" %>
+				</li>
+				<%
+=begin%>
+ <li class="service-list">居宅介護</li>
+				<li class="service-list">重度介護訪問</li>
+				<li class="service-list">同行援護</li>
+				<li class="service-list">行動援護</li>
+				<li class="service-list">移動支援</li>
+				<li class="service-list">生活介護</li>
+				<li class="service-list">短期入所</li>
+				<li class="service-list">自立訓練</li>
+				<li class="service-list">就労移行支援</li>
+				<li class="service-list">就労継続支援A</li>
+				<li class="service-list">就労継続支援B</li>
+				<li class="service-list">就労定着支援</li>
+				<li class="service-list">自立生活援助</li>
+				<li class="service-list">共同生活援助</li>
+				<li class="service-list">児童発達支援</li>
+				<li class="service-list">放課後等デイサービス</li>
+				<li class="service-list">計画相談支援</li>
+				<li class="service-list">障害児相談支援</li>
+				<li class="service-list">地域移行支援</li>
+				<li class="service-list">地域定着支援</li> 
+<%
+=end%>
+			</ol>
+		</div>
+	</div>
+	<%#//事業者の方はこちら%>
+
+　</div>
 

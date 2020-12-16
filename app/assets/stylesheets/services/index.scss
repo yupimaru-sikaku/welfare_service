@@ -8,6 +8,7 @@
 
 }
 
+// ★★検索フォーム全体
 .search-content{
   width: 100%;
   text-align: center;
@@ -15,11 +16,13 @@
   align-items: center;
   justify-content: space-around;
   
+  // 画像の中にある文字
   p{
     padding: calc((350px - 189px) / 4) 0px;
     font-size: 0.3em;
   }
   
+  // 検索欄と送信を囲むの大きな枠
   .search-form{
     background-color: rgba(255, 255, 255, 0.8);
     width: 90%;
@@ -31,6 +34,7 @@
     margin-top: calc((350px - 189px) / 4);
     margin-bottom: calc((350px - 189px) / 4);
     
+    // 検索欄
     .search-text{
       border: 1px solid #ffffff;
       background-color: white;
@@ -42,6 +46,7 @@
       color: black;
     }
     
+    // 検索送信ボタン
     .search-submit{
       background-color: #21c1f7;
       font-size: 17px;
@@ -51,10 +56,12 @@
     }
   }
 
+  // 検索フォームの大きな画像
   .search-img{
     height: 350px;
   }
-
+  
+  // 検索フォームの大きな画像をぼかすため
   figure {
     width: 100%;
     position: relative;
@@ -82,10 +89,10 @@
 
   
 }
-
+// ★★事業者はこちら
 .business{
   text-align: center;
-
+  
   span{
     font-size: 18px;
     padding: 10px;
@@ -97,5 +104,47 @@
   
   a{
     text-decoration: none;
+  }
+}
+
+// ★★福祉サービス一覧
+.service-content{
+  text-align: center;
+
+  .service-titile{
+    padding: 10px;
+  }
+
+  .services{
+    
+    ol.service-lists{
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      li{
+        margin-bottom: 20px;
+      }
+    }
+
+    a.service-list{
+      display: inline-block;
+    max-width: 180px;
+    text-align: center;
+    background-color: #26bf14;
+    color: #FFF;
+    text-decoration: none;
+    width: 50vW;
+    line-height: 45px;
+    border-radius: 20px;
+    border-bottom: 5px solid #2f3e2f;
+
+      &:active{
+        transform: translateY(4px);
+        border-bottom: none;
+      }
+
+    }
   }
 }

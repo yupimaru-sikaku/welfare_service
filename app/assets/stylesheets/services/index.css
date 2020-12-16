@@ -1,0 +1,153 @@
+.content {
+  width: 100vw;
+}
+
+.content .header {
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search-content {
+  width: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.search-content p {
+  padding: calc((350px - 189px) / 4) 0px;
+  font-size: 0.3em;
+}
+
+.search-content .search-form {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 90%;
+  height: 120px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: calc((350px - 189px) / 4);
+  margin-bottom: calc((350px - 189px) / 4);
+}
+
+.search-content .search-form .search-text {
+  border: 1px solid #ffffff;
+  background-color: white;
+  font-size: 17px;
+  width: 80%;
+  height: 40px;
+  padding-left: 20px;
+  margin: 0 auto;
+  color: black;
+}
+
+.search-content .search-form .search-submit {
+  background-color: #21c1f7;
+  font-size: 17px;
+  width: 80%;
+  height: 40px;
+  margin: 0 auto;
+}
+
+.search-content .search-img {
+  height: 350px;
+}
+
+.search-content figure {
+  width: 100%;
+  position: relative;
+}
+
+.search-content figure img {
+  width: 100%;
+  vertical-align: top;
+}
+
+.search-content figure figcaption {
+  font-size: 60px;
+  color: #ffffff;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.search-content .decorator {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.business {
+  text-align: center;
+}
+
+.business span {
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+  background-color: #eaeaea63;
+  color: #b19e11;
+  text-decoration: none;
+}
+
+.business a {
+  text-decoration: none;
+}
+
+.service-content {
+  text-align: center;
+}
+
+.service-content .service-titile {
+  padding: 10px;
+}
+
+.service-content .services ol.service-lists {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.service-content .services ol.service-lists li {
+  margin-bottom: 20px;
+}
+
+.service-content .services a.service-list {
+  display: inline-block;
+  max-width: 180px;
+  text-align: center;
+  background-color: #26bf14;
+  color: #FFF;
+  text-decoration: none;
+  width: 50vW;
+  line-height: 45px;
+  border-radius: 20px;
+  border-bottom: 5px solid #2f3e2f;
+}
+
+.service-content .services a.service-list:active {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+  border-bottom: none;
+}
+/*# sourceMappingURL=index.css.map */
