@@ -1,3 +1,6 @@
+$service-width: 140px;
+$service-height: 140px;
+
 .content{
   width: 100vw;
   
@@ -107,16 +110,19 @@
   }
 }
 
+
 // ★★福祉サービス一覧
 .service-content{
   text-align: center;
-
+  
+  // 福祉サービスのタイトル
   .service-titile{
     padding: 30px;
     font-size: 1.3em;
     color: #a55fa2;
   }
-
+  
+  // 福祉サービスの中身
   .services {
     width: 100%;
     height: 100%;
@@ -124,12 +130,12 @@
     .service-lists{
       display: flex;
       flex-wrap: wrap;
-      
+      justify-content: space-around;
       
       .service-list{
-        width: 200px;
-        height: 200px;
-        margin: 20px;
+        width: $service-width;
+        height: $service-height;
+        margin: 5px;
         position: relative;
         border-radius: 30px;
         box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
@@ -139,15 +145,15 @@
           position: absolute;
           top: 0px;
           left: 0px;
-          height: 200px;
-          width: 200px;
+          height: $service-height;
+          width: $service-width;
           text-align: center;
           border-radius: 30px;
           cursor: pointer;
           
           img{
-            width: 200px;
-            height: 200px;
+            width: $service-width;
+            height: $service-height;
             display: block;
             border-radius: 30px;
           }
@@ -156,7 +162,7 @@
             color: black;
             display: block;
             position: absolute;
-            top: 178px;
+            top: calc(#{$service-height} - 24px);
             left: 0px;
             background-color: white;
             border-radius: 0 0 30px 30px;
