@@ -10,13 +10,13 @@
 
 	<%#フッターのアイコン SNSロゴ%>
 		<div class="sns-icons">
-			<%= link_to root_path  do %>
+			<%= link_to "https://medicalnote.jp/contents/200901-005-TH"  do %>
 				<i class="fab fa-google"></i>
 			<% end %>
-			<%= link_to root_path  do %>
+			<%= link_to "https://twitter.com/elonmusk"  do %>
 				<i class="fab fa-twitter"></i>
 			<% end %>
-			<%= link_to root_path  do %>
+			<%= link_to "https://www.instagram.com/gpa.100/?hl=ja"  do %>
 				<i class="fab fa-instagram"></i>
 			<% end %>
 		</div>
@@ -28,30 +28,40 @@
 	<%#各種問い合わせ%>
 	<div class="footer-menu">
 		<div class="menu-group">
-			<%= button_tag "サービスについて"%>
+			<%= link_to "サービスについて", class: "group" %>
+			<ul>
+				<li><%= link_to "事業者はこちら", "#" %></li>
+				<li><%= link_to "ログイン", "#" %></li>
+			</ul>
 		</div>
 		<div class="menu-group">
-			<%= button_tag "サポート"%>
+			<%= link_to "サポート", class: "group" %>
+			<ul>
+				<li><%= link_to "よくある質問", "#" %></li>
+				<li><%= link_to "お問い合わせ", "#" %></li>
+			</ul>
 		</div>
 		<div class="menu-group">
-			<%= button_tag "運営会社"%>
+			<%= link_to "運営会社", class: "group" %>
+			<ul>
+				<li><%= link_to "会社概要", "#" %></li>
+				<li><%= link_to "ブログ", "#" %></li>
+			</ul>
+		</div>
+		<div class="menu-group">
+			<%= link_to  "カテゴリー別に見る", class: "group" %>
+			<ul>
+				<li><%= link_to "健康・運動", "#" %></li>
+				<li><%= link_to "生活・ホーム", "#" %></li>
+			</ul>
 		</div>
 	</div>
 	<%#//各種問い合わせ%>
 
 	
-	<%#カテゴリー検索%>
-	<div class="footer-category-menu">
-		<div class="menu-group">
-			<%= button_tag "カテゴリー別に見る"%>
-		</div>
-	</div>
-	<%#//カテゴリー検索%>
-
-	
 	<%#会社名%>
 	<div class="footer-company">
-		<span>©独立法人財団YUKIPOYO</span>
+		<span>©独立財団法人YUKIPOYO</span>
 	</div>
 	<%#//会社名%>
 

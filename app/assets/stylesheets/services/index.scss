@@ -29,6 +29,7 @@ $service-height: 140px;
   .search-form{
     background-color: rgba(255, 255, 255, 0.8);
     width: 90%;
+    max-width: 400px;
     height: 120px;
     margin: 0 auto;
     display: flex;
@@ -125,7 +126,9 @@ $service-height: 140px;
   // 福祉サービスの中身
   .services {
     width: 100%;
+    max-width: 600px;
     height: 100%;
+    margin: 0 auto;
   
     .service-lists{
       display: flex;

@@ -55,17 +55,63 @@
     }
   }
   // カテゴリー検索
-  .footer-category-menu{
-    line-height: 50px;
-    color: #5d606f;
-    border-bottom: 1px solid #ffffff66;
+  .footer-menu{
 
-    button{
-      width: 100%;
-      text-align: left;
-      outline: none;
+    .menu-group{
+      
+      a{
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none;
+        color: black;
+        transition: 0.3s;
+  
+        &:hover{
+          opacity: 0.1;
+        }
+
+        &:after{
+          content: ">";
+          transform: rotate(90deg);
+        }
+
+        &.active{
+
+          &:after{
+            transform: rotate(-90deg);
+          }
+
+        }
+      }
+      
+      ul{
+        display: none;
+        
+        li{
+          list-style: none; 
+
+          a{
+            background-color: #ffffff7a;
+            transition: 0.5s;
+
+            &:hover{
+              opacity: 0.1;
+            }
+
+            &:after{
+              content: "";
+            }
+          }
+        }
+        
+        &.active{
+          display: block;
+        }
+        
+      }
     }
   }
+  
   
   // 会社名
   .footer-company{
