@@ -57,59 +57,102 @@
   // カテゴリー検索
   .footer-menu{
 
-    .menu-group{
-      
-      a{
-        display: flex;
-        justify-content: space-between;
-        text-decoration: none;
-        color: black;
-        transition: 0.3s;
+    .menu{
+      label{
+        display: block;
+        margin: 0 0 4px 0;
+        padding : 15px;
+        line-height: 1;
+        color :#fff;
+        background : green;
+        cursor :pointer;
+      }
   
-        &:hover{
-          opacity: 0.1;
-        }
+      input {
+        display: none;
+      }
 
-        &:after{
-          content: ">";
-          transform: rotate(90deg);
-        }
+      ul{
+        margin: 0;
+        padding: 0;
+        background :#f4f4f4;
+        list-style: none;
 
-        &.active{
-
-          &:after{
-            transform: rotate(-90deg);
-          }
-
+        li{
+          height: 0;
+          overflow: hidden;
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -ms-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s;
         }
       }
-      
-      ul{
-        display: none;
-        
-        li{
-          list-style: none; 
-
-          a{
-            background-color: #ffffff7a;
-            transition: 0.5s;
-
-            &:hover{
-              opacity: 0.1;
-            }
-
-            &:after{
-              content: "";
-            }
-          }
-        }
-        
-        &.active{
-          display: block;
-        }
-        
+      #type1:checked ~ #links1 li,
+      #type2:checked ~ #links2 li,
+      #type3:checked ~ #links3 li,
+      #type4:checked ~ #links4 li{
+        height: 54px;
+        opacity: 1;
       }
     }
+
+
+
+
+    // .menu-group{
+      
+    //   a{
+    //     display: flex;
+    //     justify-content: space-between;
+    //     text-decoration: none;
+    //     color: black;
+    //     transition: 0.3s;
+  
+    //     &:hover{
+    //       opacity: 0.1;
+    //     }
+
+    //     &:after{
+    //       content: ">";
+    //       transform: rotate(90deg);
+    //     }
+
+    //     &.active{
+
+    //       &:after{
+    //         transform: rotate(-90deg);
+    //       }
+
+    //     }
+    //   }
+      
+    //   ul{
+    //     display: none;
+        
+    //     li{
+    //       list-style: none; 
+
+    //       a{
+    //         background-color: #ffffff7a;
+    //         transition: 0.5s;
+
+    //         &:hover{
+    //           opacity: 0.1;
+    //         }
+
+    //         &:after{
+    //           content: "";
+    //         }
+    //       }
+    //     }
+        
+    //     &.active{
+    //       display: block;
+    //     }
+        
+    //   }
+    // }
   }
   
   
@@ -122,3 +165,4 @@
     text-align: right;
   }
 }
+

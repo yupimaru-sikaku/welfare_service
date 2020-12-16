@@ -27,34 +27,61 @@
 	
 	<%#各種問い合わせ%>
 	<div class="footer-menu">
-		<div class="menu-group">
-			<%= link_to "サービスについて", class: "group" %>
-			<ul>
+		<div class="menu">
+			<input type="checkbox" id="type1" class="accordion">
+			<label for="type1">サービスについて</label>
+			<ul id="links1">
 				<li><%= link_to "事業者はこちら", "#" %></li>
 				<li><%= link_to "ログイン", "#" %></li>
+			</ul>
+
+			<input type="checkbox" id="type2" class="accordion">
+			<label for="type2">サポート</label>
+			<ul id="links2">
+				<li><%= link_to "よくある質問", "#" %></li>
+				<li><%= link_to "お問い合わせ", "#" %></li>
+			</ul>
+		
+			<label for="type3">運営会社</label>
+			<input type="checkbox" id="type3" class="accordion">
+			<ul id="links3">
+				<li><%= link_to "会社概要", "#" %></li>
+				<li><%= link_to "ブログ", "#" %></li>
+			</ul>
+
+			<input type="checkbox" id="type4" class="accordion">
+			<label for="type4">カテゴリー別に見る</label>
+			<ul id="links4">
+				<li><%= link_to "健康・運動", "#" %></li>
+				<li><%= link_to "生活・ホーム", "#" %></li>
+			</ul>
+		</div>
+
+
+		<%
+=begin%>
+ <div class="menu-group">
+			<%= link_to "サービスについて", class: "group" %>
+			<ul>
 			</ul>
 		</div>
 		<div class="menu-group">
 			<%= link_to "サポート", class: "group" %>
 			<ul>
-				<li><%= link_to "よくある質問", "#" %></li>
-				<li><%= link_to "お問い合わせ", "#" %></li>
 			</ul>
 		</div>
 		<div class="menu-group">
 			<%= link_to "運営会社", class: "group" %>
 			<ul>
-				<li><%= link_to "会社概要", "#" %></li>
-				<li><%= link_to "ブログ", "#" %></li>
 			</ul>
 		</div>
 		<div class="menu-group">
 			<%= link_to  "カテゴリー別に見る", class: "group" %>
 			<ul>
-				<li><%= link_to "健康・運動", "#" %></li>
-				<li><%= link_to "生活・ホーム", "#" %></li>
 			</ul>
-		</div>
+		</div> 
+<%
+=end%>
 	</div>
 	<%#//各種問い合わせ%>
 
