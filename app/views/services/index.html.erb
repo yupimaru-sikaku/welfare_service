@@ -40,62 +40,68 @@
 
 		<%#サービス一覧%>
 		<div class="services">
-			<ol class="service-lists">
-				<li>
-					<%= link_to  "居宅介護", "#", class: "service-list" %>
-				</li>
-				<li>
-					<%= link_to  "重度介護訪問", "#", class: "service-list" %>
-				</li>
-				<li>
-					<%= link_to  "同行援護", "#", class: "service-list" %>
-				</li>
-				<li>
-					<%= link_to  "行動援護", "#", class: "service-list" %>
-				</li>
-				<li>
-					<%= link_to  "移動支援", "#", class: "service-list" %>
-				</li>
-				<li>
-					<%= link_to  "生活介護", "#", class: "service-list" %>
-				</li>
-				<li>
-					<%= link_to  "短期入所", "#", class: "service-list" %>
-				</li>
-				<li>
-					<%= link_to  "自立訓練", "#", class: "service-list" %>
-				</li>
-				<li>
-					<%= link_to  "就労移行支援", "#", class: "service-list" %>
-				</li>
-				<li>
-					<%= link_to  "就労継続支援A", "#", class: "service-list" %>
-				</li>
-				<%
-=begin%>
- <li class="service-list">居宅介護</li>
-				<li class="service-list">重度介護訪問</li>
-				<li class="service-list">同行援護</li>
-				<li class="service-list">行動援護</li>
-				<li class="service-list">移動支援</li>
-				<li class="service-list">生活介護</li>
-				<li class="service-list">短期入所</li>
-				<li class="service-list">自立訓練</li>
-				<li class="service-list">就労移行支援</li>
-				<li class="service-list">就労継続支援A</li>
-				<li class="service-list">就労継続支援B</li>
-				<li class="service-list">就労定着支援</li>
-				<li class="service-list">自立生活援助</li>
-				<li class="service-list">共同生活援助</li>
-				<li class="service-list">児童発達支援</li>
-				<li class="service-list">放課後等デイサービス</li>
-				<li class="service-list">計画相談支援</li>
-				<li class="service-list">障害児相談支援</li>
-				<li class="service-list">地域移行支援</li>
-				<li class="service-list">地域定着支援</li> 
-<%
-=end%>
-			</ol>
+			<div class="service-lists">
+				<div class="service-list">
+					<%= link_to "#" do %>
+						<%= image_tag "1.png" %>
+						<span>居宅介護</span>
+					<% end %>
+				</div>
+				<div class="service-list">
+					<%= link_to "#" do %>
+						<%= image_tag "2.png" %>
+						<span>重度介護訪問</span>
+					<% end %>
+				</div>
+				<div class="service-list">
+					<%= link_to "#" do %>
+						<%= image_tag "3.png" %>
+						<span>同行援護</span>
+					<% end %>
+				</div>
+				<div class="service-list">
+					<%= link_to "#" do %>
+						<%= image_tag "4.png" %>
+						<span>行動援護</span>
+					<% end %>
+				</div>
+				<div class="service-list">
+					<%= link_to "#" do %>
+						<%= image_tag "5.png" %>
+						<span>移動支援</span>
+					<% end %>
+				</div>
+				<div class="service-list">
+					<%= link_to "#" do %>
+						<%= image_tag "6.png" %>
+						<span>生活介護</span>
+					<% end %>
+				</div>
+				<div class="service-list">
+					<%= link_to "#" do %>
+						<%= image_tag "7.png" %>
+						<span>短期入所</span>
+					<% end %>
+				</div>
+				<div class="service-list">
+					<%= link_to "#" do %>
+						<%= image_tag "8.png" %>
+						<span>自立訓練</span>
+					<% end %>
+				</div>
+				<div class="service-list">
+					<%= link_to "#" do %>
+						<%= image_tag "9.png" %>
+						<span>就労移行支援</span>
+					<% end %>
+				</div>
+				<div class="service-list">
+					<%= link_to "#" do %>
+						<%= image_tag "10.png" %>
+						<span>就労継続支援A</span>
+					<% end %>
+				</div>
+			</div>
 		</div>
 	</div>
 		<%#//サービス一覧%>
