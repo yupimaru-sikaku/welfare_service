@@ -15,24 +15,30 @@
       width: 150px;
     }
     // フッターのアイコン SNSロゴ
-    a{
-      text-decoration: none;
+    
+    .sns-icons{
+      display: flex;
+      
+      a{
+        text-decoration: none;
+      }
+      .fab{
+        font-size: 25px;
+        padding-left: 10px;
+        display: flex;
+  
+        &.fa-google{
+          color: green;
+        }
+        &.fa-twitter{
+          color: #4ab3d6;
+        }
+        &.fa-instagram{
+          color: purple;
+        }
+      }
     }
 
-    .fab{
-      font-size: 25px;
-      padding-left: 10px;
-
-      &.fa-google{
-        color: green;
-      }
-      &.fa-twitter{
-        color: #4ab3d6;
-      }
-      &.fa-instagram{
-        color: purple;
-      }
-    }
   }
   // 各種問い合わせ
   .footer-menu{
