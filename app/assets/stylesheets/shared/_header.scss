@@ -20,11 +20,13 @@
 
     // ハンバーガーメニューの中のアイコン
     .icon-img{
-      
+      display: flex;
+      align-items: center;
+
       img{
-        display: block;
         width: 10vw;
         border-radius: 100px;
+        margin-right: 10px;
       }
     }
     
@@ -111,5 +113,18 @@
   img{
     display: block;
     height: 30px;
+  }
+}
+
+// ログイン中のユーザーのアイコン
+.header-user-img{
+  position: absolute;
+  top: 5px;
+  right: 15px;
+
+  img{
+    width: 35px;
+    height: 35px;
+    border-radius: 100px;
   }
 }

@@ -13,6 +13,7 @@
 				<div class="user-icon">
 					<%= link_to "#", class: "icon-img" do %>
 						<%= image_tag "kaneo.png" %>
+						<span>ユーザーはワシじゃ！</span>
 					<% end %>
 				</div>
 			</li>
@@ -48,8 +49,17 @@
 			</li>
 		</ul>
 	</div>
+
+	<%#会社ロゴ%>
 	<div class="header-img">
 		<%= link_to image_tag("logo.png"), root_path %>
 	</div>
+	<%#//会社ロゴ%>
+
+	<%#ログイン後のアイコン%>
+	<div class="header-user-img">
+		<%= link_to image_tag("kaneo.png"), root_path %>
+	</div>
+	<%#//ログイン後のアイコン%>
 	
 </div>
