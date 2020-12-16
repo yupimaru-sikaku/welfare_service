@@ -130,15 +130,15 @@
 
     a.service-list{
       display: inline-block;
-    max-width: 180px;
-    text-align: center;
-    background-color: #26bf14;
-    color: #FFF;
-    text-decoration: none;
-    width: 50vW;
-    line-height: 45px;
-    border-radius: 20px;
-    border-bottom: 5px solid #2f3e2f;
+      max-width: 180px;
+      text-align: center;
+      background-color: rgba(222,29,91, 0.25);
+      color: #a06161;
+      text-decoration: none;
+      width: 45vW;
+      line-height: 45px;
+      border-radius: 20px;
+      border-bottom: 5px solid rgba(206, 181, 181, 0.5);
 
       &:active{
         transform: translateY(4px);
