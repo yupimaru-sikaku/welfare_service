@@ -1,0 +1,58 @@
+<footer class="footer-wrapper">
+	
+	<%#フッターのアイコンたち%>
+	<div class="footer-icons">
+	<%#フッターのアイコン 会社ロゴ%>
+		<div class="footer-logo">
+			<%= link_to image_tag("logo.png"), root_path %>
+		</div>
+	<%#//フッターのアイコン 会社ロゴ%>
+
+	<%#フッターのアイコン SNSロゴ%>
+		<div class="sns-icons">
+			<%= link_to root_path  do %>
+				<i class="fab fa-google"></i>
+			<% end %>
+			<%= link_to root_path  do %>
+				<i class="fab fa-twitter"></i>
+			<% end %>
+			<%= link_to root_path  do %>
+				<i class="fab fa-instagram"></i>
+			<% end %>
+		</div>
+
+	</div>
+	<%#//フッターのアイコン SNSロゴ%>
+
+	
+	<%#各種問い合わせ%>
+	<div class="footer-menu">
+		<div class="menu-group">
+			<%= button_tag "aaaaaa"%>
+		</div>
+		<div class="menu-group">
+			<%= button_tag "bbbbb"%>
+		</div>
+		<div class="menu-group">
+			<%= button_tag "cccccc"%>
+		</div>
+	</div>
+	<%#//各種問い合わせ%>
+
+	
+	<%#カテゴリー検索%>
+	<div class="footer-category-menu">
+		<div class="menu-group">
+			<%= button_tag "ddddd"%>
+		</div>
+	</div>
+	<%#//カテゴリー検索%>
+
+	
+	<%#会社名%>
+	<div class="footer-company">
+		<span>©独立法人財団YUKIPOYO</span>
+	</div>
+	<%#//会社名%>
+
+</footer>

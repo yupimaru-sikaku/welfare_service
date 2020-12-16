@@ -114,7 +114,9 @@
 }
 
 .service-content .service-titile {
-  padding: 10px;
+  padding: 30px;
+  font-size: 1.3em;
+  color: #a55fa2;
 }
 
 .service-content .services ol.service-lists {

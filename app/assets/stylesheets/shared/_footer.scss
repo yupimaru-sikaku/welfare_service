@@ -1,0 +1,72 @@
+.footer-wrapper{
+  background-color: #c7c4c4;
+  padding: 0 20px;
+
+  // フッターのアイコンたち
+  .footer-icons{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ffffff66;
+
+    // フッターのアイコン 会社ロゴ
+    img{
+      width: 150px;
+    }
+    // フッターのアイコン SNSロゴ
+    a{
+      text-decoration: none;
+    }
+
+    .fab{
+      font-size: 25px;
+      padding-left: 10px;
+
+      &.fa-google{
+        color: green;
+      }
+      &.fa-twitter{
+        color: #4ab3d6;
+      }
+      &.fa-instagram{
+        color: purple;
+      }
+    }
+  }
+  // 各種問い合わせ
+  .footer-menu{
+    
+    .menu-group{
+      border-bottom: 1px solid #ffffff66;
+      line-height: 50px;
+      color: #5d606f;
+    }
+    button{
+      width: 100%;
+      text-align: left;
+      outline: none;
+    }
+  }
+  // カテゴリー検索
+  .footer-category-menu{
+    line-height: 50px;
+    color: #5d606f;
+    border-bottom: 1px solid #ffffff66;
+
+    button{
+      width: 100%;
+      text-align: left;
+      outline: none;
+    }
+  }
+  
+  // 会社名
+  .footer-company{
+    line-height: 50px;
+    color: white;
+    font-size: 15px;
+    font-weight: 100;
+    text-align: right;
+  }
+}

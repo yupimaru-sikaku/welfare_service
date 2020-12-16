@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: space-around;
   
-  // 画像の中にある文字
+  // 検索画像の中にある文字
   p{
     padding: calc((350px - 189px) / 4) 0px;
     font-size: 0.3em;
@@ -112,7 +112,9 @@
   text-align: center;
 
   .service-titile{
-    padding: 10px;
+    padding: 30px;
+    font-size: 1.3em;
+    color: #a55fa2;
   }
 
   .services{

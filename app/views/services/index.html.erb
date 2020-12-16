@@ -1,5 +1,8 @@
+<%#ヘッダー%>
 <%= render partial: "shared/header" %>
+<%#//ヘッダー%>
 
+<%#全体統括%>
 <div class="content">
 
 	<%#検索フォーム%>
@@ -27,9 +30,15 @@
 
 	<%#事業者の方はこちら%>
 	<div class="service-content">
+
+		
+		<%#サービスタイトル%>
 		<div class="service-titile">
 			<p>サービス一覧</p>
 		</div>
+		<%#//サービスタイトル%>
+
+		<%#サービス一覧%>
 		<div class="services">
 			<ol class="service-lists">
 				<li>
@@ -89,7 +98,13 @@
 			</ol>
 		</div>
 	</div>
+		<%#//サービス一覧%>
 	<%#//事業者の方はこちら%>
-
 　</div>
+<%#//全体統括%>
+
+
+<%#フッター%>
+<%= render partial: "shared/footer" %>
+<%#//フッター%>
 
