@@ -18,6 +18,12 @@
 				</div>
 			</li>
 			<li>
+				<%= link_to rooms_path, class: "registration-img" do %>
+					<i class="far fa-paper-plane"></i>
+					<span>メッセージ</span>
+				<% end %>
+			</li>
+			<li>
 				<%= link_to "#", class: "registration-img" do %>
 					<i class="fas fa-user"></i>
 					<span>アカウント設定</span>
@@ -30,7 +36,7 @@
 				<% end %>
 			</li>
 			<li>
-				<%= link_to "#", class: "registration-img" do %>
+				<%= link_to step1_signups_path, class: "registration-img" do %>
 					<i class="fas fa-sign-in-alt"></i>
 					<span>新規登録</span>
 				<% end %>
