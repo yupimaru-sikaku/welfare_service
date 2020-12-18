@@ -8,9 +8,15 @@
           justify-content: space-between;
   border-bottom: 1px solid #ededed;
   padding: 0 25px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background-color: white;
 }
 
 .room-header .room-header-main a {
+  display: block;
+  height: 45px;
   font-size: 25px;
   color: black;
 }
@@ -20,6 +26,7 @@
 }
 
 .room-header .room-search {
+  padding-top: 45px;
   text-align: center;
 }
 

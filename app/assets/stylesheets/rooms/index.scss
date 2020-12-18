@@ -1,15 +1,20 @@
 // ヘッダー
 .room-header{
-  
+
   .room-header-main{
     line-height: 45px;
-    // background-color: red;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #ededed;
     padding: 0 25px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    background-color: white;
     
     a{
+      display: block;
+      height: 45px;
       font-size: 25px;
       color: black;
     }
@@ -23,6 +28,9 @@
   } 
 
   .room-search{
+    
+    // ヘッダーをposition:fixedにしてもレイアウトが崩れないように調整
+    padding-top: 45px;
     text-align: center;
 
     input{
