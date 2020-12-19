@@ -1,0 +1,95 @@
+.room-header .room-header-main {
+  line-height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #ededed;
+  padding: 0 25px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background-color: white;
+}
+
+.room-header .room-header-main a {
+  display: block;
+  height: 45px;
+  font-size: 25px;
+  color: black;
+}
+
+.room-header .room-header-main .room-header-title {
+  font-size: 20px;
+}
+
+.room-header .room-search {
+  padding-top: 45px;
+  text-align: center;
+}
+
+.room-header .room-search input {
+  background-color: #f1f1f1;
+  height: 30px;
+  border-radius: 10px;
+  width: 350px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 5px;
+  padding-left: 20px;
+}
+
+.chat-room-form {
+  padding: 20px;
+}
+
+.chat-room-form h1 {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.chat-room-form .select-member-list {
+  margin: 10px 0px;
+}
+
+.chat-room-form .select-member-list input {
+  position: absolute;
+  left: -500px;
+}
+
+.chat-room-form .select-member-list input:checked ~ label {
+  background-color: #fff2eb;
+  height: 30px;
+  border-radius: 10px;
+}
+
+.chat-room-form .select-member-list label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.chat-room-form .select-member-list label img {
+  border-radius: 100%;
+}
+
+.chat-room-form .select-member-list label span {
+  padding-left: 10px;
+}
+
+.chat-room-form .chat-room-form-submit {
+  display: block;
+  margin: 0 auto;
+  color: #ecbc7a;
+  font-size: 20px;
+  background-color: beige;
+  padding: 5px;
+  border-radius: 10px;
+}
+/*# sourceMappingURL=new.html.css.map */

@@ -1,0 +1,54 @@
+<%#ヘッダー%>
+<div class="room-header">
+  <div class="room-header-main">
+    <div class="back-to-home">
+      <%= link_to rooms_path do %>
+        <i class="fas fa-arrow-circle-left"></i>
+      <% end %>
+    </div>
+    <div class="room-header-title">
+      <p>Direct Message</p>
+    </div>
+    <div class="create-room">
+      <%= link_to "#" do %>
+        <i class="fas fa-comments"></i>
+      <% end %>
+    </div>
+  </div>
+  <div class="room-search">
+    <input type="text", placeholder="名前を検索">
+  </div>
+</div>
+<%#//ヘッダー%>
+
+
+<%#新規作成画面%>
+<%#user_ids[]は必ずcurrent_userが後にくるように！%>
+<div class="chat-room-form">
+  <h1>チャットメンバーを選択して下さい</h1>
+  <%= form_with model: @room, url: rooms_path, local: true do |f| %>
+    <%= f.submit class:"chat-room-form-submit" %>
+      <div class="select-member-lists">
+
+        <%#user一覧 → ここからトークしたい人を選ぶ%>
+        <% User.where.not(id: current_user.id).each do |user| %>
+          <div class="select-member-list">
+            <input id="<%= user.id %>", name="room[user_ids][]", value=<%= user.id %> type="radio">
+            <label for="<%= user.id %>">
+              <%= image_tag "kaneo.png" %>
+              <span><%= user.nickname %></span>
+            </label>
+          </div>
+        <% end %>
+        <%#//user一覧 → ここからトークしたい人を選ぶ%>
+
+      </div>
+
+    <%#ログイン中のユーザーidも含めるようにする%>
+    <input name="room[user_ids][]", value=<%= current_user.id %> type="hidden">
+    <%#//ログイン中のユーザーidも含めるようにする%>
+
+  <% end %>
+</div>
+<%#//user_ids[]は必ずcurrent_userが後にくるように！%>
+<%#//新規作成画面%>

@@ -1,3 +1,7 @@
+<% if user_signed_in? %>
+	<p><%= current_user.nickname %></p>
+<% end %>
+
 <div class="header">
 
 	<input id="menu" type="checkbox">
@@ -36,19 +40,19 @@
 				<% end %>
 			</li>
 			<li>
-				<%= link_to step1_signups_path, class: "registration-img" do %>
+				<%= link_to new_user_registration_path, class: "registration-img" do %>
 					<i class="fas fa-sign-in-alt"></i>
 					<span>新規登録</span>
 				<% end %>
 			</li>
 			<li>
-				<%= link_to "#", class: "registration-img" do %>
+				<%= link_to new_user_session_path, class: "registration-img" do %>
 					<i class="fas fa-key"></i>
 					<span>ログイン</span>
 				<% end %>
 			</li>
 			<li>
-				<%= link_to "#", class: "registration-img" do %>
+				<%= link_to destroy_user_session_path, method: :delete, class: "registration-img" do %>
 					<i class="fas fa-door-open"></i>
 					<span>ログアウト</span>
 				<% end %>
