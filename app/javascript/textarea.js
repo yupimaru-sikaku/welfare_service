@@ -1,8 +1,10 @@
-$(function() {
-  var $textarea = $('#commentarea');
-  var lineHeight = parseInt($textarea.css('lineHeight'));
-  $textarea.on('input', function(e) {
-    var lines = ($(this).val() + '\n').match(/\n/g).length;
-    $(this).height(lineHeight * lines);
-  });
-});
+const textarea = () => {
+  const target = document.querySelector(".textarea");
+  let lineHeight = Number(target.getAttribute("rows"));
+  while (target.scrollHeight > target.offsetHeight){
+    lineHeight++;
+    target.setAttribute("rows", lineHeight);
+  }
+}
+
+setInterval(textarea, 1000);
