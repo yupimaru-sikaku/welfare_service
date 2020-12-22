@@ -33,7 +33,7 @@
 .talk-room-content{
   // ヘッダーをposition:fixedにしてもレイアウトが崩れないように調整
   padding-top: 45px;
-  height: calc(100vh - 100px);
+  height: 100vh;
   overflow: scroll;
   padding: 45px 10px;
   padding-bottom: 0px;
@@ -117,7 +117,35 @@
   }
 }
 
+
+// 投稿フォーム
 .talk-room-form{
-  background-color: red;
-  height: 100px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #ececec;
+  width: 100%;
+  
+  .new_message{
+    display: flex;
+
+    textarea{
+      border: 1px solid #cecece;
+      background-color: white;
+      border-radius: 5px;
+      width: 100%;
+      height: 25px;
+      resize: none;
+      
+    }
+
+  }
+
+  input{
+    .submit{
+      background-color: white;
+      padding: 3px;
+      border-radius: 10px;
+    }
+  }
 }

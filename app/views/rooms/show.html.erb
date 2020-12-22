@@ -67,9 +67,9 @@
 
 
 <div class="talk-room-form">
-  <%= form_for @message do |f| %>
+  <%= form_for @message, class: "contentarea" do |f| %>
     <%= f.text_area :content, :placeholder => "メッセージを入力して下さい" , :size => 70 %>
     <%= f.hidden_field :room_id, :value => @room.id %>
-  <%= f.submit "投稿する" %>
-<% end %>
+    <%= f.submit "投稿", class: "submit" %>
+  <% end %>
 </div>
