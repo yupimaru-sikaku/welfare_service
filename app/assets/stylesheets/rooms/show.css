@@ -27,7 +27,7 @@
 
 .talk-room-content {
   padding-top: 45px;
-  height: 100vh;
+  height: calc(100vh - 60px);
   overflow: scroll;
   padding: 45px 10px;
   padding-bottom: 0px;
@@ -124,26 +124,31 @@
   left: 0;
   background-color: #ececec;
   width: 100%;
+  height: 50px;
 }
 
 .talk-room-form .new_message {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .talk-room-form .new_message textarea {
   border: 1px solid #cecece;
   background-color: white;
   border-radius: 5px;
-  width: 100%;
-  height: 25px;
+  width: 80%;
   resize: none;
 }
 
-.talk-room-form input .submit {
-  background-color: white;
-  padding: 3px;
+.talk-room-form .new_message .submit {
+  background-color: cornsilk;
+  padding: 5px;
   border-radius: 10px;
 }
 /*# sourceMappingURL=show.css.map */
