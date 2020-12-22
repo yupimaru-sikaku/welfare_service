@@ -1,5 +1,6 @@
 // ヘッダー
 .room-header{
+  min-height: 100%;
 
   .room-header-main{
     line-height: 45px;
@@ -33,11 +34,10 @@
 
 // トーク画面
 .talk-room-content{
-  padding-top: 45px;
-  height: calc(100vh - 120px);
+  padding-top: 50px;
   overflow: scroll;
   padding: 45px 10px;
-  padding-bottom: 0px;
+  padding-bottom: 50px;
   
   img{
     display: block;
@@ -141,6 +141,7 @@
       background-color: white;
       border-radius: 5px;
       width: 80%;
+      line-height: 20px;
     }
 
     .submit{
