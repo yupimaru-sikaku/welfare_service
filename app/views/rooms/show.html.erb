@@ -24,6 +24,8 @@
     <% if @messages.present? %>
       <% @messages.each do |m| %>
         <% if m.user.nickname == current_user.nickname %>
+
+          <%#トーク（ユーザー側：右側）%>
           <div class="talk-room-list-right">
               <div class="talk-room-list-content">
                 <span>
@@ -36,7 +38,11 @@
               </div>
               <%= image_tag "kaneo.png" %>
           </div>
+          <%#//トーク（ユーザー側：右側）%>
+
         <% else %>
+
+          <%#トーク（相手側：左側）%>
           <div class="talk-room-list-left">
               <%= image_tag  "kaneo.png" %>
               <div class="talk-room-list-content">
@@ -49,6 +55,8 @@
                 </span>
               </div>
           </div>
+          <%#//トーク（相手側：左側）%>
+
         <% end %>
       <% end %>
     <% else %>
