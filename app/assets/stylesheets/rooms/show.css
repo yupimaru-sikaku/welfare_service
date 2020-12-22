@@ -33,6 +33,13 @@
   padding-bottom: 0px;
 }
 
+.talk-room-content img {
+  display: block;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+}
+
 .talk-room-content .talk-room-lists {
   height: 100%;
 }
@@ -41,39 +48,37 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 10px;
-  text-align: right;
-}
-
-.talk-room-content .talk-room-lists .talk-room-list-right img {
-  display: block;
-  border-radius: 100%;
-  width: 40px;
-  height: 40px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 10px;
 }
 
 .talk-room-content .talk-room-lists .talk-room-list-right .talk-room-list-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   padding-right: 10px;
+  max-width: 60%;
+  text-align: right;
+}
+
+.talk-room-content .talk-room-lists .talk-room-list-right .talk-room-list-content span {
+  display: block;
+  text-align: left;
   width: 100%;
 }
 
 .talk-room-content .talk-room-lists .talk-room-list-right .talk-room-list-content span:nth-child(1) {
-  display: block;
   font-size: 10px;
   color: gray;
+  text-align: right;
 }
 
 .talk-room-content .talk-room-lists .talk-room-list-right .talk-room-list-content span:nth-child(2) {
-  display: block;
   color: black;
   font-size: 12px;
+  word-wrap: break-word;
+  background-color: aquamarine;
+  border-radius: 25px;
+  padding: 10px;
 }
 
 .talk-room-content .talk-room-lists .talk-room-list-left {
@@ -81,12 +86,6 @@
   display: -ms-flexbox;
   display: flex;
   margin-top: 10px;
-}
-
-.talk-room-content .talk-room-lists .talk-room-list-left img {
-  border-radius: 100%;
-  width: 40px;
-  height: 40px;
 }
 
 .talk-room-content .talk-room-lists .talk-room-list-left .talk-room-list-content {
@@ -100,16 +99,21 @@
   padding-left: 10px;
 }
 
-.talk-room-content .talk-room-lists .talk-room-list-left .talk-room-list-content span:nth-child(1) {
+.talk-room-content .talk-room-lists .talk-room-list-left .talk-room-list-content span {
   display: block;
+}
+
+.talk-room-content .talk-room-lists .talk-room-list-left .talk-room-list-content span:nth-child(1) {
   font-size: 10px;
   color: gray;
 }
 
 .talk-room-content .talk-room-lists .talk-room-list-left .talk-room-list-content span:nth-child(2) {
-  display: block;
   color: black;
   font-size: 12px;
+  background-color: #f3f1f1;
+  border-radius: 25px;
+  padding: 10px;
 }
 
 .talk-room-form {

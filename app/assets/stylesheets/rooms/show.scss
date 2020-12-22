@@ -38,68 +38,74 @@
   padding: 45px 10px;
   padding-bottom: 0px;
   
+  img{
+    display: block;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+  }
+
   .talk-room-lists{
     height: 100%;
-  
+
     .talk-room-list-right{
       display: flex;
-      margin-top: 10px;
-      text-align: right;
+      justify-content: flex-end;
+      margin: 10px;
 
-      img{
-        display: block;
-        border-radius: 100%;
-        width: 40px;
-        height: 40px;
-      }
 
       .talk-room-list-content{
-        display: flex;
-        flex-direction: column;
         padding-right: 10px;
-        width: 100%;
-
+        max-width: 60%;
+        text-align: right;
+        
         span{
-
+          display: block;
+          text-align: left;
+          width: 100%;
+          
           &:nth-child(1){
-            display: block;
             font-size: 10px;
             color: gray;
+            text-align: right;
           }
+          
           &:nth-child(2){
-            display: block;
             color: black;
             font-size: 12px;
+            word-wrap: break-word;
+            background-color: aquamarine;
+            border-radius: 25px;
+            padding: 10px;
           }
         }
       }
     }
+    
     .talk-room-list-left{
       display: flex;
       margin-top: 10px;
-  
-      img{
-        border-radius: 100%;
-        width: 40px;
-        height: 40px;
-      }
-
+      
+      
       .talk-room-list-content{
         display: flex;
         flex-direction: column;
         padding-left: 10px;
-
+        
         span{
-
+          display: block;
+          
           &:nth-child(1){
-            display: block;
             font-size: 10px;
             color: gray;
           }
+          
           &:nth-child(2){
-            display: block;
             color: black;
             font-size: 12px;
+            background-color: #f3f1f1;
+            border-radius: 25px;
+            padding: 10px;
           }
         }
       }
