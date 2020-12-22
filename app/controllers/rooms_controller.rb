@@ -1,35 +1,33 @@
 class RoomsController < ApplicationController
 
-  def index
-  end
-
-  def new
-    @room = Room.new
-  end
+  before_action :authenticate_user!
 
   def create
-    binding.pry
-    # １.room_params[:user_ids][0]でチャットしたいユーザーのIDを取得し、名前も取得 → Roomにデータを保存 → なので下のストロングパラメーターはuser_ids:[]のみ取得。
-    # 2. createメソッドでは何故かroom_usersテーブルに一緒に保存されないため、それぞれのuser_idを取得してRoomUserモデルに2回保存作業をしている
-    if @room = Room.create(name: User.find(room_params[:user_ids][0]).nickname)
-      RoomUser.create(user_id: room_params[:user_ids][0], room_id: @room.id)
-      RoomUser.create(user_id: room_params[:user_ids][1], room_id: @room.id)
-      redirect_to "/rooms"
-    else
-      render :new
-    end
-
-  end
-
-  def destroy
+    @room = Room.create
+    @room_user1 = RoomUser.create(room_id: @room.id, user_id: current_user.id)
+    @room_user2 = RoomUser.create(room_id: @room.id, user_id: room_params[:user_id])
+    redirect_to "/rooms/#{@room.id}"
   end
   
+  def show
+    @room = Room.find(params[:id])
+    if RoomUser.where(user_id: current_user.id,room_id: @room.id).present?
+      @messages = @room.messages
+      @message = Message.new
+      @room_users = @room.room_users
+    else
+      redirect_back(fallback_location: root_path)
+    end
+  end
 
+  def index
+    @rooms = current_user.rooms.joins(:messages).includes(:messages).order("messages.created_at DESC")
+  end
+  
   private
-
-  # 配列に対して保存を許可したい場合は、キーに対し[]を値として記述する。
+  
   def room_params
-    params.require(:room).permit(user_ids: [])
+    params.require(:room_user).permit(:user_id)
   end
 
 end

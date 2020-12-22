@@ -1,0 +1,119 @@
+.room-header .room-header-main {
+  line-height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #ededed;
+  padding: 0 25px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background-color: white;
+}
+
+.room-header .room-header-main a {
+  display: block;
+  height: 45px;
+  font-size: 25px;
+  color: black;
+}
+
+.room-header .room-header-main .room-header-title {
+  font-size: 20px;
+}
+
+.talk-room-content {
+  padding-top: 45px;
+  height: calc(100vh - 100px);
+  overflow: scroll;
+  padding: 45px 10px;
+  padding-bottom: 0px;
+}
+
+.talk-room-content .talk-room-lists {
+  height: 100%;
+}
+
+.talk-room-content .talk-room-lists .talk-room-list-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  text-align: right;
+}
+
+.talk-room-content .talk-room-lists .talk-room-list-right img {
+  display: block;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+}
+
+.talk-room-content .talk-room-lists .talk-room-list-right .talk-room-list-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-right: 10px;
+  width: 100%;
+}
+
+.talk-room-content .talk-room-lists .talk-room-list-right .talk-room-list-content span:nth-child(1) {
+  display: block;
+  font-size: 10px;
+  color: gray;
+}
+
+.talk-room-content .talk-room-lists .talk-room-list-right .talk-room-list-content span:nth-child(2) {
+  display: block;
+  color: black;
+  font-size: 12px;
+}
+
+.talk-room-content .talk-room-lists .talk-room-list-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+
+.talk-room-content .talk-room-lists .talk-room-list-left img {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+}
+
+.talk-room-content .talk-room-lists .talk-room-list-left .talk-room-list-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 10px;
+}
+
+.talk-room-content .talk-room-lists .talk-room-list-left .talk-room-list-content span:nth-child(1) {
+  display: block;
+  font-size: 10px;
+  color: gray;
+}
+
+.talk-room-content .talk-room-lists .talk-room-list-left .talk-room-list-content span:nth-child(2) {
+  display: block;
+  color: black;
+  font-size: 12px;
+}
+
+.talk-room-form {
+  background-color: red;
+  height: 100px;
+}
+/*# sourceMappingURL=show.css.map */

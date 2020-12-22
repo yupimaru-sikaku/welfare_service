@@ -58,3 +58,4 @@ gem 'active_hash'
 gem 'ransack'
 gem 'jp_prefecture'
 gem 'jquery-rails' 
+gem "acts_as_follower", github: "tcocca/acts_as_follower"

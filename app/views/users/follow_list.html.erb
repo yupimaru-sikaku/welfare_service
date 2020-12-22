@@ -7,7 +7,7 @@
       <% end %>
     </div>
     <div class="room-header-title">
-      <p>Direct Message</p>
+      <p>フォローリスト</p>
     </div>
     <div class="create-room">
       <%= link_to "/users/follow_list/#{current_user.id}" do %>
@@ -21,30 +21,22 @@
 </div>
 <%#//ヘッダー%>
 
-<%#部屋一覧%>
-<div class="room-content">
-  <div class="room-lists">
 
-    <%#各トークルーム%>
-    <% @rooms.each do |room| %>
-      <div class="room-list">
-        <%= link_to room_path(room) do %>
+<%#フォロー一覧%>
+<div class="follow-content">
+  <div class="follow-lists">
+    <p>チャットしたいメンバーを選んで下さい</p>
+    <%#各フォローリスト%>
+    <% @users.all_following.each do |user| %>
+      <div class="follow-list">
+        <%= link_to user_path(user.id) do %>
           <%= image_tag "kaneo.png" %>
-          <div class="room-list-content">
-            <span>
-              <%= opponent_user(room) %>
-            </span>
-            <span>
-              <%= most_new_message_preview(room) %>
-            </span>
-          </div>
+          <p><%= user.nickname %></p>   
         <% end %>
       </div>
     <% end %>
-    <%#//各トークルーム%>
+    <%#//各フォローリスト%>
 
   </div>
 </div>
-<%#//部屋一覧%>
-
-
+<%#//フォロー一覧%>
