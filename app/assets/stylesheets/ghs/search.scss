@@ -56,11 +56,13 @@
         
         a{
           box-shadow: 3px 3px 5px #a78b90;
-          padding: 10px 20px;
+          padding: 10px;
+          width: 160px;
           border-radius: 5px;
           color: white;
           text-decoration: none;
           font-size: 14px;
+          text-align: center;
           
           &:nth-child(1){
             background-color: orange;
