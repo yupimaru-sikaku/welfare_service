@@ -1,0 +1,14 @@
+.gh-content{
+
+  .gh-search-forms{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .gh-search-form{
+      background-color: aqua;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  }
+}

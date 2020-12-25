@@ -1,3 +1,4 @@
+# チャットルームでのメッセージ機能で実装
 class Message < ApplicationRecord
 
   belongs_to :user

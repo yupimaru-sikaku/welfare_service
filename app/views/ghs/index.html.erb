@@ -1,0 +1,62 @@
+<%#ヘッダー%>
+<%= render partial: "shared/header" %>
+<%#//ヘッダー%>
+
+<div class="gh-content">
+
+  <%# 検索フォーム %>
+  <%= search_form_for @p, url: search_ghs_path, class: "gh-search-forms" do |f|  %>
+    <%#検索項目%>
+    <div class="gh-search-form">
+      <%= f.label :prefecutre_id_eq, '都道府県' %>
+      <%= f.collection_select :prefecture_id_eq, Prefecture.all, :id, :name, include_blank: '指定なし', selected: 27 %>
+    </div>
+    <div class="gh-search-form">
+      <%= f.label :osaka_city_id_eq, '市町村' %>
+      <%= f.collection_select :osaka_city_id_eq, OsakaCity.all, :id, :name, include_blank: '指定なし', selected: 1 %>
+    </div>
+    <div class="gh-search-form">
+      <%= f.label :osaka_ward_id_eq, '区（大阪市、堺市の方のみ選択）' %>
+      <%= f.collection_select :osaka_ward_id_eq, OsakaWard.all, :id, :name, include_blank: '指定なし'%>
+    </div>
+    <div class="gh-search-form">
+      <%= f.label :gender_id_eq, '同居される方の性別' %>
+      <%= f.collection_radio_buttons :gender_id_eq, Gender.all, :id, :name, checked: 1 %>
+    </div>
+    <div class="gh-search-form">
+      <%= f.label :residential_style_id_eq, 'ご希望の住居タイプ' %>
+      <%= f.collection_radio_buttons :residential_style_id_eq, ResidentialStyle.all, :id, :name, checked: 1  %>
+    </div>
+    <div class="gh-search-form">
+      <%= f.label :barrier_free_id_eq, 'バリアフリーの希望' %>
+      <%= f.collection_radio_buttons :barrier_free_id_eq, BarrierFree.all, :id, :name, checked: 1 %>
+    </div>
+    <div class="gh-search-form">
+      <%= f.label :use_holiday_id_eq, '土日祝の利用' %>
+      <%= f.collection_radio_buttons :use_holiday_id_eq, UseHoliday.all, :id, :name, checked: 1 %>
+    </div>
+    <div class="gh-search-form">
+      <%= f.label :gh_service_id_eq, 'サービスの種類' %>
+      <%= f.collection_radio_buttons :gh_service_id_eq, GhService.all, :id, :name, checked: 1 %>
+    </div>
+    <div class="gh-search-form">
+      <%= f.label :staff_time_id_eq, 'スタッフの配置時間帯' %>
+      <%= f.collection_radio_buttons :staff_time_id_eq, StaffTime.all, :id, :name, checked: 1  %>
+    </div>
+    <div class="gh-search-form">
+      <%= f.label :from_station_id_eq, '最寄り駅から徒歩何分' %>
+      <%= f.collection_radio_buttons :from_station_id_eq, FromStation.all, :id, :name, checked: 1 %>
+    </div>
+    <div class="gh-search-form-submit">
+      <%= f.submit '検索' %>
+    </div>
+    <%#//検索項目%>
+  <% end %>
+  <%#// 検索フォーム %>
+  
+  <%# GH事業所一覧 %>
+
+  <%#// GH事業所一覧 %>
+  
+  
+</div>

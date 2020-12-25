@@ -1,3 +1,4 @@
+# フォロー機能実装で使用
 class Follow < ActiveRecord::Base
 
   extend ActsAsFollower::FollowerLib

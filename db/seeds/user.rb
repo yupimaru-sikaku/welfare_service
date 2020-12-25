@@ -1,0 +1,5 @@
+User.create(nickname: "ゆぴまる1", email: "1@icloud.com", password: "111111", password_confirmation: "111111")
+User.create(nickname: "ゆぴまる2", email: "2@icloud.com", password: "111111", password_confirmation: "111111")
+User.create(nickname: "ゆぴまる3", email: "3@icloud.com", password: "111111", password_confirmation: "111111")
+User.create(nickname: "ゆぴまる4", email: "4@icloud.com", password: "111111", password_confirmation: "111111")
+User.create(nickname: "ゆぴまる5", email: "5@icloud.com", password: "111111", password_confirmation: "111111")

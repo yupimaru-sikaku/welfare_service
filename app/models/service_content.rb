@@ -1,10 +1,10 @@
+# サービス検索で使用
 class ServiceContent < ActiveHash::Base
 
   include ActiveHash::Associations
   has_many :services
 
   self.data = [
-    { id: 0, name: '---' },
     { id: 1, name: '居宅介護' },
     { id: 2, name: '重度介護訪問' },
     { id: 3, name: '同行援護' },
@@ -24,7 +24,7 @@ class ServiceContent < ActiveHash::Base
     { id: 17, name: '計画相談支援' },
     { id: 18, name: '障害児相談支援' },
     { id: 19, name: '地域移行支援' },
-    { id: 20, name: '地域定着支援' },
+    { id: 20, name: '地域定着支援' }
   ]
 
 end

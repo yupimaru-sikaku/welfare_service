@@ -29,7 +29,7 @@
           <div class="talk-room-list-right">
               <div class="talk-room-list-content">
                 <span>
-                  <%= m.user.nickname %>
+                  <%= m.user.nickname %><br>
                   <%= m.created_at.strftime("%m/%d %H:%M") %>
                 </span>
                 <span class="right-content">
@@ -47,7 +47,7 @@
               <%= image_tag  "kaneo.png" %>
               <div class="talk-room-list-content">
                 <span>
-                  <%= m.user.nickname %>
+                  <%= m.user.nickname %><br>
                   <%= m.created_at.strftime("%m/%d %H:%M") %>
                 </span>
                 <span>
@@ -68,7 +68,7 @@
 
 <div class="talk-room-form">
   <%= form_for @message, class: "contentarea" do |f| %>
-    <%= f.text_area :content, class: "textarea", :size => 70 %>
+    <%= f.text_area :content, id: "textarea", :size => 70 %>
     <%= f.hidden_field :room_id, :value => @room.id %>
     <%= f.submit "投稿", class: "submit" %>
   <% end %>
