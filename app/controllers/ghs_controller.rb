@@ -8,6 +8,10 @@ class GhsController < ApplicationController
     @results = @p.result
   end
 
+  def show
+    @gh = Gh.find(params[:id])
+  end
+
   private
   def search_gh
     @p = Gh.ransack(params[:q])

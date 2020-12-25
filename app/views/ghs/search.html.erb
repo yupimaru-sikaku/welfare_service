@@ -18,7 +18,7 @@
     <% if @results.length != 0 %>      
       <% @results.each do |result| %>
         <div class="gh-search-result">
-          <%= link_to  "#" do %>
+          <%= link_to  gh_path(result.id) do %>
             <div class="gh-search-result-name">
               <%= "#{result.name}" %>
             </div>

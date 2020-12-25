@@ -62,11 +62,11 @@
 .gh-search-content .gh-search-results .gh-search-result .gh-search-result-form a {
   -webkit-box-shadow: 3px 3px 5px #a78b90;
           box-shadow: 3px 3px 5px #a78b90;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 5px;
   color: white;
   text-decoration: none;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .gh-search-content .gh-search-results .gh-search-result .gh-search-result-form a:nth-child(1) {
