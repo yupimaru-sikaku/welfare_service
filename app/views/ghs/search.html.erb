@@ -17,8 +17,8 @@
     <%#検索結果一覧%>
     <% if @results.length != 0 %>      
       <% @results.each do |result| %>
-        <%= link_to  "#" do %>
-          <div class="gh-search-result">
+        <div class="gh-search-result">
+          <%= link_to  "#" do %>
             <div class="gh-search-result-name">
               <%= "#{result.name}" %>
             </div>
@@ -30,21 +30,22 @@
                 <p><%= "#{result.station}駅から徒歩#{FromStation.find(params[:q][:from_station_id_eq]).name}" %></p>
                 <p><%= "預り金： #{result.price.to_s(:delimited)}円" %></p>
                 <p><%= "#{ResidentialStyle.find(params[:q][:residential_style_id_eq]).name}" %></p>
-                <p><%= "築年数: #{Gender.find(params[:q][:gender_id_eq]).name}" %></p>
+                <p><%= "築年数: #{Date.today.strftime("%Y").to_i - result.construction_year.to_i}年" %></p>
+                <p><%= "情報更新日: #{result.updated_at.strftime("%Y年%m月%d日")}" %></p>
               </div>
             </div>
-            <div class="gh-search-result-form">
-              <%= link_to "#" do %>
-                <i class="fas fa-comments"></i>
-                <span>事業者とチャット</span>
-              <% end %>
-              <%= link_to "#" do %>
-                <i class="fas fa-star"></i>
-                <span>お気に入り</span>
-              <% end %>
-            </div>
+          <% end %>
+          <div class="gh-search-result-form">
+            <%= link_to "#" do %>
+              <i class="fas fa-comments"></i>
+              <span>事業者とチャット</span>
+            <% end %>
+            <%= link_to "#" do %>
+              <i class="fas fa-star"></i>
+              <span>お気に入り</span>
+            <% end %>
           </div>
-        <% end %>
+        </div>
       <% end %>
     <% else %>
       該当する事業所はありません

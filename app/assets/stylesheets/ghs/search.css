@@ -39,9 +39,10 @@
 
 .gh-search-content .gh-search-results .gh-search-result .gh-search-result-content p {
   font-size: 14px;
-  color: cadetblue;
+  color: black;
   padding-left: 10px;
-  padding-bottom: 7px;
+  padding-bottom: 2px;
+  font-weight: 300;
 }
 
 .gh-search-content .gh-search-results .gh-search-result .gh-search-result-content p:nth-child(2) {
@@ -55,26 +56,23 @@
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 15px;
+  padding: 15px 0px;
+}
+
+.gh-search-content .gh-search-results .gh-search-result .gh-search-result-form a {
+  -webkit-box-shadow: 3px 3px 5px #a78b90;
+          box-shadow: 3px 3px 5px #a78b90;
+  padding: 8px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+}
+
+.gh-search-content .gh-search-results .gh-search-result .gh-search-result-form a:nth-child(1) {
+  background-color: orange;
 }
 
 .gh-search-content .gh-search-results .gh-search-result .gh-search-result-form a:nth-child(2) {
-  background-color: orange;
-  padding: 8px;
-  border-radius: 5px;
-  color: white;
-  text-decoration: none;
-  -webkit-box-shadow: 3px 3px 5px #a78b90;
-          box-shadow: 3px 3px 5px #a78b90;
-}
-
-.gh-search-content .gh-search-results .gh-search-result .gh-search-result-form a:nth-child(3) {
   background-color: #d4c8b2;
-  padding: 8px;
-  border-radius: 5px;
-  color: white;
-  text-decoration: none;
-  -webkit-box-shadow: 3px 3px 5px #a78b90;
-          box-shadow: 3px 3px 5px #a78b90;
 }
 /*# sourceMappingURL=search.css.map */

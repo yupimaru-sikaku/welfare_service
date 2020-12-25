@@ -37,9 +37,10 @@
         }
         p{
           font-size: 14px;
-          color: cadetblue;
+          color: black;
           padding-left: 10px;
-          padding-bottom: 7px;
+          padding-bottom: 2px;
+          font-weight: 300;
 
           &:nth-child(2){
             color: #f16a6a;
@@ -51,25 +52,21 @@
       .gh-search-result-form{
         display: flex;
         justify-content: space-around;
-        padding: 15px;
-
+        padding: 15px 0px;
+        
         a{
-          &:nth-child(2){
+          box-shadow: 3px 3px 5px #a78b90;
+          padding: 8px;
+          border-radius: 5px;
+          color: white;
+          text-decoration: none;
+          
+          &:nth-child(1){
             background-color: orange;
-            padding: 8px;
-            border-radius: 5px;
-            color: white;
-            text-decoration: none;
-            box-shadow: 3px 3px 5px #a78b90;
           }
 
-          &:nth-child(3){
+          &:nth-child(2){
             background-color: #d4c8b2;
-            padding: 8px;
-            border-radius: 5px;
-            color: white;
-            text-decoration: none;
-            box-shadow: 3px 3px 5px #a78b90;
           }
         }
       }
