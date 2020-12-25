@@ -39,18 +39,21 @@
 					<span>管理者はこちら</span>
 				<% end %>
 			</li>
-			<li>
-				<%= link_to new_user_registration_path, class: "registration-img" do %>
-					<i class="fas fa-sign-in-alt"></i>
-					<span>新規登録</span>
-				<% end %>
-			</li>
-			<li>
-				<%= link_to new_user_session_path, class: "registration-img" do %>
-					<i class="fas fa-key"></i>
-					<span>ログイン</span>
-				<% end %>
-			</li>
+			<% if user_signed_in? %>
+			<% else %>
+				<li>
+					<%= link_to new_user_registration_path, class: "registration-img" do %>
+						<i class="fas fa-sign-in-alt"></i>
+						<span>新規登録</span>
+					<% end %>
+				</li>
+				<li>
+					<%= link_to new_user_session_path, class: "registration-img" do %>
+						<i class="fas fa-key"></i>
+						<span>ログイン</span>
+					<% end %>
+				</li>
+			<% end %>
 			<li>
 				<%= link_to destroy_user_session_path, method: :delete, class: "registration-img" do %>
 					<i class="fas fa-door-open"></i>
