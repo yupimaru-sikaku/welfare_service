@@ -17,6 +17,7 @@
 .gh-search-content .gh-search-results .gh-search-result {
   background-color: white;
   border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 .gh-search-content .gh-search-results .gh-search-result .gh-search-result-name {
@@ -50,7 +51,7 @@
   font-weight: bold;
 }
 
-.gh-search-content .gh-search-results .gh-search-result .gh-search-result-form {
+.gh-search-content .gh-search-results .gh-search-result .gh-search-result-contact-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,7 +60,7 @@
   padding: 15px 0px;
 }
 
-.gh-search-content .gh-search-results .gh-search-result .gh-search-result-form a {
+.gh-search-content .gh-search-results .gh-search-result .gh-search-result-contact-form a {
   -webkit-box-shadow: 3px 3px 5px #a78b90;
           box-shadow: 3px 3px 5px #a78b90;
   padding: 10px;
@@ -71,11 +72,11 @@
   text-align: center;
 }
 
-.gh-search-content .gh-search-results .gh-search-result .gh-search-result-form a:nth-child(1) {
-  background-color: orange;
+.gh-search-content .gh-search-results .gh-search-result .gh-search-result-contact-form a:nth-child(1) {
+  background-color: #0979ec;
 }
 
-.gh-search-content .gh-search-results .gh-search-result .gh-search-result-form a:nth-child(2) {
-  background-color: #d4c8b2;
+.gh-search-content .gh-search-results .gh-search-result .gh-search-result-contact-form a:nth-child(2) {
+  background-color: orange;
 }
 /*# sourceMappingURL=search.css.map */

@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :services, only: [:index]
 
   # GH（共同生活援助）
-  resources :ghs, only: [:index, :search, :show] do
+  resources :ghs, only: [:index, :search, :show, :edit, :update] do
     collection do
       get 'search'
     end

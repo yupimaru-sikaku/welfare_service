@@ -50,6 +50,10 @@ ActiveRecord::Schema.define(version: 2020_12_23_054158) do
     t.string "name", null: false
     t.string "station", null: false
     t.integer "price", null: false
+    t.integer "house_rent", null: false
+    t.integer "food_expenses", null: false
+    t.integer "daily_necessities_costs", null: false
+    t.integer "utility_costs", null: false
     t.integer "capacity", null: false
     t.string "phone_number"
     t.string "fax_number"

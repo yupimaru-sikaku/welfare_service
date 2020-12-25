@@ -24,7 +24,7 @@
             </div>
             <div class="gh-search-result-content">
               <div class="gh-search-result-content-img">
-                <%= image_tag  "sazanka.png" %>
+                <%= image_tag  "koki.png" %>
               </div>
               <div class="gh-search-result-content-info">
                 <p><%= "#{result.station}駅から徒歩#{FromStation.find(params[:q][:from_station_id_eq]).name}" %></p>
@@ -35,7 +35,7 @@
               </div>
             </div>
           <% end %>
-          <div class="gh-search-result-form">
+          <div class="gh-search-result-contact-form">
             <%= link_to "#" do %>
               <i class="fas fa-comments"></i>
               <span>事業者とチャット</span>

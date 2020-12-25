@@ -1,0 +1,132 @@
+.gh-show-content .gh-show-edit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 15px 0px;
+}
+
+.gh-show-content .gh-show-edit a {
+  -webkit-box-shadow: 3px 3px 5px #a78b90;
+          box-shadow: 3px 3px 5px #a78b90;
+  padding: 10px;
+  width: 120px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  text-align: center;
+}
+
+.gh-show-content .gh-show-edit a:nth-child(1) {
+  background-color: #d6cdbd;
+}
+
+.gh-show-content .gh-show-edit a:nth-child(2) {
+  background-color: #6b6863;
+}
+
+.gh-show-content .gh-show-name {
+  padding: 10px;
+  text-align: center;
+  -webkit-box-shadow: 2px 9px 3px -3px rgba(24, 211, 22, 0.4);
+  margin: 0 15%;
+}
+
+.gh-show-content .gh-show-img {
+  margin: 20px 0px 0px;
+}
+
+.gh-show-content .gh-show-img img {
+  width: 100%;
+}
+
+.gh-show-content .gh-show-contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 15px 0px;
+}
+
+.gh-show-content .gh-show-contact-form a {
+  -webkit-box-shadow: 3px 3px 5px #a78b90;
+          box-shadow: 3px 3px 5px #a78b90;
+  padding: 10px;
+  width: 170px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  text-align: center;
+}
+
+.gh-show-content .gh-show-contact-form a:nth-child(1) {
+  background-color: #0979ec;
+}
+
+.gh-show-content .gh-show-contact-form a:nth-child(2) {
+  background-color: orange;
+}
+
+.gh-show-content .gh-show-price {
+  padding: 0px 10px;
+  padding-bottom: 10px;
+}
+
+.gh-show-content .gh-show-price p:nth-child(1) {
+  color: #FF5C68;
+  font-size: 20px;
+  font-weight: bold;
+  -webkit-text-stroke: 1px  #FF5C68;
+}
+
+.gh-show-content .gh-show-price p:nth-child(2) {
+  font-size: 10px;
+}
+
+.gh-show-content .gh-show-capacity {
+  text-align: center;
+  padding: 10px;
+  background-color: beige;
+}
+
+.gh-show-content .gh-show-infos {
+  padding: 10px 0px;
+}
+
+.gh-show-content .gh-show-infos .gh-show-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  margin: 20px;
+}
+
+.gh-show-content .gh-show-infos .gh-show-info p:nth-child(1) {
+  background-color: #cecece;
+  width: 65px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.gh-show-content .gh-show-infos .gh-show-info p:nth-child(2) {
+  margin-left: 10px;
+}
+
+.gh-show-content .gh-show-description {
+  background-color: #dfffe0;
+  margin: 0 10px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.gh-show-content .gh-show-description p:nth-child(1) {
+  text-align: center;
+}
+/*# sourceMappingURL=show.css.map */

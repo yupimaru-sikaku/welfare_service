@@ -2,8 +2,90 @@
 <%= render partial: "shared/header" %>
 <%#//ヘッダー%>
 
+
+<%# GH詳細統括 %>
 <div class="gh-show-content">
 
-  link<div class="gh-show-edit">
+
+  <%# GH事業者編集画面 %>
+  <div class="gh-show-edit">
+    <%= link_to "編集する", "#" %>
+    <%= link_to "削除する", "#" %>
   </div>
+  <%# //GH事業者編集画面 %>
+
+  <%# GH名前 %>
+  <div class="gh-show-name">
+    <p><%= @gh.name %></p>
+  </div>
+  <%# //GH名前 %>
+
+  <%# GH写真 %>
+  <div class="gh-show-img">
+    <%= image_tag  "sazanka.png" %>
+  </div>
+  <%# //GH写真 %>
+
+  <%# 問い合わせ %>
+  <div class="gh-show-contact-form">
+    <%= link_to "#" do %>
+      <i class="fas fa-comments"></i>
+      <span>空室状況問い合わせ</span>
+    <% end %>
+    <%= link_to "#" do %>
+      <i class="fas fa-star"></i>
+      <span>お気に入り</span>
+    <% end %>
+  </div>
+  <%# //問い合わせ %>
+
+  <%# GH預かり金 %>
+  <div class="gh-show-price">
+    <p><%= "#{@gh.price.to_s(:delimited)}円" %></p>
+    <p><%= "（家賃#{@gh.house_rent.to_s(:delimited)}、食費#{@gh.food_expenses.to_s(:delimited)}、日用品費#{@gh.daily_necessities_costs.to_s(:delimited)}、水道光熱費#{@gh.utility_costs.to_s(:delimited)}）" %></p>
+  </div>
+  <%# //GH預かり金 %>
+
+  <%# 定員 %>
+  <div class="gh-show-capacity">
+    <p><%= "定員数：#{@gh.capacity}名" %></p>
+  </div>
+  <%# //定員 %>
+
+  <%# 他情報 %>
+  <div class="gh-show-infos">
+    <div class="gh-show-info">
+      <p>交通</p>
+      <p><%= "#{@gh.station}から徒歩#{@gh.from_station.name}" %></p>
+    </div>
+    <div class="gh-show-info">
+      <p>タイプ</p>
+      <p><%= "#{@gh.residential_style.name}" %></p>
+    </div>
+    <div class="gh-show-info">
+      <p>築年数</p>
+      <p><%= "#{Date.today.strftime("%Y").to_i - @gh.construction_year.to_i}年" %></p>
+    </div>
+    <div class="gh-show-info">
+      <p>TEL</p>
+      <p><%= link_to "#{@gh.phone_number}", "tel:" + @gh.phone_number %></p>
+    </div>
+    <div class="gh-show-info">
+      <p>FAX</p>
+      <p><%= link_to "#{@gh.fax_number}", "tel:" + @gh.phone_number %></p>
+    </div>
+    <div class="gh-show-info">
+      <p>メール</p>
+      <p><%= link_to "#{@gh.email}", "mailto:#{@gh.email}" %></p>
+    </div>
+  </div>
+  <%# //他情報 %>
+
+  <%# 施設説明 %>
+  <div class="gh-show-description">
+    <p>この物件について</p>
+    <p><%= simple_format(@gh.description) %></p>
+  </div>
+  <%# //施設説明 %>
+
 </div>

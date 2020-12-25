@@ -20,6 +20,7 @@
 
       background-color: white;
       border-radius: 5px;
+      margin-bottom: 20px;
 
       .gh-search-result-name{
         padding: 10px;
@@ -49,7 +50,7 @@
         }
       }
 
-      .gh-search-result-form{
+      .gh-search-result-contact-form{
         display: flex;
         justify-content: space-around;
         padding: 15px 0px;
@@ -65,11 +66,11 @@
           text-align: center;
           
           &:nth-child(1){
-            background-color: orange;
+            background-color: #0979ec;
           }
 
           &:nth-child(2){
-            background-color: #d4c8b2;
+            background-color: orange;
           }
         }
       }
