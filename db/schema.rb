@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 2020_12_26_054707) do
     t.integer "daily_necessities_costs", null: false
     t.integer "utility_costs", null: false
     t.integer "capacity", null: false
+    t.integer "availability", null: false
     t.string "phone_number"
     t.string "fax_number"
     t.string "email"

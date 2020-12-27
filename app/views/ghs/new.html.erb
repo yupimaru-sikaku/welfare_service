@@ -2,15 +2,19 @@
 <%= render partial: "shared/header" %>
 <%#//ヘッダー%>
 
+<%#GH新規作成%>
 <div class="gh-new-content">
 
+<%#GH新規作成タイトル%>
   <div class="gh-new-title">
     <p>共同生活援助</p>
     <p>事業所を登録します。各項目を記入して下さい</p>
   </div>
+<%#//GH新規作成タイトル%>
 
 
-  <%= form_with model: @gh, class: 'gh-new-forms' do |f| %>
+  <%#GH新規作成フォーム%>
+  <%= form_with model: @gh, class: 'gh-new-forms', local: true do |f| %>
     <div class="gh-new-form">
       <div class="gh-new-form-1">
         <%= f.label :name, '事業所名'%>
@@ -303,5 +307,6 @@
     </div>
 
   <% end %>
+  <%#GH新規作成フォーム%>
 
 </div>

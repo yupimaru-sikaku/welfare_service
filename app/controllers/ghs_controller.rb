@@ -10,10 +10,9 @@ class GhsController < ApplicationController
 
   def create
     @gh = Gh.new(gh_params)
-    binding.pry
     if @gh.valid?
-      @gh = Gh.save
-      redirect_to ghs_path
+      @gh.save
+      redirect_to admin_request_users_path
     else
       render :new
     end
@@ -30,6 +29,7 @@ class GhsController < ApplicationController
   private
 
   def search_gh
+    # binding.pry
     @p = Gh.ransack(params[:q])
   end
 
@@ -43,6 +43,7 @@ class GhsController < ApplicationController
       :daily_necessities_costs,
       :utility_costs,
       :capacity,
+      :availability,
       :phone_number,
       :fax_number,
       :email,
