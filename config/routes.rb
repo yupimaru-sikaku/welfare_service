@@ -1,17 +1,26 @@
 Rails.application.routes.draw do
 
-  get 'ghs/index'
+  # ユーザー専用
   devise_for :users
   root to: 'services#index'
 
-  resources :users
+  resources :users do
+    collection do
+      get 'admin_request'
+    end
+  end
+
   resources :rooms, only: [:index, :new, :create, :destroy, :show]
   resources :messages
 
-  resources :services, only: [:index]
+  resources :services do
+    collection do
+      get 'admin_index'
+    end
+  end
 
   # GH（共同生活援助）
-  resources :ghs, only: [:index, :search, :show, :edit, :update] do
+  resources :ghs do
     collection do
       get 'search'
     end

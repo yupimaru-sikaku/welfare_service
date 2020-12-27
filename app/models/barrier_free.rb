@@ -4,7 +4,8 @@ class BarrierFree < ActiveHash::Base
   has_many :ghs
 
   self.data = [
-    {id: 1, name: '希望する'},
-    {id: 2, name: '希望しない'}
+    {id: 1, name: 'どちらでもよい'},
+    {id: 2, name: '希望する'}
   ]
+  
 end

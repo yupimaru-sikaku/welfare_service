@@ -1,9 +1,7 @@
-<% if user_signed_in? %>
-	<p><%= current_user.nickname %></p>
-<% end %>
-
+<%#ヘッダー%>
 <div class="header">
 
+	<%#左上のハンバーガーメニュー%>
 	<input id="menu" type="checkbox">
 	<label for="menu" class="open">
 		<span></span>
@@ -11,15 +9,27 @@
 		<span></span>
 	</label>
 	<label for="menu" class="close-2"></label>
+	<%#//左上のハンバーガーメニュー%>
+
+
+	<%#ハンバーガーメニュークリック後に表示されるコンテンツ%>
 	<div class="content">
 		<ul class="content-lists">
+			
+			<% if user_signed_in? %>
 			<li>
 				<div class="user-icon">
 					<%= link_to "#", class: "icon-img" do %>
-						<%= image_tag "kaneo.png" %>
-						<span>ユーザーはワシじゃ！</span>
+						<img src=<%= current_user.image %>>
+						<span><%= current_user.nickname %></span>
 					<% end %>
 				</div>
+			</li>
+			<li>
+				<%= link_to root_path, class: "registration-img" do %>
+					<i class="fas fa-home"></i>
+					<span>トップページ</span>
+				<% end %>
 			</li>
 			<li>
 				<%= link_to rooms_path, class: "registration-img" do %>
@@ -33,13 +43,21 @@
 					<span>アカウント設定</span>
 				<% end %>
 			</li>
+			<% end %>
+
 			<li>
-				<%= link_to "#", class: "registration-img" do %>
+				<%= link_to admin_index_services_path, class: "registration-img" do %>
 					<i class="fas fa-business-time"></i>
-					<span>管理者はこちら</span>
+					<span>事業者はこちら</span>
 				<% end %>
 			</li>
 			<% if user_signed_in? %>
+				<li>
+					<%= link_to destroy_user_session_path, method: :delete, class: "registration-img" do %>
+						<i class="fas fa-door-open"></i>
+						<span>ログアウト</span>
+					<% end %>
+				</li>
 			<% else %>
 				<li>
 					<%= link_to new_user_registration_path, class: "registration-img" do %>
@@ -54,14 +72,9 @@
 					<% end %>
 				</li>
 			<% end %>
-			<li>
-				<%= link_to destroy_user_session_path, method: :delete, class: "registration-img" do %>
-					<i class="fas fa-door-open"></i>
-					<span>ログアウト</span>
-				<% end %>
-			</li>
 		</ul>
 	</div>
+	<%#//ハンバーガーメニュークリック後に表示されるコンテンツ%>
 
 	<%#会社ロゴ%>
 	<div class="header-img">
@@ -70,9 +83,13 @@
 	<%#//会社ロゴ%>
 
 	<%#ログイン後のアイコン%>
-	<div class="header-user-img">
-		<%= link_to image_tag("kaneo.png"), root_path %>
-	</div>
+	<% if user_signed_in? %>
+		<div class="header-user-img">
+			<%= link_to users_path(current_user) do %>
+				<img src=<%= current_user.image %>>
+			<% end %>
+		</div>
+	<% end %>
 	<%#//ログイン後のアイコン%>
 	
 </div>

@@ -1,0 +1,60 @@
+<%#ヘッダー%>
+<div class="registration-header">
+  <div class="registration-header-main">
+    <div class="back-to-home">
+      <%= link_to root_path do %>
+        <i class="fas fa-arrow-circle-left"></i>
+      <% end %>
+    </div>
+    <div class="registration-header-title">
+      <p>ユーザー新規登録</p>
+    </div>
+    <div class="create-room">
+      <%= link_to "#" do %>
+        <i class="fas fa-comments"></i>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%#//ヘッダー%>
+
+<%#新規登録画面%>
+<div class="resistration-content">
+  <%= form_with model: @user, url: user_registration_path, class: 'registration-fields' do |f| %>
+
+    <div class="resistration-field">
+      <%= f.label :nickname %><br />
+      <%= f.text_field :nickname, autofocus: true %>
+    </div>
+
+    <div class="registration-field">
+      <%= f.label :image %><br/>
+      <%= f.file_field :image %>
+    </div>    
+
+    <div class="resistration-field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autocomplete: "email" %>
+    </div>
+
+    <div class="resistration-field">
+      <%= f.label :password %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password, autocomplete: "new-password" %>
+    </div>
+
+    <div class="resistration-field">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Sign up" %>
+    </div>
+  <% end %>
+</div>
+<%#//新規登録画面%>
+
+<%= render "users/shared/links" %>

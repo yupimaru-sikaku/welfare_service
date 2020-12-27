@@ -4,7 +4,6 @@ class Gh < ApplicationRecord
 
   belongs_to_active_hash :prefecture
   belongs_to_active_hash :osaka_city
-  belongs_to_active_hash :osaka_ward
   belongs_to_active_hash :gender
   belongs_to_active_hash :residential_style
   belongs_to_active_hash :barrier_free

@@ -1,0 +1,307 @@
+<%#ヘッダー%>
+<%= render partial: "shared/header" %>
+<%#//ヘッダー%>
+
+<div class="gh-new-content">
+
+  <div class="gh-new-title">
+    <p>共同生活援助</p>
+    <p>事業所を登録します。各項目を記入して下さい</p>
+  </div>
+
+
+  <%= form_with model: @gh, class: 'gh-new-forms' do |f| %>
+    <div class="gh-new-form">
+      <div class="gh-new-form-1">
+        <%= f.label :name, '事業所名'%>
+        <span>必須</span>
+      </div>
+      <div class="gh-new-form-2">
+        <%= f.text_field :name, placeholder: '例）さざんか' %>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="gh-new-form">
+      <div class="gh-new-form-1">
+        <%= f.label :price, '預り金' %>
+        <span>必須</span>
+      </div>
+      <div class="gh-new-form-2">
+        <%= f.text_field :price, placeholder: '例）90000' %>
+        <span>円</span>
+      </div>
+    </div>
+
+    <div class="gh-new-form">
+      <div class="gh-new-form-1">
+        <%= f.label :house_rent, '家賃(預り金内訳)' %>
+        <span>必須</span>
+      </div>
+      <div class="gh-new-form-2">
+        <%= f.text_field :house_rent, placeholder: '例）30000' %>
+        <span>円</span>
+      </div>
+    </div>
+
+    <div class="gh-new-form">
+      <div class="gh-new-form-1">
+        <%= f.label :food_expenses, '食費(預り金内訳)' %>
+        <span>必須</span>
+      </div>
+      <div class="gh-new-form-2">
+        <%= f.text_field :food_expenses, placeholder: '例）40000' %>
+        <span>円</span>
+      </div>
+    </div>
+
+    <div class="gh-new-form">
+      <div class="gh-new-form-1">
+        <%= f.label :daily_necessities_costs, '日用品費(預り金内訳)' %>
+        <span>必須</span>
+      </div>
+      <div class="gh-new-form-2">
+        <%= f.text_field :daily_necessities_costs, placeholder: '例）10000' %>
+        <span>円</span>
+      </div>
+    </div>
+
+    <div class="gh-new-form">
+      <div class="gh-new-form-1">
+        <%= f.label :utility_costs, '水道光熱費(預り金内訳)' %>
+        <span>必須</span>
+      </div>
+      <div class="gh-new-form-2">
+        <%= f.text_field :utility_costs, placeholder: '例）10000' %>
+        <span>円</span>
+      </div>
+    </div>
+
+    <div class="gh-new-form">
+      <div class="gh-new-form-1">
+        <%= f.label :capacity, '定員数' %>
+        <span>必須</span>
+      </div>
+      <div class="gh-new-form-2">
+        <%= f.text_field :capacity, placeholder: '例）4' %>
+        <span>名</span>
+      </div>
+    </div>
+    
+    <div class="gh-new-form">
+      <div class="gh-new-form-1">
+        <%= f.label :availability, '空き状況' %>
+        <span>必須</span>
+      </div>
+      <div class="gh-new-form-2">
+        <%= f.text_field :availability, placeholder: '例）1' %>
+        <span>名</span>
+      </div>
+    </div>
+
+    <div class="gh-new-form">
+      <div class="gh-new-form-3">
+        <%= f.label :phone_number, '電話番号(ハイフンを含める)' %>
+        <span>任意</span>
+      </div>
+      <div class="gh-new-form-4">
+        <%= f.text_field :phone_number, placeholder: '例）000-0000-0000' %>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="gh-new-form">
+      <div class="gh-new-form-3">
+        <%= f.label :fax_number, 'FAX(ハイフンを含める)' %>
+        <span>任意</span>
+      </div>
+      <div class="gh-new-form-4">
+      <%= f.text_field :fax_number, placeholder: '例）00-0000-0000' %>
+      <span></span>
+      </div>
+    </div>
+
+    <div class="gh-new-form">
+      <div class="gh-new-form-3">
+        <%= f.label :email, 'メールアドレス' %>
+        <span>任意</span>
+      </div>
+      <div class="gh-new-form-4">
+        <%= f.email_field :email, placeholder: '例）sazanka@email.com' %>
+        <span></span>
+      </div>
+    </div>
+    
+    <div class="gh-new-form">
+      <div class="gh-new-form-1">
+        <%= f.label :description, '事業所説明'%>
+        <span>必須</span>
+      </div>
+      <div class="gh-new-form-2">
+        <%= f.text_area :description, placeholder: '例）家族のようなアットホーム感!!' %>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="gh-new-form">
+      <div class="gh-new-form-1">
+        <%= f.label :construction_year, '事業所設立年' %>
+        <span>必須</span>
+      </div>
+      <div class="gh-new-form-2">
+        <%= f.text_field :construction_year, placeholder: '例）1992' %>
+        <span>年</span>
+      </div>
+    </div>
+
+    <div class="gh-new-form">
+      <div class="gh-new-form-3">
+        <%= f.label :construction_month, '事業所設立月' %>
+        <span>任意</span>
+      </div>
+      <div class="gh-new-form-4">
+        <%= f.text_field :construction_month, placeholder: '例）3' %>
+        <span>月</span>
+      </div>
+    </div>
+
+    <div class="gh-new-form">
+      <div class="gh-new-form-1">
+        <%= f.label :station, '最寄り駅' %>
+        <span>必須</span>
+      </div>
+      <div class="gh-new-form-2">
+      <%= f.text_field :station, placeholder: '例）天下茶屋' %>
+      <span>駅</span>
+      </div>
+    </div>
+
+    <%#ここからActiveHash%>
+    <div class="gh-new-form-activehash">
+      <div class="gh-new-form-activehash-1">
+        <%= f.label :prefecutre_id, '都道府県' %>
+        <span>必須</span>
+      </div>
+      <%= f.collection_select :prefecture_id, Prefecture.all, :id, :name, selected: 27 %>
+    </div>
+
+    <div class="gh-new-form-activehash">
+      <div class="gh-new-form-activehash-1">
+        <%= f.label :osaka_city_id, '市町村' %>
+        <span>必須</span>
+      </div>
+      <%= f.collection_select :osaka_city_id, OsakaCity.all, :id, :name %>
+    </div>
+
+    <div class="gh-new-form-activehash">
+      <div class="gh-new-form-activehash-1">
+        <%= f.label :gender_id, '同居される方の性別' %>
+        <span>必須</span>
+      </div>
+      <div class="gh-new-form-activehash-2">
+        <% Gender.all.each do |gender| %>
+          <div class="gh-new-form-activehash-2-content">
+            <%= f.radio_button :gender_id, gender.id, id: "gender#{gender.id}" %>
+            <%= f.label :gender_id, gender.name, for: "gender#{gender.id}" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="gh-new-form-activehash">
+      <div class="gh-new-form-activehash-1">
+        <%= f.label :residential_style_id, 'ご希望の住居タイプ' %>
+        <span>必須</span>
+      </div>
+      <div class="gh-new-form-activehash-2">
+        <% ResidentialStyle.all.each do |residential_style| %>
+          <div class="gh-new-form-activehash-2-content">
+            <%= f.radio_button :residential_style_id, residential_style.id, id: "residential_style#{residential_style.id}" %>
+            <%= f.label :residential_style_id, residential_style.name, for: "residential_style#{residential_style.id}" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="gh-new-form-activehash">
+      <div class="gh-new-form-activehash-1">
+        <%= f.label :barrier_free_id, 'バリアフリーの希望' %>
+        <span>必須</span>
+      </div>
+      <div class="gh-new-form-activehash-2">
+        <% BarrierFree.all.each do |barrier_free| %>
+          <div class="gh-new-form-activehash-2-content">
+            <%= f.radio_button :barrier_free_id, barrier_free.id, id: "barrier_free#{barrier_free.id}" %>
+            <%= f.label :barrier_free_id, barrier_free.name, for: "barrier_free#{barrier_free.id}" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="gh-new-form-activehash">
+      <div class="gh-new-form-activehash-1">
+        <%= f.label :use_holiday_id, '土日祝の利用' %>
+        <span>必須</span>
+      </div>
+      <div class="gh-new-form-activehash-2">
+        <% UseHoliday.all.each do |use_holiday| %>
+          <div class="gh-new-form-activehash-2-content">
+            <%= f.radio_button :use_holiday_id, use_holiday.id, id: "use_holiday#{use_holiday.id}" %>
+            <%= f.label :use_holiday_id, use_holiday.name, for: "use_holiday#{use_holiday.id}" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="gh-new-form-activehash">
+      <div class="gh-new-form-activehash-1">
+        <%= f.label :gh_service_id, 'サービスの種類' %>
+        <span>必須</span>
+      </div>
+      <div class="gh-new-form-activehash-2">
+        <% GhService.all.each do |gh_service| %>
+          <div class="gh-new-form-activehash-2-content">
+            <%= f.radio_button :gh_service_id, gh_service.id, id: "gh_service#{gh_service.id}" %>
+            <%= f.label :gh_service_id, gh_service.name, for: "gh_service#{gh_service.id}" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="gh-new-form-activehash">
+      <div class="gh-new-form-activehash-1">
+        <%= f.label :staff_time_id, 'スタッフの配置時間帯' %>
+        <span>必須</span>
+      </div>
+      <div class="gh-new-form-activehash-2">
+        <% StaffTime.all.each do |staff_time| %>
+          <div class="gh-new-form-activehash-2-content">
+            <%= f.radio_button :staff_time_id, staff_time.id, id: "staff_time#{staff_time.id}" %>
+            <%= f.label :staff_time_id, staff_time.name, for: "staff_time#{staff_time.id}" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="gh-new-form-activehash">
+      <div class="gh-new-form-activehash-1">
+        <%= f.label :from_station_id, '最寄り駅から徒歩何分' %>
+        <span>必須</span>
+      </div>
+      <div class="gh-new-form-activehash-2">
+        <% FromStation.all.each do |from_station| %>
+          <div class="gh-new-form-activehash-2-content">
+            <%= f.radio_button :from_station_id, from_station.id, id: "from_station#{from_station.id}" %>
+            <%= f.label :from_station_id, from_station.name, for: "from_station#{from_station.id}" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="gh-new-form-submit">
+      <%= f.submit '新規作成' %>
+    </div>
+
+  <% end %>
+
+</div>

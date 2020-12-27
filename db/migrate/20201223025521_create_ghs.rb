@@ -10,6 +10,7 @@ class CreateGhs < ActiveRecord::Migration[6.0]
       t.integer :daily_necessities_costs, null: false
       t.integer :utility_costs, null: false
       t.integer :capacity, null: false
+      t.integer :availability, null: false
       t.string :phone_number
       t.string :fax_number
       t.string :email
@@ -20,7 +21,6 @@ class CreateGhs < ActiveRecord::Migration[6.0]
       # 以降はActiveHash
       t.integer :prefecture_id
       t.integer :osaka_city_id
-      t.integer :osaka_ward_id
       t.integer :gender_id
       t.integer :residential_style_id
       t.integer :barrier_free_id
@@ -30,6 +30,10 @@ class CreateGhs < ActiveRecord::Migration[6.0]
       t.integer :from_station_id
       # //以降はActiveHash
       
+      # 掲載するための承認権限
+      t.boolean :flag, null: false, default: false
+      # //掲載するための承認権限
+
       t.timestamps
     end
   end

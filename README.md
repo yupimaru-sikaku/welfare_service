@@ -10,18 +10,16 @@
 
 ### Association
 
-- has_many :services, dependent: :destroy
 - has_many :rooms, through: :room_users
 - has_many :messages
 - has_many :room_users
 
-
 ## services テーブル
 
-| Column                 | Type       | Options                        |
-| ---------------------- | ---------- | ------------------------------ |
-| name                   | string     | null: false                    |
-| user                   | references | null: false, foreign_key: true |
+| Column             | Type       | Options                        |
+| ------------------ | ---------- | ------------------------------ |
+| name               | string     | null: false                    |
+| user               | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -75,6 +73,7 @@
 | daily_necessities_costs | integer |             |
 | utility_costs           | integer |             |
 | capacity                | integer | null: false |
+| availability            | integer | null: false |
 | phone_number            | string  |             |
 | fax_number              | string  |             |
 | email                   | string  |             |
@@ -92,13 +91,13 @@
 | gh_service_id           | integer | null: false |
 | staff_time_id           | integer | null: false |
 | from_station_id         | integer | null: false |
+| flag                    | boolean | null: false |
 
 ### Association
   
  - belongs_to :user
  - belongs_to_active_hash :prefecture
  - belongs_to_active_hash :osaka_city
- - belongs_to_active_hash :osaka_ward
  - belongs_to_active_hash :gender
  - belongs_to_active_hash :residenial_style
  - belongs_to_active_hash :barrier_free

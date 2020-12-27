@@ -1,0 +1,24 @@
+.registration-header .registration-header-main {
+  line-height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #ededed;
+  padding: 0 25px;
+  background-color: white;
+}
+
+.registration-header .registration-header-main a {
+  display: block;
+  height: 45px;
+  font-size: 25px;
+  color: black;
+}
+
+.registration-header .registration-header-main .registration-header-title {
+  font-size: 20px;
+}
+/*# sourceMappingURL=new.css.map */

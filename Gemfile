@@ -61,3 +61,6 @@ gem 'jquery-rails'
 gem "acts_as_follower", github: "tcocca/acts_as_follower"
 gem 'rails-i18n', '~> 6.0'
 gem 'devise-i18n'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'image_processing', '~> 1.2'

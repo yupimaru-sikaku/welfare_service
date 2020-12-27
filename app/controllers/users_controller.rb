@@ -49,5 +49,7 @@ class UsersController < ApplicationController
     @rooms = Room.all
   end
 
+  def admin_request
+  end
 
 end

@@ -27,9 +27,9 @@
                 <%= image_tag  "koki.png" %>
               </div>
               <div class="gh-search-result-content-info">
-                <p><%= "#{result.station}駅から徒歩#{FromStation.find(params[:q][:from_station_id_eq]).name}" %></p>
+                <p><%= "#{result.station}駅から徒歩#{result.from_station.name}" %></p>
                 <p><%= "預り金： #{result.price.to_s(:delimited)}円" %></p>
-                <p><%= "#{ResidentialStyle.find(params[:q][:residential_style_id_eq]).name}" %></p>
+                <p><%= "#{result.residential_style.name}" %></p>
                 <p><%= "築年数: #{Date.today.strftime("%Y").to_i - result.construction_year.to_i}年" %></p>
                 <p><%= "情報更新日: #{result.updated_at.strftime("%Y年%m月%d日")}" %></p>
               </div>

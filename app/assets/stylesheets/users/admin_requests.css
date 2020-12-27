@@ -1,0 +1,62 @@
+.request-content {
+  text-align: center;
+}
+
+.request-content .request-user-admin-form {
+  margin-top: 30px;
+}
+
+.request-content .request-user-admin-form p:nth-child(1) {
+  padding: 10px;
+  text-align: center;
+  -webkit-box-shadow: 2px 9px 3px -3px rgba(24, 211, 22, 0.4);
+  margin: 0 15%;
+}
+
+.request-content .request-user-admin-form p:nth-child(2) {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #e25d5d;
+  padding: 10px 0px;
+}
+
+.request-content .request-user-admin-form a {
+  padding: 25px;
+  display: block;
+  background-color: #80e480;
+  color: white;
+  text-decoration: none;
+  margin: 0 30px;
+  border-radius: 20px;
+  width: 80%;
+}
+
+.request-content .request-service-admin-form {
+  margin-top: 30px;
+}
+
+.request-content .request-service-admin-form p:nth-child(1) {
+  padding: 10px;
+  text-align: center;
+  -webkit-box-shadow: 2px 9px 3px -3px rgba(24, 211, 22, 0.4);
+  margin: 0 15%;
+}
+
+.request-content .request-service-admin-form p:nth-child(2) {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #e25d5d;
+  padding: 10px 0px;
+}
+
+.request-content .request-service-admin-form a {
+  padding: 25px;
+  display: block;
+  background-color: #80e480;
+  color: white;
+  text-decoration: none;
+  margin: 0 30px;
+  border-radius: 20px;
+  width: 80%;
+}
+/*# sourceMappingURL=admin_requests.css.map */
