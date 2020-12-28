@@ -39,7 +39,7 @@
         <% Gender.all.each do |gender| %>
           <div class="gh-search-form-activehash-2-content">
             <%= f.check_box :gender_id_eq_any, {multiple: true, id: "gender_id#{gender.id}"}, gender.id, nil %>
-            <%= f.label :gender_id_eq_any, gender.name, for: "gender_id#{gender.id}" %>
+            <%= f.label :gender_id_eq_any, gender.name, for: "gender_id#{gender.id}", class: "checkbox" %>
           </div>
         <% end %>
       </div>
@@ -54,7 +54,7 @@
         <% ResidentialStyle.all.each do |residential_style| %>
           <div class="gh-search-form-activehash-2-content">
             <%= f.check_box :residential_style_id_eq_any, {multiple: true, id: "residential_style#{residential_style.id}"}, residential_style.id, nil %>
-            <%= f.label :residential_style_id_eq_any, residential_style.name, for: "residential_style#{residential_style.id}" %>
+            <%= f.label :residential_style_id_eq_any, residential_style.name, for: "residential_style#{residential_style.id}", class: "checkbox" %>
           </div>
         <% end %>
       </div>
@@ -68,7 +68,7 @@
         <% BarrierFree.all.each do |barrier_free| %>
           <div class="gh-search-form-activehash-2-content">
             <%= f.radio_button :barrier_free_id_eq, barrier_free.id, id: "barrier_free#{barrier_free.id}" %>
-            <%= f.label :barrier_free_id_eq, barrier_free.name, for: "barrier_free#{barrier_free.id}" %>
+            <%= f.label :barrier_free_id_eq, barrier_free.name, for: "barrier_free#{barrier_free.id}", class: "radio" %>
           </div>
         <% end %>
       </div>
@@ -82,7 +82,7 @@
         <% UseHoliday.all.each do |use_holiday| %>
           <div class="gh-search-form-activehash-2-content">
             <%= f.radio_button :use_holiday_id_eq, use_holiday.id, id: "use_holiday#{use_holiday.id}" %>
-            <%= f.label :use_holiday_id_eq, use_holiday.name, for: "use_holiday#{use_holiday.id}" %>
+            <%= f.label :use_holiday_id_eq, use_holiday.name, for: "use_holiday#{use_holiday.id}", class: "radio" %>
           </div>
         <% end %>
       </div>
@@ -97,7 +97,7 @@
         <% GhService.all.each do |gh_service| %>
           <div class="gh-search-form-activehash-2-content">
             <%= f.check_box :gh_service_id_eq_any, {multiple: true, id: "gh_service#{gh_service.id}"}, gh_service.id, nil %>
-            <%= f.label :gh_service_id_eq_any, gh_service.name, for: "gh_service#{gh_service.id}" %>
+            <%= f.label :gh_service_id_eq_any, gh_service.name, for: "gh_service#{gh_service.id}", class: "checkbox" %>
           </div>
         <% end %>
       </div>
@@ -112,7 +112,7 @@
         <% StaffTime.all.each do |staff_time| %>
           <div class="gh-search-form-activehash-2-content">
             <%= f.check_box :staff_time_id_eq_any, {multiple: true, id: "staff_time#{staff_time.id}"}, staff_time.id, nil %>
-            <%= f.label :staff_time_id_eq_any, staff_time.name, for: "staff_time#{staff_time.id}" %>
+            <%= f.label :staff_time_id_eq_any, staff_time.name, for: "staff_time#{staff_time.id}", class: "checkbox" %>
           </div>
         <% end %>
       </div>
@@ -127,7 +127,7 @@
         <% FromStation.all.each do |from_station| %>
           <div class="gh-search-form-activehash-2-content">
             <%= f.check_box :from_station_id_eq_any, {multiple: true, id: "from_station#{from_station.id}"}, from_station.id, nil %>
-            <%= f.label :from_station_id_eq_any, from_station.name, for: "from_station#{from_station.id}" %>
+            <%= f.label :from_station_id_eq_any, from_station.name, for: "from_station#{from_station.id}", class: "checkbox" %>
           </div>
         <% end %>
       </div>

@@ -10,51 +10,65 @@
       <p>ユーザー新規登録</p>
     </div>
     <div class="create-room">
-      <%= link_to "#" do %>
-        <i class="fas fa-comments"></i>
-      <% end %>
     </div>
   </div>
 </div>
 <%#//ヘッダー%>
 
 <%#新規登録画面%>
-<div class="resistration-content">
-  <%= form_with model: @user, url: user_registration_path, class: 'registration-fields', local: true do |f| %>
+<div class="registration-new-content">
+  <%= form_with model: @user, url: user_registration_path, class: 'registration-new-fields', local: true do |f| %>
 
-    <div class="resistration-field">
-      <%= f.label :nickname %><br />
-      <%= f.text_field :nickname, autofocus: true %>
+    <div class="registration-new-field">
+      <div class="registration-new-field-1">
+        <%= f.label :nickname, "ニックネーム" %>
+        <span>必須</span>
+      </div>
+      <%= f.text_field :nickname, autofocus: true, placeholder: "例）タロウ" %>
     </div>
 
-    <div class="registration-field">
-      <%= f.label :image %><br/>
-      <%= f.file_field :image %>
+    <div class="registration-new-field">
+      <div class="registration-new-field-2">
+        <%= f.label :image, "アイコン画像" %>
+        <span>任意</span>
+      </div>
+      <%= f.file_field :image, accept: "image/*" %>
     </div>    
 
-    <div class="resistration-field">
-      <%= f.label :email %><br />
+    <div class="registration-new-field">
+      <div class="registration-new-field-1">
+        <%= f.label :email %>
+        <span>必須</span>
+      </div>
       <%= f.email_field :email, autocomplete: "email" %>
     </div>
 
-    <div class="resistration-field">
-      <%= f.label :password %>
+    <div class="registration-new-field">
+      <div class="registration-new-field-1">
+        <%= f.label :password %>
+        <span>必須</span>
+      </div>
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
       <%= f.password_field :password, autocomplete: "new-password" %>
     </div>
 
-    <div class="resistration-field">
-      <%= f.label :password_confirmation %><br />
+    <div class="registration-new-field">
+      <div class="registration-new-field-1">
+        <%= f.label :password_confirmation %>
+        <span>必須</span>
+      </div>
       <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
     </div>
 
-    <div class="actions">
-      <%= f.submit "Sign up" %>
+    <div class="registration-new-submit">
+      <%= f.submit "ユーザー新規登録" %>
     </div>
   <% end %>
 </div>
 <%#//新規登録画面%>
 
-<%= render "users/shared/links" %>
+<div class="session-new-link">
+  <%= link_to "ログインはこちらから", new_user_session_path %>
+</div>

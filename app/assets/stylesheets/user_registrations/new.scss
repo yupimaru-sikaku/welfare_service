@@ -1,3 +1,8 @@
+$back-color: rgba(197, 207, 243, 0.3);
+$input-color: white;
+$border: 1px solid #cecece;
+
+
 // ヘッダー
 .registration-header{
 
@@ -23,4 +28,100 @@
       font-size: 20px;
     }
   } 
+}
+
+// 新規登録画面
+.registration-new-content{
+  padding: 20px;
+
+  .registration-new-fields{
+    
+    .registration-new-field{
+      background-color: $back-color;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 10px;
+      
+      .registration-new-field-1{
+        display: flex;
+        align-items: center;
+        
+        span{
+          display: block;
+          background-color: red;
+          color: white;
+          font-size: 10px;
+          margin-left: 10px;
+          border-radius: 5px;
+          padding: 2px;
+        }
+        
+      }
+
+      .registration-new-field-2{
+        display: flex;
+        align-items: center;
+        
+        span{
+          display: block;
+          background-color: green;
+          color: white;
+          font-size: 10px;
+          margin-left: 10px;
+          border-radius: 5px;
+          padding: 2px;
+        }
+        
+      }
+
+
+      input{
+        background-color: $input-color;
+        border: $border;
+        width: 250px;
+        height: 30px;
+        padding-left: 15px;
+        border-radius: 5px;
+      }
+
+      input#user_image{
+        width: 300px;
+        background-color: transparent;
+        border: none;
+      }
+    }
+    .registration-new-submit{
+      text-align: center;
+      margin-bottom: 20px;
+      
+      input{
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        -webkit-box-shadow: 10px 10px 10px #cecece;
+        box-shadow: 10px 10px 10px #cecece;
+        text-decoration: none;
+        color: black;
+        border: 1px solid;
+      }
+      
+    }
+  }
+}
+
+.session-new-link{
+  text-align: center;
+  margin-bottom: 50px;
+
+  a{
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 10px 10px 10px #cecece;
+    box-shadow: 10px 10px 10px #cecece;
+    text-decoration: none;
+    color: black;
+    border: 1px solid;
+  }
+
 }

@@ -10,6 +10,8 @@ require("channels")
 
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ui.widget
+//= require jquery.ui.droppable
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

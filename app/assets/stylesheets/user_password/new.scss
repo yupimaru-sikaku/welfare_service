@@ -1,0 +1,70 @@
+$back-color: rgba(197, 207, 243, 0.3);
+$input-color: white;
+$border: 1px solid #cecece;
+
+
+// ヘッダー
+.password-header{
+
+  .password-header-main{
+    line-height: 45px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ededed;
+    padding: 0 25px;
+    background-color: white;
+    
+    a{
+      display: block;
+      height: 45px;
+      font-size: 25px;
+      color: black;
+    }
+    
+    .back-to-home{
+    }
+  
+    .password-header-title{
+      font-size: 20px;
+    }
+  } 
+}
+
+// 新規登録画面
+.password-new-content{
+  padding: 20px;
+
+
+  .password-new-field{
+    background-color: $back-color;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+
+    input{
+      background-color: $input-color;
+      border: $border;
+      width: 250px;
+      height: 30px;
+      padding-left: 15px;
+      border-radius: 5px;
+    }
+    }
+
+  .password-new-submit{
+    text-align: center;
+    margin-bottom: 20px;
+    
+    input{
+      background-color: white;
+      padding: 10px;
+      border-radius: 5px;
+      -webkit-box-shadow: 10px 10px 10px #cecece;
+      box-shadow: 10px 10px 10px #cecece;
+      text-decoration: none;
+      color: black;
+      border: 1px solid;
+    }
+    
+  }
+}

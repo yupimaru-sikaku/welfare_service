@@ -206,7 +206,7 @@
         <% Gender.all.each do |gender| %>
           <div class="gh-new-form-activehash-2-content">
             <%= f.radio_button :gender_id, gender.id, id: "gender#{gender.id}" %>
-            <%= f.label :gender_id, gender.name, for: "gender#{gender.id}" %>
+            <%= f.label :gender_id, gender.name, for: "gender#{gender.id}", class: "radio" %>
           </div>
         <% end %>
       </div>
@@ -221,7 +221,7 @@
         <% ResidentialStyle.all.each do |residential_style| %>
           <div class="gh-new-form-activehash-2-content">
             <%= f.radio_button :residential_style_id, residential_style.id, id: "residential_style#{residential_style.id}" %>
-            <%= f.label :residential_style_id, residential_style.name, for: "residential_style#{residential_style.id}" %>
+            <%= f.label :residential_style_id, residential_style.name, for: "residential_style#{residential_style.id}", class: "radio" %>
           </div>
         <% end %>
       </div>
@@ -236,7 +236,7 @@
         <% BarrierFree.all.each do |barrier_free| %>
           <div class="gh-new-form-activehash-2-content">
             <%= f.radio_button :barrier_free_id, barrier_free.id, id: "barrier_free#{barrier_free.id}" %>
-            <%= f.label :barrier_free_id, barrier_free.name, for: "barrier_free#{barrier_free.id}" %>
+            <%= f.label :barrier_free_id, barrier_free.name, for: "barrier_free#{barrier_free.id}", class: "radio" %>
           </div>
         <% end %>
       </div>
@@ -251,7 +251,7 @@
         <% UseHoliday.all.each do |use_holiday| %>
           <div class="gh-new-form-activehash-2-content">
             <%= f.radio_button :use_holiday_id, use_holiday.id, id: "use_holiday#{use_holiday.id}" %>
-            <%= f.label :use_holiday_id, use_holiday.name, for: "use_holiday#{use_holiday.id}" %>
+            <%= f.label :use_holiday_id, use_holiday.name, for: "use_holiday#{use_holiday.id}", class: "radio" %>
           </div>
         <% end %>
       </div>
@@ -266,7 +266,7 @@
         <% GhService.all.each do |gh_service| %>
           <div class="gh-new-form-activehash-2-content">
             <%= f.radio_button :gh_service_id, gh_service.id, id: "gh_service#{gh_service.id}" %>
-            <%= f.label :gh_service_id, gh_service.name, for: "gh_service#{gh_service.id}" %>
+            <%= f.label :gh_service_id, gh_service.name, for: "gh_service#{gh_service.id}", class: "radio" %>
           </div>
         <% end %>
       </div>
@@ -281,7 +281,7 @@
         <% StaffTime.all.each do |staff_time| %>
           <div class="gh-new-form-activehash-2-content">
             <%= f.radio_button :staff_time_id, staff_time.id, id: "staff_time#{staff_time.id}" %>
-            <%= f.label :staff_time_id, staff_time.name, for: "staff_time#{staff_time.id}" %>
+            <%= f.label :staff_time_id, staff_time.name, for: "staff_time#{staff_time.id}", class: "radio" %>
           </div>
         <% end %>
       </div>
@@ -296,7 +296,7 @@
         <% FromStation.all.each do |from_station| %>
           <div class="gh-new-form-activehash-2-content">
             <%= f.radio_button :from_station_id, from_station.id, id: "from_station#{from_station.id}" %>
-            <%= f.label :from_station_id, from_station.name, for: "from_station#{from_station.id}" %>
+            <%= f.label :from_station_id, from_station.name, for: "from_station#{from_station.id}", class: "radio" %>
           </div>
         <% end %>
       </div>

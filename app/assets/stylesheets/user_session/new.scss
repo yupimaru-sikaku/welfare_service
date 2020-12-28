@@ -1,0 +1,131 @@
+$back-color: rgba(197, 207, 243, 0.3);
+$input-color: white;
+$border: 1px solid #cecece;
+
+
+// ヘッダー
+.session-header{
+
+  .session-header-main{
+    line-height: 45px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ededed;
+    padding: 0 25px;
+    background-color: white;
+    
+    a{
+      display: block;
+      height: 45px;
+      font-size: 25px;
+      color: black;
+    }
+    
+    .back-to-home{
+    }
+  
+    .session-header-title{
+      font-size: 20px;
+    }
+  } 
+}
+
+// 新規登録画面
+.session-new-content{
+  padding: 20px;
+
+  .session-new-fields{
+    
+    .session-new-field{
+      background-color: $back-color;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 10px;
+      
+      .session-new-field-1{
+        display: flex;
+        align-items: center;
+        
+        span{
+          display: block;
+          background-color: red;
+          color: white;
+          font-size: 10px;
+          margin-left: 10px;
+          border-radius: 5px;
+          padding: 2px;
+        }
+        
+      }
+
+      .session-new-field-2{
+        display: flex;
+        align-items: center;
+        
+        span{
+          display: block;
+          background-color: green;
+          color: white;
+          font-size: 10px;
+          margin-left: 10px;
+          border-radius: 5px;
+          padding: 2px;
+        }
+        
+      }
+
+
+      input{
+        background-color: $input-color;
+        border: $border;
+        width: 250px;
+        height: 30px;
+        padding-left: 15px;
+        border-radius: 5px;
+      }
+
+      input#user_image{
+        width: 300px;
+      }
+    }
+    .session-new-submit{
+      text-align: center;
+      margin-bottom: 20px;
+      
+      input{
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        -webkit-box-shadow: 10px 10px 10px #cecece;
+        box-shadow: 10px 10px 10px #cecece;
+        text-decoration: none;
+        color: black;
+        border: 1px solid;
+      }
+      
+    }
+    .field{
+      padding: 10px 0px;
+    }
+    .password-new-link{
+      padding: 10px 0px 20px;
+    }
+  }
+}
+
+.registration-new-link{
+  text-align: center;
+  margin-bottom: 50px;
+
+  a{
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 10px 10px 10px #cecece;
+    box-shadow: 10px 10px 10px #cecece;
+    text-decoration: none;
+    color: black;
+    border: 1px solid;
+  }
+
+}
