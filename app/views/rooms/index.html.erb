@@ -29,7 +29,11 @@
     <% @rooms.each do |room| %>
       <div class="room-list">
         <%= link_to room_path(room) do %>
-          <%= image_tag "kaneo.png" %>
+          <% if opponent_user_image(room).file == nil %>
+            <%= image_tag "defalut.png" %>
+          <% else %>
+            <img src=<%= opponent_user_image(room) %>>
+          <% end %>
           <div class="room-list-content">
             <span>
               <%= opponent_user(room) %>

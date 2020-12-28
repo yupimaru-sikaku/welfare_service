@@ -48,9 +48,45 @@
   .gh-show-contact-form{
     display: flex;
     justify-content: space-around;
-    padding: 15px 0px;
+    padding: 25px 0px;
     
-    a{
+    .gh-show-contact-form-1{
+
+      .gh-show-contact-form-2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a{
+          display: block;
+          padding: 10px;
+          background-color: blue;
+          font-size: 12px;
+          width: 170px;
+          border-radius: 5px;
+          color: white;
+          text-decoration: none;
+          box-shadow: 3px 3px 5px #a78b90;
+          text-align: center;
+
+        }
+      }
+
+      form{
+        padding: 10px;
+        width: 170px;
+        border-radius: 5px;
+        color: white;
+        text-decoration: none;
+        font-size: 12px;
+        text-align: center;
+        background-color: blue;
+        box-shadow: 3px 3px 5px #a78b90;
+      }
+    }
+
+    a.favorite-btn{
+      display: block;
       box-shadow: 3px 3px 5px #a78b90;
       padding: 10px;
       width: 170px;
@@ -59,16 +95,11 @@
       text-decoration: none;
       font-size: 12px;
       text-align: center;
-      
-      &:nth-child(1){
-        background-color: #0979ec;
-      }
-      
-      &:nth-child(2){
-        background-color: orange;
-      }
+      background-color: orange;
     }
+    
   }
+  
 
   // GH預かり金
   .gh-show-price{

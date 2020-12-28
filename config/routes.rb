@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 
   # GH（共同生活援助）
   resources :ghs do
+    resource :favorites, only: [:create, :destroy]
     collection do
       get 'search'
     end

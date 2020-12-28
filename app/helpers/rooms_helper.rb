@@ -26,4 +26,11 @@ module RoomsHelper
     tag.p "#{nickname}", class: "dm_list__content__link__box__name"
   end
 
+  def opponent_user_image(room)
+    # 中間テーブルから相手ユーザーのデータを取得
+    room_user = room.room_users.where.not(user_id: current_user)
+    # 相手ユーザーの名前を取得
+    image = room_user[0].user.image
+  end
+
 end

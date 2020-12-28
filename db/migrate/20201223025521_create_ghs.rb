@@ -34,6 +34,8 @@ class CreateGhs < ActiveRecord::Migration[6.0]
       t.boolean :flag, null: false, default: false
       # //掲載するための承認権限
 
+      t.references :user, foreign_key: true
+
       t.timestamps
     end
   end

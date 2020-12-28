@@ -24,6 +24,26 @@ class GhsController < ApplicationController
 
   def show
     @gh = Gh.find(params[:id])
+    @user = User.find(@gh.user_id)
+
+    @currentUserEntry = RoomUser.where(user_id: current_user.id)
+    @userEntry = RoomUser.where(user_id: @user.id)
+
+    unless @user.id == current_user.id
+      @currentUserEntry.each do |cu|
+        @userEntry.each do |u|
+          if cu.room_id == u.room_id then
+            @isRoom = true
+            @roomId = cu.room_id
+          end
+        end
+      end
+      if @isRoom
+      else
+        @room = Room.new
+        @entry = RoomUser.new
+      end
+    end
   end
 
   private

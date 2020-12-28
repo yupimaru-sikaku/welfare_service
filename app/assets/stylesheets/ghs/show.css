@@ -48,10 +48,50 @@
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 15px 0px;
+  padding: 25px 0px;
 }
 
-.gh-show-content .gh-show-contact-form a {
+.gh-show-content .gh-show-contact-form .gh-show-contact-form-1 .gh-show-contact-form-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gh-show-content .gh-show-contact-form .gh-show-contact-form-1 .gh-show-contact-form-2 a {
+  display: block;
+  padding: 10px;
+  background-color: blue;
+  font-size: 12px;
+  width: 170px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  -webkit-box-shadow: 3px 3px 5px #a78b90;
+          box-shadow: 3px 3px 5px #a78b90;
+  text-align: center;
+}
+
+.gh-show-content .gh-show-contact-form .gh-show-contact-form-1 form {
+  padding: 10px;
+  width: 170px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  text-align: center;
+  background-color: blue;
+  -webkit-box-shadow: 3px 3px 5px #a78b90;
+          box-shadow: 3px 3px 5px #a78b90;
+}
+
+.gh-show-content .gh-show-contact-form a.favorite-btn {
+  display: block;
   -webkit-box-shadow: 3px 3px 5px #a78b90;
           box-shadow: 3px 3px 5px #a78b90;
   padding: 10px;
@@ -61,13 +101,6 @@
   text-decoration: none;
   font-size: 12px;
   text-align: center;
-}
-
-.gh-show-content .gh-show-contact-form a:nth-child(1) {
-  background-color: #0979ec;
-}
-
-.gh-show-content .gh-show-contact-form a:nth-child(2) {
   background-color: orange;
 }
 

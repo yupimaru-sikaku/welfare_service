@@ -55,7 +55,21 @@
         justify-content: space-around;
         padding: 15px 0px;
         
-        a{
+        .gh-search-result-contact-form-1{
+          a{
+            box-shadow: 3px 3px 5px #a78b90;
+            padding: 10px;
+            width: 160px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            text-align: center;
+            background-color: #0979ec;
+          }
+        }
+        
+        a.favorite-btn{
           box-shadow: 3px 3px 5px #a78b90;
           padding: 10px;
           width: 160px;
@@ -64,14 +78,8 @@
           text-decoration: none;
           font-size: 14px;
           text-align: center;
-          
-          &:nth-child(1){
-            background-color: #0979ec;
-          }
+          background-color: orange;
 
-          &:nth-child(2){
-            background-color: orange;
-          }
         }
       }
     }

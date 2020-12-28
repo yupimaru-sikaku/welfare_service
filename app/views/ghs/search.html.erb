@@ -35,15 +35,17 @@
               </div>
             </div>
           <% end %>
+          
           <div class="gh-search-result-contact-form">
-            <%= link_to "#" do %>
-              <i class="fas fa-comments"></i>
-              <span>事業者とチャット</span>
-            <% end %>
-            <%= link_to "#" do %>
-              <i class="fas fa-star"></i>
-              <span>お気に入り</span>
-            <% end %>
+            <div class="gh-search-result-contact-form-1">
+              <%= link_to rooms_path, method: :post do %>
+                <i class="fas fa-comments"></i>
+                <span>事業者とチャット</span>
+              <% end %>
+            </div>
+            <div id="favorites_button-<%= result.id %>">
+              <%= render partial: "favorites/favorites", locals: { gh: result } %>
+            </div>
           </div>
         </div>
       <% end %>

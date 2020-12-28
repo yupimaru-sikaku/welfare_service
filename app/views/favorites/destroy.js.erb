@@ -1,0 +1,4 @@
+var fav = document.getElementById("favorites_button-<%= @gh.id %>");
+
+fav.innerHTML = "<%= j(render partial: "favorites", locals: { gh: @gh }) %>"
+

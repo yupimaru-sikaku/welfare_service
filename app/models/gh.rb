@@ -12,4 +12,7 @@ class Gh < ApplicationRecord
   belongs_to_active_hash :staff_time
   belongs_to_active_hash :from_station
 
+  has_many :favorites, dependent: :destroy
+
+
 end

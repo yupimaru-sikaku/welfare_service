@@ -1,0 +1,18 @@
+<% if user_signed_in? %>
+  <% if Favorite.find_by(user_id: current_user.id, gh_id: gh.id) %>
+    <%= link_to gh_favorites_path(gh), method: :delete, remote: true, class: "favorite-btn" do %>
+      <i class="fas fa-star">   </i>
+      お気に入り済
+    <% end %>
+  <% else %>
+    <%= link_to gh_favorites_path(gh), method: :post, remote: true, class: "favorite-btn" do %>
+      <i class="far fa-star"></i>
+      お気に入りに登録
+    <% end %>
+  <% end %>
+<% else %>
+  <div class="favorite-btn">
+    <i class="far fa-star"></i>
+    <%= gh.favorites.count %>
+  </div>
+<% end %>
