@@ -1,0 +1,87 @@
+.gh-favorite-content {
+  height: 100vh;
+  padding: 0 10px;
+  background-color: #cecece;
+}
+
+.gh-favorite-content .gh-favorite-title {
+  text-align: center;
+  padding: 20px;
+}
+
+.gh-favorite-content .gh-favorite-lists a {
+  text-decoration: none;
+}
+
+.gh-favorite-content .gh-favorite-lists .gh-favorite-list {
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.gh-favorite-content .gh-favorite-lists .gh-favorite-list .gh-favorite-list-name {
+  padding: 10px;
+  border-bottom: 0.5px solid #cecece;
+  color: black;
+}
+
+.gh-favorite-content .gh-favorite-lists .gh-favorite-list .gh-favorite-list-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 15px 0 15px;
+}
+
+.gh-favorite-content .gh-favorite-lists .gh-favorite-list .gh-favorite-list-content img {
+  width: 100px;
+  height: 100px;
+}
+
+.gh-favorite-content .gh-favorite-lists .gh-favorite-list .gh-favorite-list-content p {
+  font-size: 14px;
+  color: black;
+  padding-left: 10px;
+  padding-bottom: 2px;
+  font-weight: 300;
+}
+
+.gh-favorite-content .gh-favorite-lists .gh-favorite-list .gh-favorite-list-content p:nth-child(2) {
+  color: #f16a6a;
+  font-weight: bold;
+}
+
+.gh-favorite-content .gh-favorite-lists .gh-favorite-list .gh-favorite-list-contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 15px 0px;
+}
+
+.gh-favorite-content .gh-favorite-lists .gh-favorite-list .gh-favorite-list-contact-form .gh-favorite-list-contact-form-1 a {
+  -webkit-box-shadow: 3px 3px 5px #a78b90;
+          box-shadow: 3px 3px 5px #a78b90;
+  padding: 10px;
+  width: 160px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  text-align: center;
+  background-color: #0979ec;
+}
+
+.gh-favorite-content .gh-favorite-lists .gh-favorite-list .gh-favorite-list-contact-form a.favorite-btn {
+  -webkit-box-shadow: 3px 3px 5px #a78b90;
+          box-shadow: 3px 3px 5px #a78b90;
+  padding: 10px;
+  width: 160px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  text-align: center;
+  background-color: orange;
+}
+/*# sourceMappingURL=index.css.map */

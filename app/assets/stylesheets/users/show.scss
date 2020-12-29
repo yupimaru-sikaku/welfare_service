@@ -1,0 +1,83 @@
+.user-show-content{
+  text-align: center;
+
+  // ユーザー顔写真
+  .user-show-img{
+    padding: 50px 0px 10px;
+    
+    img{
+      width: 150px;
+      height: 150px;
+      border-radius: 100%;
+      display: block;
+      margin: 0 auto;
+      border: 5px solid #cecece;
+    }
+  }
+
+  // ユーザーニックネーム
+  .user-show-nickname{
+    font-size: 20px;
+    color: #464040ce;
+    letter-spacing: 5px;
+    padding: 10px;
+  }
+
+  // ユーザー情報
+  .user-show-infos{
+    margin: 0px 10px;
+
+    .user-show-info{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      border-bottom: 2px ridge;
+      padding-bottom: 5px;
+
+      p{
+
+        &:nth-child(1){
+          background-color: #d6d6d6;
+          font-size: 12px;
+          padding: 5px;
+          width: 100px;
+        }
+        
+        &:nth-child(2){
+          font-size: 12px;
+          margin-left: 20px;
+          width: 200px;
+        }
+      }
+    }
+  }
+
+  .user-show-chat-room{
+    
+    a{
+      padding: 10px;
+      background-color: blue;
+      text-decoration: none;
+      color: white;
+      display: block;
+      width: 210px;
+      border-radius: 100px;
+      margin: 20px auto;
+    }
+  }
+
+  .user-show-favorites{
+    
+    a{
+      padding: 10px;
+      background-color: orange;
+      text-decoration: none;
+      color: white;
+      display: block;
+      width: 210px;
+      border-radius: 100px;
+      margin: 20px auto;
+    }
+  }
+}

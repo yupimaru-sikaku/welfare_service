@@ -26,6 +26,7 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+  resources :favorites, only: [:index]
 
   # フォロー機能用
   put 'users/follow/:user_id',to: 'users#follow'

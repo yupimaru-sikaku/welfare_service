@@ -35,6 +35,10 @@
                 <span class="right-content">
                   <%=simple_format(m.content)%>
                 </span>
+                <span class="right-content">
+                  <%= image_tag m.image if m.image.attached? %>
+                </span>
+                
               </div>
               <% if current_user.image.file == nil %>
                 <%= image_tag "defalut.png" %>
@@ -77,6 +81,7 @@
 <div class="talk-room-form">
   <%= form_for @message, class: "contentarea" do |f| %>
     <%= f.text_area :content, id: "textarea", :size => 70 %>
+    <%= f.file_field :image, class: 'hidden' %>
     <%= f.hidden_field :room_id, :value => @room.id %>
     <%= f.submit "投稿", class: "submit" %>
   <% end %>

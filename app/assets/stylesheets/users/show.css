@@ -1,0 +1,78 @@
+.user-show-content {
+  text-align: center;
+}
+
+.user-show-content .user-show-img {
+  padding: 50px 0px 10px;
+}
+
+.user-show-content .user-show-img img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  display: block;
+  margin: 0 auto;
+  border: 5px solid #cecece;
+}
+
+.user-show-content .user-show-nickname {
+  font-size: 20px;
+  color: #464040ce;
+  letter-spacing: 5px;
+  padding: 10px;
+}
+
+.user-show-content .user-show-infos {
+  margin: 0px 10px;
+}
+
+.user-show-content .user-show-infos .user-show-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 10px;
+  border-bottom: 2px ridge;
+  padding-bottom: 5px;
+}
+
+.user-show-content .user-show-infos .user-show-info p:nth-child(1) {
+  background-color: #d6d6d6;
+  font-size: 12px;
+  padding: 5px;
+  width: 100px;
+}
+
+.user-show-content .user-show-infos .user-show-info p:nth-child(2) {
+  font-size: 12px;
+  margin-left: 20px;
+  width: 200px;
+}
+
+.user-show-content .user-show-chat-room a {
+  padding: 10px;
+  background-color: blue;
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 210px;
+  border-radius: 100px;
+  margin: 20px auto;
+}
+
+.user-show-content .user-show-favorites a {
+  padding: 10px;
+  background-color: orange;
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 210px;
+  border-radius: 100px;
+  margin: 20px auto;
+}
+/*# sourceMappingURL=show.css.map */

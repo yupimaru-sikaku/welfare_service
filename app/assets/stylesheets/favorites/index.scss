@@ -1,0 +1,87 @@
+// お気に入りリスト
+.gh-favorite-content{
+  
+  height: 100vh;
+  padding: 0 10px;
+  background-color: #cecece;
+
+  .gh-favorite-title{
+    text-align: center;
+    padding: 20px;
+  }
+  
+  // お気に入りリスト一覧
+  .gh-favorite-lists{
+
+    a{
+      text-decoration: none;
+    }
+
+    .gh-favorite-list{
+      background-color: white;
+      border-radius: 5px;
+      margin-bottom: 20px;
+
+      .gh-favorite-list-name{
+        padding: 10px;
+        border-bottom: 0.5px solid #cecece;
+        color: black;
+      }
+      
+      .gh-favorite-list-content{
+        display: flex;
+        padding: 15px 15px 0 15px ;
+
+        img{
+          width: 100px;
+          height: 100px;
+        }
+        p{
+          font-size: 14px;
+          color: black;
+          padding-left: 10px;
+          padding-bottom: 2px;
+          font-weight: 300;
+
+          &:nth-child(2){
+            color: #f16a6a;
+            font-weight: bold;
+          }
+        }
+      }
+
+      .gh-favorite-list-contact-form{
+        display: flex;
+        justify-content: space-around;
+        padding: 15px 0px;
+        
+        .gh-favorite-list-contact-form-1{
+          a{
+            box-shadow: 3px 3px 5px #a78b90;
+            padding: 10px;
+            width: 160px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            text-align: center;
+            background-color: #0979ec;
+          }
+        }
+        
+        a.favorite-btn{
+          box-shadow: 3px 3px 5px #a78b90;
+          padding: 10px;
+          width: 160px;
+          border-radius: 5px;
+          color: white;
+          text-decoration: none;
+          font-size: 14px;
+          text-align: center;
+          background-color: orange;
+
+        }
+      }
+    }
+  }
+}

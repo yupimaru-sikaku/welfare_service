@@ -1,21 +1,56 @@
-<%= @user.follow_count %>
-<%= link_to "フォロー", {controller: :users, action: :follow_list, user_id: @user.id}, method: :get %>
-<%= @user.followers_count %>
-<%= link_to "フォロワー", {controller: :users,action: :follower_list,user_id: @user.id}, method: :get %>
+<%#ヘッダー%>
+  <%= render partial: "shared/header" %>
+<%#//ヘッダー%>
 
-<% if current_user.id != @user.id %>
-  <%= render 'follow' %>
-<% end %>
+<div class="user-show-content">
 
-<% unless @user.id == current_user.id %>
-  <% if @isRoom == true %>
-    <p class="user-show-room"><a href="/rooms/<%= @roomId %>" class="btn btn-primary btn-lg">チャットへ</a>
-  <% else %>
-    <%= form_for @room do |f| %>
-      <%= fields_for @entry do |e| %>
-        <%= e.hidden_field :user_id, value: @user.id %>
-      <% end %>
-      <%= f.submit "チャットを始める", class:"btn btn-primary btn-lg user-show-chat"%>
+  <%#ユーザー顔写真%>
+  <div class="user-show-img">
+    <% if current_user.image.file == nil %>
+      <%= image_tag "defalut.png" %>
+    <% else %>
+      <img src=<%= current_user.image %>>
     <% end %>
-  <% end %>
-<% end %>
+  </div>
+  <%#//ユーザー顔写真%>
+
+
+  <%#ユーザーニックネーム%>
+  <div class="user-show-nickname">
+    <%= current_user.nickname %>
+  </div>
+  <%#//ユーザーニックネーム%>
+
+
+  <%#ユーザー情報%>
+  <div class="user-show-infos">
+    <div class="user-show-info">
+      <p>メールアドレス</p>
+      <p><%= current_user.email %></p>
+    </div>
+    <div class="user-show-info">
+      <p>住所</p>
+      <p><%= current_user.email %></p>
+    </div>
+  </div>
+  <%#//ユーザー情報%>
+
+  <%#チャットルームへ%>
+  <div class="user-show-chat-room">
+    <%= link_to rooms_path do %>
+      <i class="far fa-comments"></i>
+      <span>チャットルームへ</span>
+    <% end %>
+  </div>
+  <%#//チャットルームへ%>
+
+  <%#お気に入りリストへ%>
+  <div class="user-show-favorites">
+    <%= link_to favorites_path do %>
+      <i class="far fa-star"></i>
+      <span>お気に入りリストへ</span>
+    <% end %>
+  </div>
+  <%#/お気に入りリストへ%>
+
+</div>

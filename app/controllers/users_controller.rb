@@ -24,24 +24,8 @@ class UsersController < ApplicationController
   # //フォロー機能用
 
   def show
-    @user = User.find(params[:id])
-    @currentUserEntry=RoomUser.where(user_id: current_user.id)
-    @userEntry=RoomUser.where(user_id: @user.id)
-    unless @user.id == current_user.id
-      @currentUserEntry.each do |cu|
-        @userEntry.each do |u|
-          if cu.room_id == u.room_id then
-            @isRoom = true
-            @roomId = cu.room_id
-          end
-        end
-      end
-      if @isRoom
-      else
-        @room = Room.new
-        @entry = RoomUser.new
-      end
-    end
+    favorites = current_user.favorites.pluck(:gh_id)
+    @gh_favorite_lists = Gh.find(favorites)
   end
 
   def index

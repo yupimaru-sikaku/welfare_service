@@ -19,7 +19,7 @@
 			<% if user_signed_in? %>
 			<li>
 				<div class="user-icon">
-					<%= link_to users_path(current_user), class: "icon-img" do %>
+					<%= link_to user_path(current_user), class: "icon-img" do %>
 						<% if current_user.image.file == nil %>
 							<%= image_tag "defalut.png" %>
 						<% else %>
@@ -88,15 +88,18 @@
 
 	<%#ログイン後のアイコン%>
 	<% if user_signed_in? %>
-		<div class="header-user-img">
-			<%= link_to users_path(current_user) do %>
-				<% if current_user.image.file == nil %>
+		<% if current_user.image.file == nil %>
+				<%= link_to user_path(current_user), class: 'header-user-img' do %>
 					<%= image_tag "defalut.png" %>
-				<% else %>
-					<img src=<%= current_user.image %>>
+					<span><%= current_user.nickname.truncate(8) %></span>
 				<% end %>
-			<% end %>
-		</div>
+			</div>
+		<% else %>
+				<%= link_to user_path(current_user), class: 'header-user-img' do %>
+					<img src=<%= current_user.image %>>
+					<span><%= current_user.nickname.truncate(8) %></span>
+				<% end %>
+		<% end %>
 	<% end %>
 	<%#//ログイン後のアイコン%>
 	

@@ -3,6 +3,9 @@ class ServicesController < ApplicationController
     def index
     end
 
+    def new
+    end
+
     def admin_index
         if user_signed_in?
             if current_user.admin?

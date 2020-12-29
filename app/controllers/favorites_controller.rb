@@ -12,6 +12,10 @@ class FavoritesController < ApplicationController
     favorite.destroy
   end
 
+  def index
+    favorites = current_user.favorites.pluck(:gh_id)
+    @gh_favorite_lists = Gh.find(favorites)
+  end
 
 end
 
