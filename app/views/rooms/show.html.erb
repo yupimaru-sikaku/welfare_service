@@ -28,16 +28,21 @@
           <%#トーク（ユーザー側：右側）%>
           <div class="talk-room-list-right">
               <div class="talk-room-list-content">
-                <span>
+                <span class="talk-room-list-nickname">
                   <%= m.user.nickname %><br>
                   <%= m.created_at.strftime("%m/%d %H:%M") %>
                 </span>
-                <span class="right-content">
-                  <%=simple_format(m.content)%>
-                </span>
-                <span class="right-content">
-                  <%= image_tag m.image if m.image.attached? %>
-                </span>
+                <% if m.image.attached? %>
+                <% else %>
+                  <span class="talk-room-list-content">
+                    <%= simple_format(m.content) %>
+                  </span>
+                <% end %>
+                <% if m.image.attached? %>
+                  <span class="talk-room-list-image">
+                    <%= image_tag m.image %>
+                  </span>
+                <% end %>
                 
               </div>
               <% if current_user.image.file == nil %>
@@ -58,12 +63,18 @@
                 <img src=<%= opponent_user_image(@room) %>>
               <% end %>
               <div class="talk-room-list-content">
-                <span>
+                <span class="talk-room-list-nickname">
                   <%= m.user.nickname %><br>
                   <%= m.created_at.strftime("%m/%d %H:%M") %>
                 </span>
-                <span>
-                  <%=simple_format(m.content)%>
+                <% if m.image.attached? %>
+                <% else %>
+                  <span class="talk-room-list-content">
+                    <%= simple_format(m.content) %>
+                  </span>
+                <% end %>
+                <span class="talk-room-list-image">
+                  <%= image_tag m.image if m.image.attached? %>
                 </span>
               </div>
           </div>
@@ -82,6 +93,9 @@
   <%= form_for @message, class: "contentarea" do |f| %>
     <%= f.text_area :content, id: "textarea", :size => 70 %>
     <%= f.file_field :image, class: 'hidden' %>
+    <%= f.label :image do%>
+      <i class="fas fa-camera-retro"></i>
+    <% end %>
     <%= f.hidden_field :room_id, :value => @room.id %>
     <%= f.submit "投稿", class: "submit" %>
   <% end %>

@@ -14,5 +14,11 @@ class Gh < ApplicationRecord
 
   has_many :favorites, dependent: :destroy
 
+  has_many_attached :images
+
+  def was_attached?
+    self.image.attached?
+  end
+
 
 end

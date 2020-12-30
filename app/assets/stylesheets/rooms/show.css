@@ -32,10 +32,11 @@
 }
 
 .talk-room-content {
-  padding-top: 50px;
   overflow: scroll;
-  padding: 45px 10px;
+  padding: 55px 10px;
   padding-bottom: 50px;
+  width: 100vW;
+  background-color: #efeef1;
 }
 
 .talk-room-content img {
@@ -47,6 +48,7 @@
 
 .talk-room-content .talk-room-lists {
   height: 95%;
+  width: 100%;
 }
 
 .talk-room-content .talk-room-lists .talk-room-list-right {
@@ -56,34 +58,60 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin: 10px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .talk-room-content .talk-room-lists .talk-room-list-right .talk-room-list-content {
   padding-right: 10px;
-  max-width: 90%;
-  text-align: right;
+  max-width: 100%;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.talk-room-content .talk-room-lists .talk-room-list-right .talk-room-list-content span {
+.talk-room-content .talk-room-lists .talk-room-list-right .talk-room-list-content span.talk-room-list-nickname {
+  display: block;
+  text-align: right;
+  width: 100%;
+  font-size: 10px;
+  color: gray;
+}
+
+.talk-room-content .talk-room-lists .talk-room-list-right .talk-room-list-content span.talk-room-list-content {
   display: block;
   text-align: left;
   width: 100%;
-}
-
-.talk-room-content .talk-room-lists .talk-room-list-right .talk-room-list-content span:nth-child(1) {
-  font-size: 10px;
-  color: gray;
-  text-align: right;
-}
-
-.talk-room-content .talk-room-lists .talk-room-list-right .talk-room-list-content span:nth-child(2) {
   color: black;
   font-size: 12px;
-  word-wrap: break-word;
-  background-color: aquamarine;
-  border-radius: 25px;
+  background-color: #c1ffea;
+  border-radius: 10px;
   padding: 10px;
+}
+
+.talk-room-content .talk-room-lists .talk-room-list-right .talk-room-list-content span.talk-room-list-content p {
+  width: 100%;
+  word-break: break-all;
+}
+
+.talk-room-content .talk-room-lists .talk-room-list-right .talk-room-list-content span.talk-room-list-image {
+  display: block;
+  text-align: left;
+  width: 100%;
+  background-color: transparent;
+  padding: 10px;
+}
+
+.talk-room-content .talk-room-lists .talk-room-list-right .talk-room-list-content span.talk-room-list-image img {
+  display: block;
+  border-radius: 0px;
+  width: 250px;
+  height: 250px;
 }
 
 .talk-room-content .talk-room-lists .talk-room-list-left {
@@ -93,34 +121,61 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin: 10px;
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 .talk-room-content .talk-room-lists .talk-room-list-left .talk-room-list-content {
   padding-left: 10px;
-  max-width: 60%;
+  max-width: 100%;
   text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.talk-room-content .talk-room-lists .talk-room-list-left .talk-room-list-content span {
+.talk-room-content .talk-room-lists .talk-room-list-left .talk-room-list-content span.talk-room-list-nickname {
   display: block;
   text-align: left;
   width: 100%;
-}
-
-.talk-room-content .talk-room-lists .talk-room-list-left .talk-room-list-content span:nth-child(1) {
   font-size: 10px;
   color: gray;
-  text-align: left;
 }
 
-.talk-room-content .talk-room-lists .talk-room-list-left .talk-room-list-content span:nth-child(2) {
+.talk-room-content .talk-room-lists .talk-room-list-left .talk-room-list-content span.talk-room-list-content {
+  display: block;
+  text-align: left;
+  width: 100%;
   color: black;
   font-size: 12px;
   word-wrap: break-word;
-  background-color: #ececec;
-  border-radius: 25px;
+  background-color: white;
+  border-radius: 10px;
   padding: 10px;
+}
+
+.talk-room-content .talk-room-lists .talk-room-list-left .talk-room-list-content span.talk-room-list-content p {
+  width: 100%;
+  word-break: break-all;
+}
+
+.talk-room-content .talk-room-lists .talk-room-list-left .talk-room-list-content span.talk-room-list-image {
+  display: block;
+  text-align: left;
+  width: 100%;
+  background-color: transparent;
+  padding: 10px;
+}
+
+.talk-room-content .talk-room-lists .talk-room-list-left .talk-room-list-content span.talk-room-list-image img {
+  display: block;
+  border-radius: 0px;
+  width: 250px;
+  height: 250px;
 }
 
 .talk-room-form {
@@ -156,5 +211,9 @@
   background-color: cornsilk;
   padding: 5px;
   border-radius: 10px;
+}
+
+.talk-room-form input.hidden {
+  display: none;
 }
 /*# sourceMappingURL=show.css.map */

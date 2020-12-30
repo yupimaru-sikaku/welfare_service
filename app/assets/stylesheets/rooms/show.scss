@@ -34,10 +34,11 @@
 
 // トーク画面
 .talk-room-content{
-  padding-top: 50px;
   overflow: scroll;
-  padding: 45px 10px;
+  padding: 55px 10px;
   padding-bottom: 50px;
+  width: 100vW;
+  background-color: #efeef1;
   
   img{
     display: block;
@@ -45,40 +46,62 @@
     width: 30px;
     height: 30px;
   }
-
+  
   .talk-room-lists{
     height: 95%;
-
+    width: 100%;
+    
     // トーク（ユーザー側：右側）
     .talk-room-list-right{
       display: flex;
       justify-content: flex-end;
-      margin: 10px;
+      width: 100%;
+      margin-bottom: 10px;
       
       
       .talk-room-list-content{
         padding-right: 10px;
-        max-width: 90%;
-        text-align: right;
+        max-width: 100%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
         
-        span{
+        span.talk-room-list-nickname{
+          display: block;
+          text-align: right;
+          width: 100%;
+          font-size: 10px;
+          color: gray;
+        }
+        
+        span.talk-room-list-content{
           display: block;
           text-align: left;
           width: 100%;
+          color: black;
+          font-size: 12px;
+          background-color: #c1ffea;
+          border-radius: 10px;
+          padding: 10px;
           
-          &:nth-child(1){
-            font-size: 10px;
-            color: gray;
-            text-align: right;
+          p{
+            width: 100%;
+            word-break: break-all
           }
+        }
+        
+        span.talk-room-list-image{
+          display: block;
+          text-align: left;
+          width: 100%;
+          background-color: transparent;
+          padding: 10px;
           
-          &:nth-child(2){
-            color: black;
-            font-size: 12px;
-            word-wrap: break-word;
-            background-color: aquamarine;
-            border-radius: 25px;
-            padding: 10px;
+          img{
+            display: block;
+            border-radius: 0px;
+            width: 250px;
+            height: 250px;
           }
         }
       }
@@ -88,31 +111,55 @@
     .talk-room-list-left{
       display: flex;
       justify-content: flex-start;
-      margin: 10px;
+      width: 100%;
+      margin-bottom: 10px;
       
       
       .talk-room-list-content{
         padding-left: 10px;
-        max-width: 60%;
+        max-width: 100%;
         text-align: left;
+        display: flex;
+        flex-direction: column;
         
-        span{
+        
+        span.talk-room-list-nickname{
           display: block;
           text-align: left;
           width: 100%;
+          font-size: 10px;
+          color: gray; 
+        }
+        
+        span.talk-room-list-content{
+          display: block;
+          text-align: left;
+          width: 100%;
+          color: black;
+          font-size: 12px;
+          word-wrap: break-word;
+          background-color: white;
+          border-radius: 10px;
+          padding: 10px;
           
-          &:nth-child(1){
-            font-size: 10px;
-            color: gray;
-            text-align: left;
+          p{
+            width: 100%;
+            word-break: break-all
           }
-          &:nth-child(2){
-            color: black;
-            font-size: 12px;
-            word-wrap: break-word;
-            background-color: #ececec;
-            border-radius: 25px;
-            padding: 10px;
+        }
+        
+        span.talk-room-list-image{
+          display: block;
+          text-align: left;
+          width: 100%;
+          background-color: transparent;
+          padding: 10px;
+          
+          img{
+            display: block;
+            border-radius: 0px;
+            width: 250px;
+            height: 250px;
           }
         }
       }
@@ -149,5 +196,8 @@
       padding: 5px;
       border-radius: 10px;
     }
+  }
+  input.hidden{
+    display: none;
   }
 }

@@ -78,7 +78,8 @@ class GhsController < ApplicationController
       :use_holiday_id,
       :gh_service_id,
       :staff_time_id,
-      :from_station_id
+      :from_station_id,
+      images: []
     )
   end
 end

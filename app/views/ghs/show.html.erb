@@ -24,7 +24,9 @@
 
   <%# GH写真 %>
   <div class="gh-show-img">
-    <%= image_tag  "sazanka.png" %>
+    <% @gh.images.each do |image| %>
+      <%= image_tag image %>
+    <% end %>
   </div>
   <%# //GH写真 %>
 

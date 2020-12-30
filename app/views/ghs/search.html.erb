@@ -24,7 +24,7 @@
             </div>
             <div class="gh-search-result-content">
               <div class="gh-search-result-content-img">
-                <%= image_tag  "koki.png" %>
+                <%= image_tag result.images[0] %>
               </div>
               <div class="gh-search-result-content-info">
                 <p><%= "#{result.station}駅から徒歩#{result.from_station.name}" %></p>
