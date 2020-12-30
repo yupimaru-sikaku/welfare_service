@@ -28,15 +28,16 @@
 
     <div class="gh-new-form">
       <div class="gh-new-form-1">
-        <%= f.label :images, '事業所写真'%>
+        <%= f.label :images, '事業所写真(最大6枚)'%>
         <span>必須</span>
       </div>
-      <div class="gh-new-form-2">
-        <%= f.file_field :images, name: 'gh[[images][]', id: 'gh_image' %>
-        <%#preview画面で表示する箇所%>
-        <div id="image-list"></div>
-        <%#//preview画面で表示する箇所%>
-
+      <div class="gh-new-form-2-image">
+        <div class="image-lists">
+        </div>
+        <%= f.label :images, name: 'gh[images][]', class: "gh_image_label", for: "gh_image" do %>
+          <%= f.file_field :images, name: 'gh[images][]', id: "gh_image" %>
+          <i class="fas fa-camera">クリック！！</i>
+        <% end%>
       </div>
     </div>
 

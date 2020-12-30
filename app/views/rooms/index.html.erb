@@ -38,9 +38,15 @@
             <span>
               <%= opponent_user(room) %>
             </span>
-            <span>
-              <%= most_new_message_preview(room) %>
-            </span>
+            <% if most_new_message_preview(room) %>
+              <span>
+                <p>写真が送信されました</p>
+              </span>
+              <% else %>
+              <span>
+                <%= most_new_message_preview(room) %>
+              </span>
+            <% end %>
           </div>
         <% end %>
       </div>
@@ -50,5 +56,3 @@
   </div>
 </div>
 <%#//部屋一覧%>
-
-

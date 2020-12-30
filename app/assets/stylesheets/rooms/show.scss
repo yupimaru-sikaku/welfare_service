@@ -101,7 +101,7 @@
             display: block;
             border-radius: 0px;
             width: 250px;
-            height: 250px;
+            height: 300px;
           }
         }
       }
@@ -159,7 +159,7 @@
             display: block;
             border-radius: 0px;
             width: 250px;
-            height: 250px;
+            height: 300px;
           }
         }
       }
@@ -199,5 +199,10 @@
   }
   input.hidden{
     display: none;
+  }
+  
+  label{
+    font-size: 20px;
+    padding: 10px;
   }
 }
