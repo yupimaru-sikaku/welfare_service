@@ -32,7 +32,7 @@
 }
 
 .talk-room-content {
-  overflow: auto;
+  overflow: scroll;
   padding: 55px 10px;
   padding-bottom: 65px;
   width: 100vW;
