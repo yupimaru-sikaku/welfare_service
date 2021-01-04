@@ -63,6 +63,9 @@ if(document.URL.match( /new/ ) || document.URL.match( /edit/ )){
         }
       })
     })
+    
+    
+    
   });
 }
 // const ImageList = document.getElementById('image-list');

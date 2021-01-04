@@ -58,6 +58,32 @@ $border: 1px solid #cecece;
         
       }
 
+      .registration-user-icon{
+        padding: 20px;
+
+        img{
+          width: 65px;
+          height: 65px;
+          border-radius: 100%;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+      
+      .registration-user-icon-form{
+        label{
+          display: block;
+          background-color: #e4e4e4;
+          padding: 10px;
+          text-align: center;
+  
+          input{
+            display: none;
+          }
+        }
+
+      }
+
       .registration-new-field-2{
         display: flex;
         align-items: center;

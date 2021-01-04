@@ -15,6 +15,14 @@ module RoomsHelper
       tag.p "[ まだメッセージはありません ]", class: "dm_list__content__link__box__message"
     end
   end
+  
+  # 最新メッセージが写真かどうか判断するメソッド
+  def most_new_message_preview_image(room)
+    # 最新メッセージのデータを取得する
+    message = room.messages.order(updated_at: :desc).limit(1)
+    # 配列から取り出す
+    message = message[0].image.attached?
+  end
 
   # 相手ユーザー名を取得して表示するメソッド
   def opponent_user(room)

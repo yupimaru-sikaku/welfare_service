@@ -80,6 +80,6 @@ class GhsController < ApplicationController
       :staff_time_id,
       :from_station_id,
       images: []
-    )
+    ).merge(user_id: current_user.id)
   end
 end

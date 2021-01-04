@@ -8,7 +8,10 @@ require("@rails/activestorage").start()
 require("channels")
 require("../preview.js")
 require("../chatroom.js")
+require("../user_preview")
+require("../slider")
 
+require('jquery')
 
 //= require jquery
 //= require jquery_ujs

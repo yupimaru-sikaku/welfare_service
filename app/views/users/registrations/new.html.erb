@@ -32,7 +32,15 @@
         <%= f.label :image, "アイコン画像" %>
         <span>任意</span>
       </div>
-      <%= f.file_field :image, accept: "image/*" %>
+      <div class="registration-user-icon">
+        <%= image_tag "defalut.png" , class: 'default-icon' %>
+      </div>
+      <div class="registration-user-icon-form">
+        <%= f.label :image, accept: "image/*" do %>
+          <%= f.file_field :image, accept: "image/*", class: 'input-user-icon' %>
+          <i class="fas fa-camera-retro">タッチ</i>
+        <% end %>
+      </div>
     </div>    
 
     <div class="registration-new-field">

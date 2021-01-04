@@ -52,6 +52,29 @@
   padding: 2px;
 }
 
+.registration-new-content .registration-new-fields .registration-new-field .registration-user-icon {
+  padding: 20px;
+}
+
+.registration-new-content .registration-new-fields .registration-new-field .registration-user-icon img {
+  width: 65px;
+  height: 65px;
+  border-radius: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.registration-new-content .registration-new-fields .registration-new-field .registration-user-icon-form label {
+  display: block;
+  background-color: #e4e4e4;
+  padding: 10px;
+  text-align: center;
+}
+
+.registration-new-content .registration-new-fields .registration-new-field .registration-user-icon-form label input {
+  display: none;
+}
+
 .registration-new-content .registration-new-fields .registration-new-field .registration-new-field-2 {
   display: -webkit-box;
   display: -ms-flexbox;

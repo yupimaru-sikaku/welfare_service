@@ -9,10 +9,10 @@
 
   <%# GH事業者編集画面 %>
   <% if @gh.user_id == current_user.id %>
-    <div class="gh-show-edit">
-      <%= link_to "編集する", "#" %>
-      <%= link_to "削除する", "#" %>
-    </div>
+  <div class="gh-show-edit">
+    <%= link_to "編集する", "#" %>
+    <%= link_to "削除する", "#" %>
+  </div>
   <% end %>
   <%# //GH事業者編集画面 %>
 
@@ -25,7 +25,7 @@
   <%# GH写真 %>
   <div class="gh-show-img">
     <% @gh.images.each do |image| %>
-      <%= image_tag image %>
+    <%= image_tag image.variant(resize_to_fill: [512, 512]) %>
     <% end %>
   </div>
   <%# //GH写真 %>
@@ -35,25 +35,25 @@
   <div class="gh-show-contact-form">
     <div class="gh-show-contact-form-1">
       <% unless @gh.user_id == current_user.id %>
-        <% if @isRoom == true %>
-          <div class="gh-show-contact-form-2">
-            <a href="/rooms/<%= @roomId %>">
-              <i class="fas fa-comments"></i>
-              事業者へ問い合わせ
-            </a>
-          </div>
-        <% else %>
-          <%= form_for @room do |f| %>
-            <%= fields_for @entry do |e| %>
-              <%= e.hidden_field :user_id, value: @gh.user_id %>
-              <i class="fas fa-comments"></i>
-            <% end %>
-            <%= f.submit "事業者へ問い合わせ", class:"btn btn-primary btn-lg user-show-chat"%>
-          <% end %>
-        <% end %>
+      <% if @isRoom == true %>
+      <div class="gh-show-contact-form-2">
+        <a href="/rooms/<%= @roomId %>">
+          <i class="fas fa-comments"></i>
+          事業者へ問い合わせ
+        </a>
+      </div>
+      <% else %>
+      <%= form_for @room do |f| %>
+      <%= fields_for @entry do |e| %>
+      <%= e.hidden_field :user_id, value: @gh.user_id %>
+      <i class="fas fa-comments"></i>
+      <% end %>
+      <%= f.submit "事業者へ問い合わせ", class:"btn btn-primary btn-lg user-show-chat"%>
+      <% end %>
+      <% end %>
       <% end %>
     </div>
-    
+
     <div id="favorites_button-<%= @gh.id %>">
       <%= render partial: "favorites/favorites", locals: { gh: @gh } %>
     </div>
