@@ -15,46 +15,55 @@
   <div class="gh-search-results">
 
     <%#検索結果一覧%>
-    <% if @results.length != 0 %>      
-      <% @results.each do |result| %>
-        <div class="gh-search-result">
-          <%= link_to  gh_path(result.id) do %>
-            <div class="gh-search-result-name">
-              <%= "#{result.name}" %>
-            </div>
-            <div class="gh-search-result-content">
-              <div class="gh-search-result-content-img">
-                <%= image_tag result.images[0] %>
-              </div>
-              <div class="gh-search-result-content-info">
-                <p><%= "#{result.station}駅から徒歩#{result.from_station.name}" %></p>
-                <p><%= "預り金： #{result.price.to_s(:delimited)}円" %></p>
-                <p><%= "#{result.residential_style.name}" %></p>
-                <p><%= "築年数: #{Date.today.strftime("%Y").to_i - result.construction_year.to_i}年" %></p>
-                <p><%= "情報更新日: #{result.updated_at.strftime("%Y年%m月%d日")}" %></p>
-              </div>
-            </div>
-          <% end %>
-          
-          <div class="gh-search-result-contact-form">
-            <div class="gh-search-result-contact-form-1">
-              <%= link_to rooms_path, method: :post do %>
-                <i class="fas fa-comments"></i>
-                <span>事業者とチャット</span>
-              <% end %>
-            </div>
-            <div id="favorites_button-<%= result.id %>">
-              <%= render partial: "favorites/favorites", locals: { gh: result } %>
-            </div>
-          </div>
+    <% if @results.length != 0 %>
+    <% @results.each do |result| %>
+    <div class="gh-search-result">
+      <%= link_to  gh_path(result.id) do %>
+      <div class="gh-search-result-name">
+        <%= "#{result.name}" %>
+      </div>
+      <div class="gh-search-result-content">
+        <div class="gh-search-result-content-img">
+          <%= image_tag result.images[0] %>
         </div>
+        <div class="gh-search-result-content-info">
+          <p><%= "#{result.station}駅から徒歩#{result.from_station.name}" %></p>
+          <p><%= "預り金： #{result.price.to_s(:delimited)}円" %></p>
+          <p><%= "#{result.residential_style.name}" %></p>
+          <p><%= "築年数: #{Date.today.strftime("%Y").to_i - result.construction_year.to_i}年" %></p>
+          <p><%= "情報更新日: #{result.updated_at.strftime("%Y年%m月%d日")}" %></p>
+        </div>
+      </div>
       <% end %>
+
+      <div class="gh-search-result-contact-form">
+        <div class="gh-search-result-contact-form-1">
+          <%= link_to rooms_path, method: :post do %>
+          <i class="fas fa-comments"></i>
+          <span>事業者とチャット</span>
+          <% end %>
+        </div>
+        <% if user_signed_in? %>
+        <div id="favorites_button-<%= result.id %>">
+          <%= render partial: "favorites/favorites", locals: { gh: result } %>
+        </div>
+        <% else %>
+        <div id="favorites_button-<%= result.id %>">
+          <%= link_to "#", local: true, class: "favorite-btn" do %>
+          <i class="far fa-star"></i>
+          お気に入りに登録
+          <% end %>
+        </div>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
     <% else %>
-      該当する事業所はありません
+    該当する事業所はありません
     <% end %>
     <%#//検索結果一覧%>
 
   </div>
   <%#//検索結果全体%>
-  
+
 </div>

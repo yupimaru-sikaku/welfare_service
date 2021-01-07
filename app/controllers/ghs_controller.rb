@@ -18,6 +18,46 @@ class GhsController < ApplicationController
     end
   end
 
+  # def edit
+  #   @items = Item.includes(:user).order('created_at DESC')
+  #   if @item.user.id == current_user.id && @orders.where(item_id: @item.id).blank?
+  #     edit_item_path(@item)
+  #   else
+  #     redirect_to root_path
+  #   end
+  # end
+
+  # def update
+  #   if @item.update(item_params)
+  #     redirect_to item_path(@item)
+  #   else
+  #     render :edit
+  #   end
+  # end
+
+  def edit
+    @gh = Gh.find(params[:id])
+  end
+  
+  def update
+    @gh = Gh.find(params[:id])
+    
+    @gh.valid?
+    if @gh.update(gh_params)
+      redirect_to gh_path(@gh.id)
+    else
+      render :edit
+    end
+  end
+  
+  def destroy
+    @gh = Gh.find(params[:id])
+    if @gh.user_id == current_user.id
+      @gh.destroy
+      redirect_to root_path
+    end
+  end
+
   def search
     @results = @p.result.where(flag: 1)
   end
@@ -26,22 +66,24 @@ class GhsController < ApplicationController
     @gh = Gh.find(params[:id])
     @user = User.find(@gh.user_id)
 
-    @currentUserEntry = RoomUser.where(user_id: current_user.id)
-    @userEntry = RoomUser.where(user_id: @user.id)
+    if user_signed_in?
+      @currentUserEntry = RoomUser.where(user_id: current_user.id)
+      @userEntry = RoomUser.where(user_id: @user.id)
 
-    unless @user.id == current_user.id
-      @currentUserEntry.each do |cu|
-        @userEntry.each do |u|
-          if cu.room_id == u.room_id then
-            @isRoom = true
-            @roomId = cu.room_id
+      unless @user.id == current_user.id
+        @currentUserEntry.each do |cu|
+          @userEntry.each do |u|
+            if cu.room_id == u.room_id then
+              @isRoom = true
+              @roomId = cu.room_id
+            end
           end
         end
-      end
-      if @isRoom
-      else
-        @room = Room.new
-        @entry = RoomUser.new
+        if @isRoom
+        else
+          @room = Room.new
+          @entry = RoomUser.new
+        end
       end
     end
   end

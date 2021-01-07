@@ -2,10 +2,10 @@ $back-color: rgba(197, 207, 243, 0.3);
 $input-color: white;
 
 
-.gh-new-content{
+.gh-edit-content{
   padding: 0 20px;
   
-  .gh-new-title{
+  .gh-edit-title{
 
     p{
       text-align: center;
@@ -25,16 +25,16 @@ $input-color: white;
     }
   }
 
-  .gh-new-forms{
+  .gh-edit-forms{
     margin-top: 20px;
 
-    .gh-new-form{
+    .gh-edit-form{
       margin-bottom: 10px;
       background-color: $back-color;
       border-radius: 10px;
       padding: 10px 10px;
 
-      .gh-new-form-1{
+      .gh-edit-form-1{
         display: flex;
         align-items: center;
         
@@ -50,7 +50,7 @@ $input-color: white;
         
       }
       
-      .gh-new-form-2{
+      .gh-edit-form-2{
         display: flex;
         align-items: center;
         
@@ -86,7 +86,7 @@ $input-color: white;
         
       }
 
-      .gh-new-form-2-image{
+      .gh-edit-form-2-image{
         width: 100%;
 
         .image-lists{
@@ -100,8 +100,8 @@ $input-color: white;
             margin-bottom: 10px;
   
             img{
-              width: 80px;
-              height: 80px;
+              width: 100px;
+              height: 100px;
             }
 
             p{
@@ -129,7 +129,7 @@ $input-color: white;
         }        
       }
       
-      .gh-new-form-3{
+      .gh-edit-form-3{
         display: flex;
         align-items: center;
         
@@ -145,7 +145,7 @@ $input-color: white;
         }
       }
       
-      .gh-new-form-4{
+      .gh-edit-form-4{
         display: flex;
         align-items: center;
         
@@ -165,7 +165,7 @@ $input-color: white;
       }
     }
     
-    .gh-new-form-activehash{
+    .gh-edit-form-activehash{
       display: flex;
       flex-direction: column;
       margin-bottom: 10px;
@@ -186,7 +186,7 @@ $input-color: white;
         background-color: $input-color;
       }
       
-      .gh-new-form-activehash-1{
+      .gh-edit-form-activehash-1{
         display: flex;
         align-items: center;
 
@@ -201,7 +201,7 @@ $input-color: white;
         }
       }
 
-      .gh-new-form-activehash-2{
+      .gh-edit-form-activehash-2{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -209,7 +209,7 @@ $input-color: white;
         margin: 10px;
         font-size: 14px;
 
-        .gh-new-form-activehash-2-content{
+        .gh-edit-form-activehash-2-content{
           display: flex;
           align-items: center;
           width: 100%;
@@ -284,7 +284,7 @@ $input-color: white;
     }
 
     // 新規作成ボタン
-    .gh-new-form-submit{
+    .gh-edit-form-submit{
       text-align: center;
 
       input{

@@ -1,35 +1,35 @@
-.gh-new-content {
+.gh-edit-content {
   padding: 0 20px;
 }
 
-.gh-new-content .gh-new-title p {
+.gh-edit-content .gh-edit-title p {
   text-align: center;
 }
 
-.gh-new-content .gh-new-title p:nth-child(1) {
+.gh-edit-content .gh-edit-title p:nth-child(1) {
   padding: 10px;
   -webkit-box-shadow: 2px 9px 3px -3px rgba(24, 211, 22, 0.4);
   margin: 0 15%;
   margin-bottom: 15px;
 }
 
-.gh-new-content .gh-new-title p:nth-child(2), .gh-new-content .gh-new-title p:nth-child(3) {
+.gh-edit-content .gh-edit-title p:nth-child(2), .gh-edit-content .gh-edit-title p:nth-child(3) {
   font-size: 12px;
   color: blue;
 }
 
-.gh-new-content .gh-new-forms {
+.gh-edit-content .gh-edit-forms {
   margin-top: 20px;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form {
+.gh-edit-content .gh-edit-forms .gh-edit-form {
   margin-bottom: 10px;
   background-color: rgba(197, 207, 243, 0.3);
   border-radius: 10px;
   padding: 10px 10px;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form .gh-new-form-1 {
+.gh-edit-content .gh-edit-forms .gh-edit-form .gh-edit-form-1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -38,7 +38,7 @@
           align-items: center;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form .gh-new-form-1 span {
+.gh-edit-content .gh-edit-forms .gh-edit-form .gh-edit-form-1 span {
   display: block;
   margin-left: 10px;
   background-color: red;
@@ -48,7 +48,7 @@
   padding: 2px;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form .gh-new-form-2 {
+.gh-edit-content .gh-edit-forms .gh-edit-form .gh-edit-form-2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,7 +57,7 @@
           align-items: center;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form .gh-new-form-2 input {
+.gh-edit-content .gh-edit-forms .gh-edit-form .gh-edit-form-2 input {
   border: 1px solid #cecece;
   height: 30px;
   border-radius: 5px;
@@ -66,12 +66,12 @@
   width: 200px;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form .gh-new-form-2 span {
+.gh-edit-content .gh-edit-forms .gh-edit-form .gh-edit-form-2 span {
   display: block;
   margin-left: 10px;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form .gh-new-form-2 textarea {
+.gh-edit-content .gh-edit-forms .gh-edit-form .gh-edit-form-2 textarea {
   border: 1px solid #cecece;
   border-radius: 5px;
   width: 100%;
@@ -80,17 +80,17 @@
   background-color: white;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form .gh-new-form-2 .image-element img {
+.gh-edit-content .gh-edit-forms .gh-edit-form .gh-edit-form-2 .image-element img {
   display: block;
   width: 100px;
   height: 100px;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form .gh-new-form-2-image {
+.gh-edit-content .gh-edit-forms .gh-edit-form .gh-edit-form-2-image {
   width: 100%;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form .gh-new-form-2-image .image-lists {
+.gh-edit-content .gh-edit-forms .gh-edit-form .gh-edit-form-2-image .image-lists {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,40 +98,40 @@
       flex-wrap: wrap;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form .gh-new-form-2-image .image-lists .image-list {
+.gh-edit-content .gh-edit-forms .gh-edit-form .gh-edit-form-2-image .image-lists .image-list {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 10px;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form .gh-new-form-2-image .image-lists .image-list img {
-  width: 80px;
-  height: 80px;
+.gh-edit-content .gh-edit-forms .gh-edit-form .gh-edit-form-2-image .image-lists .image-list img {
+  width: 100px;
+  height: 100px;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form .gh-new-form-2-image .image-lists .image-list p {
+.gh-edit-content .gh-edit-forms .gh-edit-form .gh-edit-form-2-image .image-lists .image-list p {
   color: blue;
   border-bottom: 1px solid;
   width: 50px;
   margin: 0 auto;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form .gh-new-form-2-image input {
+.gh-edit-content .gh-edit-forms .gh-edit-form .gh-edit-form-2-image input {
   display: none;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form .gh-new-form-2-image label {
+.gh-edit-content .gh-edit-forms .gh-edit-form .gh-edit-form-2-image label {
   display: block;
   background-color: #dcdada;
   padding: 10px;
   text-align: center;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form .gh-new-form-2-image label .fa-camera {
+.gh-edit-content .gh-edit-forms .gh-edit-form .gh-edit-form-2-image label .fa-camera {
   font-size: 15px;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form .gh-new-form-3 {
+.gh-edit-content .gh-edit-forms .gh-edit-form .gh-edit-form-3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -140,7 +140,7 @@
           align-items: center;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form .gh-new-form-3 span {
+.gh-edit-content .gh-edit-forms .gh-edit-form .gh-edit-form-3 span {
   display: block;
   margin-left: 10px;
   background-color: green;
@@ -150,7 +150,7 @@
   padding: 2px;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form .gh-new-form-4 {
+.gh-edit-content .gh-edit-forms .gh-edit-form .gh-edit-form-4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,7 +159,7 @@
           align-items: center;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form .gh-new-form-4 input {
+.gh-edit-content .gh-edit-forms .gh-edit-form .gh-edit-form-4 input {
   border: 1px solid #cecece;
   height: 30px;
   border-radius: 5px;
@@ -168,12 +168,12 @@
   width: 200px;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form .gh-new-form-4 span {
+.gh-edit-content .gh-edit-forms .gh-edit-form .gh-edit-form-4 span {
   display: block;
   margin-left: 10px;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form-activehash {
+.gh-edit-content .gh-edit-forms .gh-edit-form-activehash {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,11 +187,11 @@
   padding: 10px 10px;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form-activehash label {
+.gh-edit-content .gh-edit-forms .gh-edit-form-activehash label {
   display: block;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form-activehash select {
+.gh-edit-content .gh-edit-forms .gh-edit-form-activehash select {
   display: block;
   padding-left: 10px;
   border: 1px solid #cecece;
@@ -200,7 +200,7 @@
   background-color: white;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form-activehash .gh-new-form-activehash-1 {
+.gh-edit-content .gh-edit-forms .gh-edit-form-activehash .gh-edit-form-activehash-1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -209,7 +209,7 @@
           align-items: center;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form-activehash .gh-new-form-activehash-1 span {
+.gh-edit-content .gh-edit-forms .gh-edit-form-activehash .gh-edit-form-activehash-1 span {
   display: block;
   margin-left: 10px;
   background-color: red;
@@ -219,7 +219,7 @@
   padding: 2px;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form-activehash .gh-new-form-activehash-2 {
+.gh-edit-content .gh-edit-forms .gh-edit-form-activehash .gh-edit-form-activehash-2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -233,7 +233,7 @@
   font-size: 14px;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form-activehash .gh-new-form-activehash-2 .gh-new-form-activehash-2-content {
+.gh-edit-content .gh-edit-forms .gh-edit-form-activehash .gh-edit-form-activehash-2 .gh-edit-form-activehash-2-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -244,30 +244,30 @@
   margin-bottom: 10px;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form-activehash .gh-new-form-activehash-2 .gh-new-form-activehash-2-content input {
+.gh-edit-content .gh-edit-forms .gh-edit-form-activehash .gh-edit-form-activehash-2 .gh-edit-form-activehash-2-content input {
   display: block;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form-activehash .gh-new-form-activehash-2 .gh-new-form-activehash-2-content label {
+.gh-edit-content .gh-edit-forms .gh-edit-form-activehash .gh-edit-form-activehash-2 .gh-edit-form-activehash-2-content label {
   display: block;
   margin-left: 10px;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form-activehash .gh-new-form-activehash-2 .gh-new-form-activehash-2-content input[type="radio"] {
+.gh-edit-content .gh-edit-forms .gh-edit-form-activehash .gh-edit-form-activehash-2 .gh-edit-form-activehash-2-content input[type="radio"] {
   display: none;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form-activehash .gh-new-form-activehash-2 .gh-new-form-activehash-2-content input[type="radio"]:checked + .radio::before {
+.gh-edit-content .gh-edit-forms .gh-edit-form-activehash .gh-edit-form-activehash-2 .gh-edit-form-activehash-2-content input[type="radio"]:checked + .radio::before {
   border-color: #666;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form-activehash .gh-new-form-activehash-2 .gh-new-form-activehash-2-content input[type="radio"]:checked + .radio::after {
+.gh-edit-content .gh-edit-forms .gh-edit-form-activehash .gh-edit-form-activehash-2 .gh-edit-form-activehash-2-content input[type="radio"]:checked + .radio::after {
   opacity: 1;
   -webkit-transform: scale3d(1, 1, 1);
           transform: scale3d(1, 1, 1);
 }
 
-.gh-new-content .gh-new-forms .gh-new-form-activehash .gh-new-form-activehash-2 .gh-new-form-activehash-2-content .radio {
+.gh-edit-content .gh-edit-forms .gh-edit-form-activehash .gh-edit-form-activehash-2 .gh-edit-form-activehash-2-content .radio {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   cursor: pointer;
@@ -277,7 +277,7 @@
   width: auto;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form-activehash .gh-new-form-activehash-2 .gh-new-form-activehash-2-content .radio::before {
+.gh-edit-content .gh-edit-forms .gh-edit-form-activehash .gh-edit-form-activehash-2 .gh-edit-form-activehash-2-content .radio::before {
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 50%;
@@ -291,7 +291,7 @@
   width: 16px;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form-activehash .gh-new-form-activehash-2 .gh-new-form-activehash-2-content .radio::after {
+.gh-edit-content .gh-edit-forms .gh-edit-form-activehash .gh-edit-form-activehash-2 .gh-edit-form-activehash-2-content .radio::after {
   background: #ff2600;
   border-radius: 50%;
   content: '';
@@ -312,11 +312,11 @@
   width: 10px;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form-submit {
+.gh-edit-content .gh-edit-forms .gh-edit-form-submit {
   text-align: center;
 }
 
-.gh-new-content .gh-new-forms .gh-new-form-submit input {
+.gh-edit-content .gh-edit-forms .gh-edit-form-submit input {
   background-color: white;
   padding: 10px;
   border-radius: 5px;
@@ -328,4 +328,4 @@
   width: 200px;
   margin-bottom: 50px;
 }
-/*# sourceMappingURL=new.css.map */
+/*# sourceMappingURL=edit.css.map */

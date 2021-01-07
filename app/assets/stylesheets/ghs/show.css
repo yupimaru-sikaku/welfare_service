@@ -13,18 +13,12 @@
   padding: 10px;
   width: 120px;
   border-radius: 5px;
-  color: white;
+  color: black;
   text-decoration: none;
   font-size: 14px;
   text-align: center;
-}
-
-.gh-show-content .gh-show-edit a:nth-child(1) {
-  background-color: #d6cdbd;
-}
-
-.gh-show-content .gh-show-edit a:nth-child(2) {
-  background-color: #6b6863;
+  background-color: white;
+  border: 1px solid;
 }
 
 .gh-show-content .gh-show-name {
@@ -49,19 +43,19 @@
 .gh-show-content .gh-show-img .fa-chevron-left {
   font-size: 50px;
   position: absolute;
-  z-index: 100;
+  z-index: 1;
   left: 0px;
   top: 170px;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .gh-show-content .gh-show-img .fa-chevron-right {
   font-size: 50px;
   position: absolute;
-  z-index: 100;
+  z-index: 1;
   right: 0px;
   top: 170px;
-  opacity: 0.3;
+  opacity: 0.5;
 }
 
 .gh-show-content .gh-show-contact-form {

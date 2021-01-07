@@ -1,7 +1,8 @@
 .gh-favorite-content {
-  height: 100vh;
+  height: 100%;
   padding: 0 10px;
   background-color: #cecece;
+  padding-bottom: 10px;
 }
 
 .gh-favorite-content .gh-favorite-title {
