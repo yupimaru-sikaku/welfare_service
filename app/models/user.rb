@@ -9,8 +9,6 @@ class User < ApplicationRecord
   has_many :messages, dependent: :destroy
   has_many :favorites, dependent: :destroy
 
-  # carrierwaveでアイコン作成用
-  mount_uploader :image, ImageUploader
   
   # ActiveStorageでアイコン作成用
   has_one_attached :image
@@ -19,6 +17,8 @@ class User < ApplicationRecord
   acts_as_followable 
   acts_as_follower
 
-  
+  def was_attached?
+    self.image.attached?
+  end
 
 end
