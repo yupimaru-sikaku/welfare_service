@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :services do
     collection do
       get 'admin_index'
+      get 'search'
     end
   end
 

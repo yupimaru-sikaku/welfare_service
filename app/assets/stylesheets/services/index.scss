@@ -14,16 +14,6 @@ $service-height: 140px;
 // ★★検索フォーム全体
 .search-content{
   width: 100%;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  
-  // 検索画像の中にある文字
-  p{
-    padding: calc((350px - 189px) / 4) 0px;
-    font-size: 0.3em;
-  }
   
   // 検索欄と送信を囲むの大きな枠
   .search-form{
@@ -32,38 +22,13 @@ $service-height: 140px;
     max-width: 400px;
     height: 120px;
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     margin-top: calc((350px - 189px) / 4);
-    margin-bottom: calc((350px - 189px) / 4);
-    
-    // 検索欄
-    .search-text{
-      border: 1px solid #ffffff;
-      background-color: white;
-      font-size: 17px;
-      width: 80%;
-      height: 40px;
-      padding-left: 20px;
-      margin: 0 auto;
-      color: black;
-    }
-    
-    // 検索送信ボタン
-    .search-submit{
-      background-color: #21c1f7;
-      font-size: 17px;
-      width: 80%;
-      height: 40px;
-      margin: 0 auto;
-      outline: none;
-    }
+    margin-bottom: calc((350px - 189px) / 4); 
   }
-
+  
   // 検索フォームの大きな画像
   .search-img{
-    height: 350px;
+    height: 150px;
   }
   
   // 検索フォームの大きな画像をぼかすため
@@ -78,14 +43,17 @@ $service-height: 140px;
   }
   
   figure figcaption {
-    font-size: 60px;
+    font-size: 18px;
     color: #ffffff;
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
     margin: 0;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
   
   .decorator {
@@ -119,9 +87,10 @@ $service-height: 140px;
   
   // 福祉サービスのタイトル
   .service-titile{
-    padding: 30px;
-    font-size: 1.3em;
+    margin: 30px 70px;
+    font-size: 18px;
     color: #a55fa2;
+    border-bottom: 1px solid;
   }
   
   // 福祉サービスの中身

@@ -3,16 +3,13 @@
   <div class="room-header-main">
     <div class="back-to-home">
       <%= link_to rooms_path do %>
-        <i class="fas fa-arrow-circle-left"></i>
+      <i class="fas fa-arrow-circle-left"></i>
       <% end %>
     </div>
     <div class="room-header-title">
       <p><%= opponent_user(@room) %></p>
     </div>
     <div class="create-room">
-      <%= link_to "#" do %>
-        <i class="fas fa-comments"></i>
-      <% end %>
     </div>
   </div>
 </div>
@@ -22,68 +19,68 @@
 <div class="talk-room-content">
   <div class="talk-room-lists">
     <% if @messages.present? %>
-      <% @messages.each do |m| %>
-        <% if m.user.nickname == current_user.nickname %>
+    <% @messages.each do |m| %>
+    <% if m.user.nickname == current_user.nickname %>
 
-          <%#トーク（ユーザー側：右側）%>
-          <div class="talk-room-list-right">
-              <div class="talk-room-list-content">
-                <span class="talk-room-list-nickname">
-                  <%= m.user.nickname %><br>
-                  <%= m.created_at.strftime("%m/%d %H:%M") %>
-                </span>
-                <% if m.image.attached? %>
-                <% else %>
-                  <span class="talk-room-list-content">
-                    <%= simple_format(m.content) %>
-                  </span>
-                <% end %>
-                <% if m.image.attached? %>
-                  <span class="talk-room-list-image">
-                    <%= image_tag m.image %>
-                  </span>
-                <% end %>
-                
-              </div>
-              <% if current_user.image.file == nil %>
-                <%= image_tag "defalut.png" %>
-              <% else %>
-                <img src=<%= current_user.image %>>
-              <% end %>
-          </div>
-          <%#//トーク（ユーザー側：右側）%>
-
+    <%#トーク（ユーザー側：右側）%>
+    <div class="talk-room-list-right">
+      <div class="talk-room-list-content">
+        <span class="talk-room-list-nickname">
+          <%= m.user.nickname %><br>
+          <%= m.created_at.strftime("%m/%d %H:%M") %>
+        </span>
+        <% if m.image.attached? %>
         <% else %>
-
-          <%#トーク（相手側：左側）%>
-          <div class="talk-room-list-left">
-              <% if opponent_user_image(@room).file == nil %>
-                <%= image_tag "defalut.png" %>
-              <% else %>
-                <img src=<%= opponent_user_image(@room) %>>
-              <% end %>
-              <div class="talk-room-list-content">
-                <span class="talk-room-list-nickname">
-                  <%= m.user.nickname %><br>
-                  <%= m.created_at.strftime("%m/%d %H:%M") %>
-                </span>
-                <% if m.image.attached? %>
-                <% else %>
-                  <span class="talk-room-list-content">
-                    <%= simple_format(m.content) %>
-                  </span>
-                <% end %>
-                <span class="talk-room-list-image">
-                  <%= image_tag m.image if m.image.attached? %>
-                </span>
-              </div>
-          </div>
-          <%#//トーク（相手側：左側）%>
-
+        <span class="talk-room-list-content">
+          <%= simple_format(m.content) %>
+        </span>
         <% end %>
+        <% if m.image.attached? %>
+        <span class="talk-room-list-image">
+          <%= image_tag m.image %>
+        </span>
+        <% end %>
+
+      </div>
+      <% if current_user.image.file == nil %>
+      <%= image_tag "defalut.png" %>
+      <% else %>
+      <img src=<%= current_user.image %>>
       <% end %>
+    </div>
+    <%#//トーク（ユーザー側：右側）%>
+
     <% else %>
-      <h3 class="text-center">メッセージはまだありません</h3>
+
+    <%#トーク（相手側：左側）%>
+    <div class="talk-room-list-left">
+      <% if opponent_user_image(@room).file == nil %>
+      <%= image_tag "defalut.png" %>
+      <% else %>
+      <img src=<%= opponent_user_image(@room) %>>
+      <% end %>
+      <div class="talk-room-list-content">
+        <span class="talk-room-list-nickname">
+          <%= m.user.nickname %><br>
+          <%= m.created_at.strftime("%m/%d %H:%M") %>
+        </span>
+        <% if m.image.attached? %>
+        <% else %>
+        <span class="talk-room-list-content">
+          <%= simple_format(m.content) %>
+        </span>
+        <% end %>
+        <span class="talk-room-list-image">
+          <%= image_tag m.image if m.image.attached? %>
+        </span>
+      </div>
+    </div>
+    <%#//トーク（相手側：左側）%>
+
+    <% end %>
+    <% end %>
+    <% else %>
+    <h3 class="text-center">メッセージはまだありません</h3>
     <% end %>
   </div>
 </div>
@@ -91,12 +88,12 @@
 
 <div class="talk-room-form">
   <%= form_for @message, class: "contentarea" do |f| %>
-    <%= f.text_area :content, id: "textarea", :size => 70 %>
-    <%= f.file_field :image, class: 'hidden' %>
-    <%= f.label :image do%>
-      <i class="fas fa-camera-retro"></i>
-    <% end %>
-    <%= f.hidden_field :room_id, :value => @room.id %>
-    <%= f.submit "投稿", class: "submit" %>
+  <%= f.text_area :content, id: "textarea", :size => 70 %>
+  <%= f.file_field :image, class: 'hidden' %>
+  <%= f.label :image do%>
+  <i class="fas fa-camera-retro"></i>
+  <% end %>
+  <%= f.hidden_field :room_id, :value => @room.id %>
+  <%= f.submit "投稿", class: "submit" %>
   <% end %>
 </div>

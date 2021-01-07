@@ -18,23 +18,6 @@ class GhsController < ApplicationController
     end
   end
 
-  # def edit
-  #   @items = Item.includes(:user).order('created_at DESC')
-  #   if @item.user.id == current_user.id && @orders.where(item_id: @item.id).blank?
-  #     edit_item_path(@item)
-  #   else
-  #     redirect_to root_path
-  #   end
-  # end
-
-  # def update
-  #   if @item.update(item_params)
-  #     redirect_to item_path(@item)
-  #   else
-  #     render :edit
-  #   end
-  # end
-
   def edit
     @gh = Gh.find(params[:id])
   end
@@ -91,7 +74,6 @@ class GhsController < ApplicationController
   private
 
   def search_gh
-    # binding.pry
     @p = Gh.ransack(params[:q])
   end
 

@@ -13,6 +13,7 @@ if(document.URL.match('rooms')){
       // アップロード後に使用するアイコンを生成
       const newUploadIcon = document.createElement('i');
       newUploadIcon.setAttribute('class', 'fas fa-upload');
+      newUploadIcon.setAttribute('style', 'color: green;');
       
       // アップロード後に使用するアイコンをカメラアイコンの後に挿入
       uploadIcon.after(newUploadIcon);

@@ -3,20 +3,14 @@
   <div class="room-header-main">
     <div class="back-to-home">
       <%= link_to root_path do %>
-        <i class="fas fa-arrow-circle-left"></i>
+      <i class="fas fa-arrow-circle-left"></i>
       <% end %>
     </div>
     <div class="room-header-title">
       <p>Direct Message</p>
     </div>
     <div class="create-room">
-      <%= link_to "/users/follow_list/#{current_user.id}" do %>
-        <i class="fas fa-comments"></i>
-      <% end %>
     </div>
-  </div>
-  <div class="room-search">
-    <input type="text", placeholder="トークルームを検索">
   </div>
 </div>
 <%#//ヘッダー%>
@@ -27,29 +21,29 @@
 
     <%#各トークルーム%>
     <% @rooms.each do |room| %>
-      <div class="room-list">
-        <%= link_to room_path(room) do %>
-          <% if opponent_user_image(room).file == nil %>
-            <%= image_tag "defalut.png" %>
-          <% else %>
-            <img src=<%= opponent_user_image(room) %>>
-          <% end %>
-          <div class="room-list-content">
-            <span>
-              <%= opponent_user(room) %>
-            </span>
-            <% if most_new_message_preview_image(room) %>
-              <span>
-                <p>写真が送信されました</p>
-              </span>
-              <% else %>
-              <span>
-                <%= most_new_message_preview(room) %>
-              </span>
-            <% end %>
-          </div>
+    <div class="room-list">
+      <%= link_to room_path(room) do %>
+      <% if opponent_user_image(room).file == nil %>
+      <%= image_tag "defalut.png" %>
+      <% else %>
+      <img src=<%= opponent_user_image(room) %>>
+      <% end %>
+      <div class="room-list-content">
+        <span>
+          <%= opponent_user(room) %>
+        </span>
+        <% if most_new_message_preview_image(room) %>
+        <span>
+          <p>写真が送信されました</p>
+        </span>
+        <% else %>
+        <span>
+          <%= most_new_message_preview(room) %>
+        </span>
         <% end %>
       </div>
+      <% end %>
+    </div>
     <% end %>
     <%#//各トークルーム%>
 

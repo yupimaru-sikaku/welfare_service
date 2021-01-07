@@ -5,113 +5,108 @@
 <%#全体統括%>
 <div class="content">
 
-	<%#検索フォーム%>
-	<div class="search-content">
-		<figure>
-			<%= image_tag "search.png", class: "search-img", alt: "検索写真" %>
-			<figcaption class="decorator">
-				<p>あなたの毎日に、<br>プロからのプロテインを。</p>
-				<div class="search-form">
-					<input type="text", class="search-text", placeholder="気になる事業所名を入力">
-					<input type="submit", value="調べる", class="search-submit">
-				</div>
-			</figcaption>
-		</figure>
-	</div>
-	<%#//検索フォーム%>
+  <%#検索フォーム%>
+  <div class="search-content">
+    <figure>
+      <%= image_tag "search.png", class: "search-img", alt: "検索写真" %>
+      <figcaption class="decorator">
+        <p>あなたの毎日に、<br>心からのサービスを。</p>
+      </figcaption>
+    </figure>
+  </div>
+  <%#//検索フォーム%>
 
-	<%#事業者の方はこちら%>
-	<div class="business">
-		<%= link_to admin_index_services_path do %>
-			<span>事業者の方はこちら</span>
-		<% end %>
-	</div>
-	<%#//事業者の方はこちら%>
-	
-		
-	<%#サービス全体%>
-	<div class="service-content">
-		<%#サービスタイトル%>
-		<div class="service-titile">
-			<p>サービス一覧から検索</p>
-		</div>
-		<%#//サービスタイトル%>
+  <%#事業者の方はこちら%>
+  <div class="business">
+    <%= link_to admin_index_services_path do %>
+    <span>事業者の方はこちら</span>
+    <% end %>
+  </div>
+  <%#//事業者の方はこちら%>
 
-		<%#サービス一覧%>
-		<div class="services">
-			<div class="service-lists">
-				<div class="service-list">
-					<%= link_to ghs_path do %>
-						<%= image_tag "1.png" %>
-						<span>共同生活援助</span>
-					<% end %>
-				</div>
-				<div class="service-list">
-					<%= link_to "#" do %>
-						<%= image_tag "2.png" %>
-						<span>重度介護訪問</span>
-					<% end %>
-				</div>
-				<div class="service-list">
-					<%= link_to "#" do %>
-						<%= image_tag "3.png" %>
-						<span>同行援護</span>
-					<% end %>
-				</div>
-				<div class="service-list">
-					<%= link_to "#" do %>
-						<%= image_tag "4.png" %>
-						<span>行動援護</span>
-					<% end %>
-				</div>
-				<div class="service-list">
-					<%= link_to "#" do %>
-						<%= image_tag "5.png" %>
-						<span>移動支援</span>
-					<% end %>
-				</div>
-				<div class="service-list">
-					<%= link_to "#" do %>
-						<%= image_tag "6.png" %>
-						<span>生活介護</span>
-					<% end %>
-				</div>
-				<div class="service-list">
-					<%= link_to "#" do %>
-						<%= image_tag "7.png" %>
-						<span>短期入所</span>
-					<% end %>
-				</div>
-				<div class="service-list">
-					<%= link_to "#" do %>
-						<%= image_tag "8.png" %>
-						<span>自立訓練</span>
-					<% end %>
-				</div>
-				<div class="service-list">
-					<%= link_to "#" do %>
-						<%= image_tag "9.png" %>
-						<span>就労移行支援</span>
-					<% end %>
-				</div>
-				<div class="service-list">
-					<%= link_to "#" do %>
-						<%= image_tag "10.png" %>
-						<span>就労継続支援A</span>
-					<% end %>
-				</div>
-			</div>
-		</div>
-		<%#//サービス一覧%>
 
-	</div>
-	<%#//サービス全体%>
+  <%#サービス全体%>
+  <div class="service-content">
+    <%#サービスタイトル%>
+    <div class="service-titile">
+      <p>サービス一覧から検索</p>
+    </div>
+    <%#//サービスタイトル%>
 
-　</div>
+    <%#サービス一覧%>
+    <div class="services">
+      <div class="service-lists">
+        <div class="service-list">
+          <%= link_to ghs_path do %>
+          <%= image_tag "1.png" %>
+          <span>共同生活援助</span>
+          <% end %>
+        </div>
+        <div class="service-list">
+          <%= link_to "#" do %>
+          <%= image_tag "2.png" %>
+          <span>重度介護訪問</span>
+          <% end %>
+        </div>
+        <div class="service-list">
+          <%= link_to "#" do %>
+          <%= image_tag "3.png" %>
+          <span>同行援護</span>
+          <% end %>
+        </div>
+        <div class="service-list">
+          <%= link_to "#" do %>
+          <%= image_tag "4.png" %>
+          <span>行動援護</span>
+          <% end %>
+        </div>
+        <div class="service-list">
+          <%= link_to "#" do %>
+          <%= image_tag "5.png" %>
+          <span>移動支援</span>
+          <% end %>
+        </div>
+        <div class="service-list">
+          <%= link_to "#" do %>
+          <%= image_tag "6.png" %>
+          <span>生活介護</span>
+          <% end %>
+        </div>
+        <div class="service-list">
+          <%= link_to "#" do %>
+          <%= image_tag "7.png" %>
+          <span>短期入所</span>
+          <% end %>
+        </div>
+        <div class="service-list">
+          <%= link_to "#" do %>
+          <%= image_tag "8.png" %>
+          <span>自立訓練</span>
+          <% end %>
+        </div>
+        <div class="service-list">
+          <%= link_to "#" do %>
+          <%= image_tag "9.png" %>
+          <span>就労移行支援</span>
+          <% end %>
+        </div>
+        <div class="service-list">
+          <%= link_to "#" do %>
+          <%= image_tag "10.png" %>
+          <span>就労継続支援A</span>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <%#//サービス一覧%>
+
+  </div>
+  <%#//サービス全体%>
+
+  　</div>
 <%#//全体統括%>
 
 
 <%#フッター%>
 <%= render partial: "shared/footer" %>
 <%#//フッター%>
-

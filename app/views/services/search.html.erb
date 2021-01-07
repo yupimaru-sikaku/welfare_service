@@ -1,0 +1,7 @@
+<%#ヘッダー%>
+<%= render partial: "shared/header" %>
+<%#//ヘッダー%>
+
+<% @results.each do |result| %>
+<%= result.name %>
+<% end %>
