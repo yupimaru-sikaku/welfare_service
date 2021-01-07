@@ -65,3 +65,5 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 gem 'jquery-ui-rails'
+# S3を使用するために必要なGemfile
+gem "aws-sdk-s3", require: false

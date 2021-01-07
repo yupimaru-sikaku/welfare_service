@@ -105,4 +105,3 @@
  - belongs_to_active_hash :gh_service
  - belongs_to_active_hash :staff_time
  - belongs_to_active_hash :from_station
-
