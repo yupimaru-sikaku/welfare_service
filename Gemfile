@@ -65,14 +65,10 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'image_processing', '~> 1.2'
 gem 'jquery-ui-rails'
-# S3を使用するために必要なGemfile
 gem "aws-sdk-s3", require: false
-
-# Unicornは、全世界に公開されるサーバ上で利用されるアプリケーションサーバー
 group :production do
   gem 'unicorn', '5.4.1'
 end
-
 group :development do
   gem 'rubocop', require: false
 end
