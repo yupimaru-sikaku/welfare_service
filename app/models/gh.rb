@@ -1,5 +1,4 @@
 class Gh < ApplicationRecord
-
   extend ActiveHash::Associations::ActiveRecordExtensions
 
   belongs_to_active_hash :prefecture
@@ -17,7 +16,6 @@ class Gh < ApplicationRecord
   has_many_attached :images
 
   def was_attached?
-    self.image.attached?
+    image.attached?
   end
-
 end

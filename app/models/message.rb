@@ -1,6 +1,5 @@
 # チャットルームでのメッセージ機能で実装
 class Message < ApplicationRecord
-
   belongs_to :user
   belongs_to :room
 
@@ -9,7 +8,6 @@ class Message < ApplicationRecord
   validates :content, presence: true, unless: :was_attached?
 
   def was_attached?
-    self.image.attached?
+    image.attached?
   end
-  
 end

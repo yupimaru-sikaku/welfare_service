@@ -1,5 +1,4 @@
 class RoomsController < ApplicationController
-
   before_action :authenticate_user!
 
   def create
@@ -8,10 +7,10 @@ class RoomsController < ApplicationController
     @room_user2 = RoomUser.create(room_id: @room.id, user_id: params[:room_user][:user_id])
     redirect_to "/rooms/#{@room.id}"
   end
-  
+
   def show
     @room = Room.find(params[:id])
-    if RoomUser.where(user_id: current_user.id,room_id: @room.id).present?
+    if RoomUser.where(user_id: current_user.id, room_id: @room.id).present?
       @messages = @room.messages
       @message = Message.new
       @room_users = @room.room_users
@@ -21,8 +20,6 @@ class RoomsController < ApplicationController
   end
 
   def index
-    @rooms = current_user.rooms.joins(:messages).includes(:messages).order("messages.created_at DESC")
+    @rooms = current_user.rooms.joins(:messages).includes(:messages).order('messages.created_at DESC')
   end
-  
-
 end

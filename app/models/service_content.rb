@@ -1,6 +1,5 @@
 # サービス検索で使用
 class ServiceContent < ActiveHash::Base
-
   include ActiveHash::Associations
   has_many :services
 
@@ -26,5 +25,4 @@ class ServiceContent < ActiveHash::Base
     { id: 19, name: '地域移行支援' },
     { id: 20, name: '地域定着支援' }
   ]
-
 end

@@ -21,10 +21,10 @@ class GhsController < ApplicationController
   def edit
     @gh = Gh.find(params[:id])
   end
-  
+
   def update
     @gh = Gh.find(params[:id])
-    
+
     @gh.valid?
     if @gh.update(gh_params)
       redirect_to gh_path(@gh.id)
@@ -32,7 +32,7 @@ class GhsController < ApplicationController
       render :edit
     end
   end
-  
+
   def destroy
     @gh = Gh.find(params[:id])
     if @gh.user_id == current_user.id
@@ -56,7 +56,7 @@ class GhsController < ApplicationController
       unless @user.id == current_user.id
         @currentUserEntry.each do |cu|
           @userEntry.each do |u|
-            if cu.room_id == u.room_id then
+            if cu.room_id == u.room_id
               @isRoom = true
               @roomId = cu.room_id
             end
