@@ -68,7 +68,7 @@ gem 'jquery-ui-rails'
 # S3を使用するために必要なGemfile
 gem "aws-sdk-s3", require: false
 
-# 「Unicorn」とは、全世界に公開されるサーバ上で良く利用されるアプリケーションサーバーです。
+# Unicornは、全世界に公開されるサーバ上で利用されるアプリケーションサーバー
 group :production do
   gem 'unicorn', '5.4.1'
 end
