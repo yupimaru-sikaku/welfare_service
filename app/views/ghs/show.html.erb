@@ -62,10 +62,7 @@
     </div>
 
     <div id="favorites_button-<%= @gh.id %>">
-      <%= link_to "#", method: :post, remote: true, class: "favorite-btn" do %>
-      <i class="far fa-star"></i>
-      お気に入りに登録
-      <% end %>
+      <%= render partial: "favorites/favorites", locals: { gh: @gh } %>
     </div>
   </div>
   <% end %>

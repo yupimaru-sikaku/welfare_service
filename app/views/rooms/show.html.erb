@@ -42,10 +42,10 @@
         <% end %>
 
       </div>
-      <% if current_user.image.file == nil %>
-      <%= image_tag "defalut.png" %>
+      <% if current_user.image.attached? %>
+      <%= image_tag current_user.image %>
       <% else %>
-      <img src=<%= current_user.image %>>
+      <%= image_tag "defalut.png" %>
       <% end %>
     </div>
     <%#//トーク（ユーザー側：右側）%>
@@ -54,10 +54,10 @@
 
     <%#トーク（相手側：左側）%>
     <div class="talk-room-list-left">
-      <% if opponent_user_image(@room).file == nil %>
-      <%= image_tag "defalut.png" %>
+      <% if opponent_user_image(@room).attached? %>
+      <%= image_tag opponent_user_image(@room) %>
       <% else %>
-      <img src=<%= opponent_user_image(@room) %>>
+      <%= image_tag "defalut.png" %>
       <% end %>
       <div class="talk-room-list-content">
         <span class="talk-room-list-nickname">

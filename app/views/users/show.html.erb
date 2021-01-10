@@ -1,15 +1,15 @@
 <%#ヘッダー%>
-  <%= render partial: "shared/header" %>
+<%= render partial: "shared/header" %>
 <%#//ヘッダー%>
 
 <div class="user-show-content">
 
   <%#ユーザー顔写真%>
   <div class="user-show-img">
-    <% if current_user.image.file == nil %>
-      <%= image_tag "defalut.png" %>
+    <% if current_user.image.attached? %>
+    <%= image_tag current_user.image %>
     <% else %>
-      <img src=<%= current_user.image %>>
+    <%= image_tag "defalut.png" %>
     <% end %>
   </div>
   <%#//ユーザー顔写真%>
@@ -38,8 +38,8 @@
   <%#チャットルームへ%>
   <div class="user-show-chat-room">
     <%= link_to rooms_path do %>
-      <i class="far fa-comments"></i>
-      <span>チャットルームへ</span>
+    <i class="far fa-comments"></i>
+    <span>チャットルームへ</span>
     <% end %>
   </div>
   <%#//チャットルームへ%>
@@ -47,8 +47,8 @@
   <%#お気に入りリストへ%>
   <div class="user-show-favorites">
     <%= link_to favorites_path do %>
-      <i class="far fa-star"></i>
-      <span>お気に入りリストへ</span>
+    <i class="far fa-star"></i>
+    <span>お気に入りリストへ</span>
     <% end %>
   </div>
   <%#/お気に入りリストへ%>

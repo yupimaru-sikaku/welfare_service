@@ -23,10 +23,10 @@
     <% @rooms.each do |room| %>
     <div class="room-list">
       <%= link_to room_path(room) do %>
-      <% if opponent_user_image(room).file == nil %>
-      <%= image_tag "defalut.png" %>
+      <% if opponent_user_image(room).attached? %>
+      <%= image_tag opponent_user_image(room) %>>
       <% else %>
-      <img src=<%= opponent_user_image(room) %>>
+      <%= image_tag "defalut.png" %>
       <% end %>
       <div class="room-list-content">
         <span>

@@ -21,9 +21,9 @@
         <div class="user-icon">
           <%= link_to user_path(current_user), class: "icon-img" do %>
           <% if current_user.image.attached? %>
-          <%= image_tag "defalut.png" %>
+          <%= image_tag current_user.image %>
           <% else %>
-          <img src=<%= current_user.image %>>
+          <%= image_tag "defalut.png"  %>
           <% end %>
           <span><%= current_user.nickname %></span>
           <% end %>
@@ -90,17 +90,16 @@
   <% if user_signed_in? %>
   <% if current_user.image.attached? %>
   <%= link_to user_path(current_user), class: 'header-user-img' do %>
+  <%= image_tag current_user.image %>
+  <span><%= current_user.nickname.truncate(8) %></span>
+  <% end %>
+  <% else %>
+  <%= link_to user_path(current_user), class: 'header-user-img' do %>
   <%= image_tag "defalut.png" %>
   <span><%= current_user.nickname.truncate(8) %></span>
   <% end %>
-</div>
-<% else %>
-<%= link_to user_path(current_user), class: 'header-user-img' do %>
-<img src=<%= current_user.image %>>
-<span><%= current_user.nickname.truncate(8) %></span>
-<% end %>
-<% end %>
-<% end %>
-<%#//ログイン後のアイコン%>
+  <% end %>
+  <% end %>
+  <%#//ログイン後のアイコン%>
 
 </div>
