@@ -147,3 +147,33 @@ $service-height: 140px;
     }
   }
 }
+
+.chat-bot{
+  width: 60px;
+  height: 60px;
+  background-color: #caef35;
+  position: fixed;
+  top: 700px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  text-align: center;
+
+  a{
+    text-decoration: none;
+  }
+
+  span{
+    display: block;
+    color: black;
+
+    &:nth-child(1){
+    }
+    &:nth-child(2){
+      font-size: 10px;
+    }
+  }
+}
